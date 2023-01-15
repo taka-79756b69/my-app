@@ -4,13 +4,18 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { ScorelistComponent } from './scorelist/scorelist.component';
+import { ScorelisttopComponent } from './scorelisttop/scorelisttop.component';
+import { ScoreService } from '../common/service/score.service';
+import { BrowserModule } from '@angular/platform-browser';
 
 const routes: Routes = [
   {
     path: 'score', component: ScoreComponent,
     children: [
-     { path: '', component: ScorelistComponent },
-     { path: 'scoreedit', component: ScoreeditComponent },
+     { path: '', component: ScorelisttopComponent },
+     { path: ':scoreId', component: ScorelistComponent },
+     { path: ':scoreId/scoreedit', component: ScoreeditComponent },
+     { path: 'scorelisttop', component: ScorelisttopComponent }
     ]
   }
 ];
@@ -19,13 +24,18 @@ const routes: Routes = [
   declarations: [
     ScoreComponent,
     ScoreeditComponent,
-    ScorelistComponent
+    ScorelistComponent,
+    ScorelisttopComponent
   ],
   imports: [
     RouterModule.forChild(routes),
-    CommonModule
+    BrowserModule,
+    CommonModule,
   ],
-  providers: [],
-  bootstrap: []
+  providers: [
+    ScoreService
+  ],
+  bootstrap: [],
+  exports: [RouterModule]
 })
 export class ScoreModule { }

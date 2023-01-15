@@ -1,9 +1,9 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const config = require('./config')
-const FakeDb = require('./fake-db')
+const FakeScoreDb = require('./fake-score-db')
 
-const productRoutes = require('./routes/products')
+const golfscoreRoutes = require('./routes/score')
 const path = require('path')
 
 mongoose.set('strictQuery', false)
@@ -14,15 +14,15 @@ mongoose.connect(config.DB_URI, {
 }).then(
   () => {
     if(process.env.NODE_ENV !== 'production') {
-      const fakeDb = new FakeDb()
-      // fakeDb.initDb()
+      const fakeScoreDb = new FakeScoreDb()
+      fakeScoreDb.initDb()
     }
   }
 )
 
 const app = express()
 
-app.use('/api/v1/products', productRoutes)
+app.use('/api/v1/score', golfscoreRoutes)
 
 if(process.env.NODE_ENV === 'production') {
   const appPath = path.join(__dirname, '..', 'dist', 'my-app')

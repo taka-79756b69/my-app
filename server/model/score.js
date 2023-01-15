@@ -1,40 +1,282 @@
 const { Schema, default: mongoose } = require("mongoose");
 
 const ScoreSchema = new Schema({
-  user1: {
-    name: String,
-    course: {
-      in1 : {
-        score: Number,
-        put: Number,
-        olympic: Number,
-        lasvegus: Number
-      },
-      in2 : {
-        score: Number,
-        put: Number,
-        olympic: Number,
-        lasvegus: Number
-      }
+  name1: String,
+  name2: String,
+  name3: String,
+  name4: String,
+  course: [
+    {
+      no: String,
+      score1: Number,
+      put1: Number,
+      olympic1: Number,
+      score2: Number,
+      put2: Number,
+      olympic2: Number,
+      score3: Number,
+      put3: Number,
+      olympic3: Number,
+      score4: Number,
+      put4: Number,
+      olympic4: Number
+    },
+    {
+      no: String,
+      score1: Number,
+      put1: Number,
+      olympic1: Number,
+      score2: Number,
+      put2: Number,
+      olympic2: Number,
+      score3: Number,
+      put3: Number,
+      olympic3: Number,
+      score4: Number,
+      put4: Number,
+      olympic4: Number
+    },
+    {
+      no: String,
+      score1: Number,
+      put1: Number,
+      olympic1: Number,
+      score2: Number,
+      put2: Number,
+      olympic2: Number,
+      score3: Number,
+      put3: Number,
+      olympic3: Number,
+      score4: Number,
+      put4: Number,
+      olympic4: Number
+    },
+    {
+      no: String,
+      score1: Number,
+      put1: Number,
+      olympic1: Number,
+      score2: Number,
+      put2: Number,
+      olympic2: Number,
+      score3: Number,
+      put3: Number,
+      olympic3: Number,
+      score4: Number,
+      put4: Number,
+      olympic4: Number
+    },
+    {
+      no: String,
+      score1: Number,
+      put1: Number,
+      olympic1: Number,
+      score2: Number,
+      put2: Number,
+      olympic2: Number,
+      score3: Number,
+      put3: Number,
+      olympic3: Number,
+      score4: Number,
+      put4: Number,
+      olympic4: Number
+    },
+    {
+      no: String,
+      score1: Number,
+      put1: Number,
+      olympic1: Number,
+      score2: Number,
+      put2: Number,
+      olympic2: Number,
+      score3: Number,
+      put3: Number,
+      olympic3: Number,
+      score4: Number,
+      put4: Number,
+      olympic4: Number
+    },
+    {
+      no: String,
+      score1: Number,
+      put1: Number,
+      olympic1: Number,
+      score2: Number,
+      put2: Number,
+      olympic2: Number,
+      score3: Number,
+      put3: Number,
+      olympic3: Number,
+      score4: Number,
+      put4: Number,
+      olympic4: Number
+    },
+    {
+      no: String,
+      score1: Number,
+      put1: Number,
+      olympic1: Number,
+      score2: Number,
+      put2: Number,
+      olympic2: Number,
+      score3: Number,
+      put3: Number,
+      olympic3: Number,
+      score4: Number,
+      put4: Number,
+      olympic4: Number
+    },
+    {
+      no: String,
+      score1: Number,
+      put1: Number,
+      olympic1: Number,
+      score2: Number,
+      put2: Number,
+      olympic2: Number,
+      score3: Number,
+      put3: Number,
+      olympic3: Number,
+      score4: Number,
+      put4: Number,
+      olympic4: Number
+    },
+    {
+      no: String,
+      score1: Number,
+      put1: Number,
+      olympic1: Number,
+      score2: Number,
+      put2: Number,
+      olympic2: Number,
+      score3: Number,
+      put3: Number,
+      olympic3: Number,
+      score4: Number,
+      put4: Number,
+      olympic4: Number
+    },
+    {
+      no: String,
+      score1: Number,
+      put1: Number,
+      olympic1: Number,
+      score2: Number,
+      put2: Number,
+      olympic2: Number,
+      score3: Number,
+      put3: Number,
+      olympic3: Number,
+      score4: Number,
+      put4: Number,
+      olympic4: Number
+    },
+    {
+      no: String,
+      score1: Number,
+      put1: Number,
+      olympic1: Number,
+      score2: Number,
+      put2: Number,
+      olympic2: Number,
+      score3: Number,
+      put3: Number,
+      olympic3: Number,
+      score4: Number,
+      put4: Number,
+      olympic4: Number
+    },
+    {
+      no: String,
+      score1: Number,
+      put1: Number,
+      olympic1: Number,
+      score2: Number,
+      put2: Number,
+      olympic2: Number,
+      score3: Number,
+      put3: Number,
+      olympic3: Number,
+      score4: Number,
+      put4: Number,
+      olympic4: Number
+    },
+    {
+      no: String,
+      score1: Number,
+      put1: Number,
+      olympic1: Number,
+      score2: Number,
+      put2: Number,
+      olympic2: Number,
+      score3: Number,
+      put3: Number,
+      olympic3: Number,
+      score4: Number,
+      put4: Number,
+      olympic4: Number
+    },
+    {
+      no: String,
+      score1: Number,
+      put1: Number,
+      olympic1: Number,
+      score2: Number,
+      put2: Number,
+      olympic2: Number,
+      score3: Number,
+      put3: Number,
+      olympic3: Number,
+      score4: Number,
+      put4: Number,
+      olympic4: Number
+    },
+    {
+      no: String,
+      score1: Number,
+      put1: Number,
+      olympic1: Number,
+      score2: Number,
+      put2: Number,
+      olympic2: Number,
+      score3: Number,
+      put3: Number,
+      olympic3: Number,
+      score4: Number,
+      put4: Number,
+      olympic4: Number
+    },
+    {
+      no: String,
+      score1: Number,
+      put1: Number,
+      olympic1: Number,
+      score2: Number,
+      put2: Number,
+      olympic2: Number,
+      score3: Number,
+      put3: Number,
+      olympic3: Number,
+      score4: Number,
+      put4: Number,
+      olympic4: Number
+    },
+    {
+      no: String,
+      score1: Number,
+      put1: Number,
+      olympic1: Number,
+      score2: Number,
+      put2: Number,
+      olympic2: Number,
+      score3: Number,
+      put3: Number,
+      olympic3: Number,
+      score4: Number,
+      put4: Number,
+      olympic4: Number
     }
-  },
-  user2: {
-    name: String,
-    course: {
-      in1 : {
-        score: Number,
-        put: Number,
-        olympic: Number,
-        lasvegus: Number
-      },
-      in2 : {
-        score: Number,
-        put: Number,
-        olympic: Number,
-        lasvegus: Number
-      }
-    }
-  }
+  ]
 })
 
-module.exports = mongoose.model('Product', ScoreSchema)
+module.exports = mongoose.model('Score', ScoreSchema)

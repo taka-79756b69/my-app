@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-scoreedit',
+  selector: 'app-score',
   templateUrl: './score.component.html',
   styleUrls: ['./score.component.scss']
 })

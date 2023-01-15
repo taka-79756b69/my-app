@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScoreService } from '../common/service/score.service';
 
 @Component({
   selector: 'app-home',

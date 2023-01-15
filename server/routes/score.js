@@ -8,13 +8,13 @@ router.get('', function(req, res) {
   })
 })
 
-router.get('/:productId', function(req, res) {
-  const productId = req.params.productId
-  score.findById(productId, function(err, foundProduct) {
-    if (err || !foundProduct) {
-      return res.status(422).send({errors: [{title: 'Product Error', detail: 'Product Not Found'}]})
+router.get('/:scoreId', function(req, res) {
+  const scoreId = req.params.scoreId
+  score.findById(scoreId, function(err, foundScore) {
+    if (err || !foundScore) {
+      return res.status(422).send({errors: [{title: 'Score Error', detail: 'Score Not Found'}]})
     }
-    return res.json(foundProduct)
+    return res.json(foundScore)
   })
 })
 
