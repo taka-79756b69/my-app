@@ -10,9 +10,9 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let score_no of score.course; let couseIndex = index">
+      <tr *ngFor="let score_no of score.course; let courseIndex = index">
         <th scope="row">
-          <a routerLink="scoreedit" class="btn btn-primary btn-block" href="#" role="button">{{ score_no.no }}</a>
+          <a routerLink="{{ courseIndex }}" class="btn btn-primary btn-block" href="#" role="button">{{ score_no.no }}</a>
         </th>
         <td class="text-center">Score: {{ score_no.score1 }}<br>(Put:{{ score_no.put1 }})</td>
         <td class="text-center">Score: {{ score_no.score2 }}<br>(Put:{{ score_no.put2 }})</td>

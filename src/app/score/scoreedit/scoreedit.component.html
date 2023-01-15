@@ -1,19 +1,19 @@
 <div *ngIf="scoreDetail">
   <div class="container">
     <div class="row">
-      <div class="col-3">
+      <div class="col-3 d-flex align-items-center justify-content-center">
         {{ scoreDetail.name1 }}
       </div>
       <div class="col-3">
-        <div class="btn btn-success btn-block" role="button">
+        <div class="btn btn-success btn-block" role="button" (click)="countDownUser1()">
           DOWN
         </div>
       </div>
       <div class="col-3">
-        <h3 class="text-center">{{ scoreDetail.course[0].score1 }}</h3>
+        <h4 class="text-center">{{ scoreDetail.course[courseIndex].score1 }}</h4>
       </div>
       <div class="col-3">
-        <div class="btn btn-success btn-block" role="button">
+        <div class="btn btn-success btn-block" role="button" (click)="countUpUser1()">
           UP
         </div>
       </div>
@@ -21,31 +21,71 @@
     <div class="row">
       <div class="col-3">
       </div>
-      <div class="col-9 my-2">
+      <div class="col-3 d-flex align-items-center justify-content-center">
+        OLYMPIC
+      </div>
+      <div class="col-6 mb-2">
         <select class="custom-select">
-          <option selected>OLYMPIC</option>
-          <option value="1">DIAMOND</option>
-          <option value="2">GOLD</option>
-          <option value="3">SILVER</option>
-          <option value="3">BRONZE</option>
-          <option value="3">IRON</option>
+          <option>---</option>
+          <option *ngIf="scoreDetail.course[courseIndex].olympic1 == 5; else elseContentDiamond" value="5" selected>DIAMOND</option>
+          <ng-template #elseContentDiamond>
+            <option value="5">DIAMOND</option>
+          </ng-template>
+          <option *ngIf="scoreDetail.course[courseIndex].olympic1 == 4; else elseContentGold" value="4" selected>GOLD</option>
+          <ng-template #elseContentGold>
+            <option value="4">GOLD</option>
+          </ng-template>
+          <option *ngIf="scoreDetail.course[courseIndex].olympic1 == 3; else elseContentSilver" value="3" selected>SILVER</option>
+          <ng-template #elseContentSilver>
+            <option value="3">SILVER</option>
+          </ng-template>
+          <option *ngIf="scoreDetail.course[courseIndex].olympic1 == 2; else elseContentBronze" value="2" selected>BRONZE</option>
+          <ng-template #elseContentBronze>
+            <option value="2">BRONZE</option>
+          </ng-template>
+          <option *ngIf="scoreDetail.course[courseIndex].olympic1 == 1; else elseContentIron" value="1" selected>IRON</option>
+          <ng-template #elseContentIron>
+            <option value="1">IRON</option>
+          </ng-template>
         </select>
       </div>
     </div>
     <div class="row">
       <div class="col-3">
+      </div>
+      <div class="col-3 d-flex align-items-center justify-content-center">
+        LASVEGAS
+      </div>
+      <div class="col-6">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
+          <label class="form-check-label" for="user1Radio1">
+            <h6>Team A</h6>
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
+          <label class="form-check-label" for="user1Radio2">
+            <h6>Team B</h6>
+          </label>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-3 d-flex align-items-center justify-content-center">
         {{ scoreDetail.name2 }}
       </div>
       <div class="col-3">
-        <div class="btn btn-success btn-block" role="button">
+        <div class="btn btn-success btn-block" role="button" (click)="countDownUser2()">
           DOWN
         </div>
       </div>
       <div class="col-3">
-        <h3 class="text-center">{{ scoreDetail.score2 }}</h3>
+        <h4 class="text-center">{{ scoreDetail.course[courseIndex].score2 }}</h4>
       </div>
       <div class="col-3">
-        <div class="btn btn-success btn-block" role="button">
+        <div class="btn btn-success btn-block" role="button" (click)="countUpUser2()">
           UP
         </div>
       </div>
@@ -53,31 +93,71 @@
     <div class="row">
       <div class="col-3">
       </div>
-      <div class="col-9 my-2">
+      <div class="col-3 d-flex align-items-center justify-content-center">
+        OLYMPIC
+      </div>
+      <div class="col-6 mb-2">
         <select class="custom-select">
-          <option selected>OLYMPIC</option>
-          <option value="1">DIAMOND</option>
-          <option value="2">GOLD</option>
-          <option value="3">SILVER</option>
-          <option value="3">BRONZE</option>
-          <option value="3">IRON</option>
+          <option>---</option>
+          <option *ngIf="scoreDetail.course[courseIndex].olympic2 == 5; else elseContentDiamond" value="5" selected>DIAMOND</option>
+          <ng-template #elseContentDiamond>
+            <option value="5">DIAMOND</option>
+          </ng-template>
+          <option *ngIf="scoreDetail.course[courseIndex].olympic2 == 4; else elseContentGold" value="4" selected>GOLD</option>
+          <ng-template #elseContentGold>
+            <option value="4">GOLD</option>
+          </ng-template>
+          <option *ngIf="scoreDetail.course[courseIndex].olympic2 == 3; else elseContentSilver" value="3" selected>SILVER</option>
+          <ng-template #elseContentSilver>
+            <option value="3">SILVER</option>
+          </ng-template>
+          <option *ngIf="scoreDetail.course[courseIndex].olympic2 == 2; else elseContentBronze" value="2" selected>BRONZE</option>
+          <ng-template #elseContentBronze>
+            <option value="2">BRONZE</option>
+          </ng-template>
+          <option *ngIf="scoreDetail.course[courseIndex].olympic2 == 1; else elseContentIron" value="1" selected>IRON</option>
+          <ng-template #elseContentIron>
+            <option value="1">IRON</option>
+          </ng-template>
         </select>
       </div>
     </div>
     <div class="row">
       <div class="col-3">
+      </div>
+      <div class="col-3 d-flex align-items-center justify-content-center">
+        LASVEGAS
+      </div>
+      <div class="col-6">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="user2Radio1" value="option1">
+          <label class="form-check-label" for="user2Radio1">
+            <h6>Team A</h6>
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="user2Radio2" value="option2">
+          <label class="form-check-label" for="user2Radio2">
+            <h6>Team B</h6>
+          </label>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-3 d-flex align-items-center justify-content-center">
         {{ scoreDetail.name3 }}
       </div>
       <div class="col-3">
-        <div class="btn btn-success btn-block" role="button">
+        <div class="btn btn-success btn-block" role="button" (click)="countDownUser3()">
           DOWN
         </div>
       </div>
       <div class="col-3">
-        <h3 class="text-center">{{ scoreDetail.score3 }}</h3>
+        <h4 class="text-center">{{ scoreDetail.course[courseIndex].score3 }}</h4>
       </div>
       <div class="col-3">
-        <div class="btn btn-success btn-block" role="button">
+        <div class="btn btn-success btn-block" role="button" (click)="countUpUser3()">
           UP
         </div>
       </div>
@@ -85,31 +165,71 @@
     <div class="row">
       <div class="col-3">
       </div>
-      <div class="col-9 my-2">
+      <div class="col-3 d-flex align-items-center justify-content-center">
+        OLYMPIC
+      </div>
+      <div class="col-6 mb-2">
         <select class="custom-select">
-          <option selected>OLYMPIC</option>
-          <option value="1">DIAMOND</option>
-          <option value="2">GOLD</option>
-          <option value="3">SILVER</option>
-          <option value="3">BRONZE</option>
-          <option value="3">IRON</option>
+          <option>---</option>
+          <option *ngIf="scoreDetail.course[courseIndex].olympic3 == 5; else elseContentDiamond" value="5" selected>DIAMOND</option>
+          <ng-template #elseContentDiamond>
+            <option value="5">DIAMOND</option>
+          </ng-template>
+          <option *ngIf="scoreDetail.course[courseIndex].olympic3 == 4; else elseContentGold" value="4" selected>GOLD</option>
+          <ng-template #elseContentGold>
+            <option value="4">GOLD</option>
+          </ng-template>
+          <option *ngIf="scoreDetail.course[courseIndex].olympic3 == 3; else elseContentSilver" value="3" selected>SILVER</option>
+          <ng-template #elseContentSilver>
+            <option value="3">SILVER</option>
+          </ng-template>
+          <option *ngIf="scoreDetail.course[courseIndex].olympic3 == 2; else elseContentBronze" value="2" selected>BRONZE</option>
+          <ng-template #elseContentBronze>
+            <option value="2">BRONZE</option>
+          </ng-template>
+          <option *ngIf="scoreDetail.course[courseIndex].olympic3 == 1; else elseContentIron" value="1" selected>IRON</option>
+          <ng-template #elseContentIron>
+            <option value="1">IRON</option>
+          </ng-template>
         </select>
       </div>
     </div>
     <div class="row">
       <div class="col-3">
+      </div>
+      <div class="col-3 d-flex align-items-center justify-content-center">
+        LASVEGAS
+      </div>
+      <div class="col-6">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="user3Radio1" value="option1">
+          <label class="form-check-label" for="user3Radio1">
+            <h6>Team A</h6>
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="user3Radio2" value="option2">
+          <label class="form-check-label" for="user3Radio2">
+            <h6>Team B</h6>
+          </label>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-3 d-flex align-items-center justify-content-center">
         {{ scoreDetail.name4 }}
       </div>
       <div class="col-3">
-        <div class="btn btn-success btn-block" role="button">
+        <div class="btn btn-success btn-block" role="button" (click)="countDownUser4()">
           DOWN
         </div>
       </div>
       <div class="col-3">
-        <h3 class="text-center">{{ scoreDetail.score4 }}</h3>
+        <h4 class="text-center">{{ scoreDetail.course[courseIndex].score4 }}</h4>
       </div>
       <div class="col-3">
-        <div class="btn btn-success btn-block" role="button">
+        <div class="btn btn-success btn-block" role="button" (click)="countUpUser4()">
           UP
         </div>
       </div>
@@ -117,27 +237,65 @@
     <div class="row">
       <div class="col-3">
       </div>
-      <div class="col-9 my-2">
+      <div class="col-3 d-flex align-items-center justify-content-center">
+        OLYMPIC
+      </div>
+      <div class="col-6 mb-2">
         <select class="custom-select">
-          <option selected>OLYMPIC</option>
-          <option value="1">DIAMOND</option>
-          <option value="2">GOLD</option>
-          <option value="3">SILVER</option>
-          <option value="3">BRONZE</option>
-          <option value="3">IRON</option>
+          <option>---</option>
+          <option *ngIf="scoreDetail.course[courseIndex].olympic4 == 5; else elseContentDiamond" value="5" selected>DIAMOND</option>
+          <ng-template #elseContentDiamond>
+            <option value="5">DIAMOND</option>
+          </ng-template>
+          <option *ngIf="scoreDetail.course[courseIndex].olympic4 == 4; else elseContentGold" value="4" selected>GOLD</option>
+          <ng-template #elseContentGold>
+            <option value="4">GOLD</option>
+          </ng-template>
+          <option *ngIf="scoreDetail.course[courseIndex].olympic4 == 3; else elseContentSilver" value="3" selected>SILVER</option>
+          <ng-template #elseContentSilver>
+            <option value="3">SILVER</option>
+          </ng-template>
+          <option *ngIf="scoreDetail.course[courseIndex].olympic4 == 2; else elseContentBronze" value="2" selected>BRONZE</option>
+          <ng-template #elseContentBronze>
+            <option value="2">BRONZE</option>
+          </ng-template>
+          <option *ngIf="scoreDetail.course[courseIndex].olympic4 == 1; else elseContentIron" value="1" selected>IRON</option>
+          <ng-template #elseContentIron>
+            <option value="1">IRON</option>
+          </ng-template>
         </select>
       </div>
     </div>
+    <div class="row">
+      <div class="col-3">
+      </div>
+      <div class="col-3 d-flex align-items-center justify-content-center">
+        LASVEGAS
+      </div>
+      <div class="col-6">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="user4Radio1" value="option1">
+          <label class="form-check-label" for="user4Radio1">
+            <h6>Team A</h6>
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="user4Radio2" value="option2">
+          <label class="form-check-label" for="user4Radio2">
+            <h6>Team B</h6>
+          </label>
+        </div>
+      </div>
+    </div>
   </div>
-  <br>
+  <!-- <br>
   <div class="container">
     <div class="row justify-content-md-center">
       <div class="col-6">
         <div class="card bg-danger text-white">
           <div class="card-body">
             <h5 class="card-title">-5</h5>
-            <p class="card-text">山田進太郎</p>
-            <p class="card-text">Ｃさん</p>
+            <p class="card-text">山田進太郎<br>Dさん</p>
           </div>
         </div>
       </div>
@@ -145,18 +303,17 @@
         <div class="card bg-primary text-white">
           <div class="card-body">
             <h5 class="card-title">+5</h5>
-            <p class="card-text">山田新次郎</p>
-            <p class="card-text">Ｃさん</p>
+            <p class="card-text">山田新次郎<br>Cさん</p>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <br>
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-4">
-        <div class="btn btn-success btn-block" role="button">
+        <div class="btn btn-primary btn-block" role="button">
           保存
         </div>
       </div>

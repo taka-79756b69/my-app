@@ -10,6 +10,8 @@ import { ScoreService } from 'src/app/common/service/score.service';
 export class ScoreeditComponent {
 
   scoreDetail: any
+  courseIndex: any
+  nowScore: any
 
   constructor(
     private route: ActivatedRoute,
@@ -36,6 +38,48 @@ export class ScoreeditComponent {
           console.log('complete!')
         }
       )
+
+      this.courseIndex = params.get("courseIndex")
     })
+  }
+
+  countDownUser1() {
+    if(this.scoreDetail.course[this.courseIndex].score1 !== 1 )
+      this.scoreDetail.course[this.courseIndex].score1--
+  }
+
+  countUpUser1() {
+    if(this.scoreDetail.course[this.courseIndex].score1 !== 15 )
+      this.scoreDetail.course[this.courseIndex].score1++
+  }
+
+  countDownUser2() {
+    if(this.scoreDetail.course[this.courseIndex].score2 !== 1 )
+      this.scoreDetail.course[this.courseIndex].score2--
+  }
+
+  countUpUser2() {
+    if(this.scoreDetail.course[this.courseIndex].score2 !== 15 )
+      this.scoreDetail.course[this.courseIndex].score2++
+  }
+
+  countDownUser3() {
+    if(this.scoreDetail.course[this.courseIndex].score3 !== 1 )
+      this.scoreDetail.course[this.courseIndex].score3--
+  }
+
+  countUpUser3() {
+    if(this.scoreDetail.course[this.courseIndex].score3 !== 15 )
+      this.scoreDetail.course[this.courseIndex].score3++
+  }
+
+  countDownUser4() {
+    if(this.scoreDetail.course[this.courseIndex].score4 !== 1 )
+      this.scoreDetail.course[this.courseIndex].score4--
+  }
+
+  countUpUser4() {
+    if(this.scoreDetail.course[this.courseIndex].score4 !== 15 )
+      this.scoreDetail.course[this.courseIndex].score4++
   }
 }

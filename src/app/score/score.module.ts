@@ -14,7 +14,7 @@ const routes: Routes = [
     children: [
      { path: '', component: ScorelisttopComponent },
      { path: ':scoreId', component: ScorelistComponent },
-     { path: ':scoreId/scoreedit', component: ScoreeditComponent },
+     { path: ':scoreId/:courseIndex', component: ScoreeditComponent },
      { path: 'scorelisttop', component: ScorelisttopComponent }
     ]
   }

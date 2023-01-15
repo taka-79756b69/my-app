@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ScoreService } from 'src/app/common/service/score.service';
 
 @Component({
@@ -12,15 +12,17 @@ export class ScorelistComponent {
   score: any
 
   constructor(
-    private route: ActivatedRoute,
-    private scoreService: ScoreService) {
-  }
+    private activatedRoute: ActivatedRoute,
+    private scoreService: ScoreService,
+    private router: Router
+    )
+   {}
 
   ngOnInit(): void {
 
     console.log("scorelist呼ばれた")
 
-    this.route.paramMap.subscribe(params => {
+    this.activatedRoute.paramMap.subscribe(params => {
 
       const scoreObservable = this.scoreService.getScore(params.get("scoreId")!)
 
