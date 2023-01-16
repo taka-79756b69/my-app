@@ -7,6 +7,7 @@ import { ScorelistComponent } from './scorelist/scorelist.component';
 import { ScorelisttopComponent } from './scorelisttop/scorelisttop.component';
 import { ScoreService } from '../common/service/score.service';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -30,6 +31,7 @@ const routes: Routes = [
   imports: [
     RouterModule.forChild(routes),
     BrowserModule,
+    FormsModule,
     CommonModule,
   ],
   providers: [

@@ -25,28 +25,13 @@
         OLYMPIC
       </div>
       <div class="col-6 mb-2">
-        <select class="custom-select">
-          <option>---</option>
-          <option *ngIf="scoreDetail.course[courseIndex].olympic1 == 5; else elseContentDiamond" value="5" selected>DIAMOND</option>
-          <ng-template #elseContentDiamond>
-            <option value="5">DIAMOND</option>
-          </ng-template>
-          <option *ngIf="scoreDetail.course[courseIndex].olympic1 == 4; else elseContentGold" value="4" selected>GOLD</option>
-          <ng-template #elseContentGold>
-            <option value="4">GOLD</option>
-          </ng-template>
-          <option *ngIf="scoreDetail.course[courseIndex].olympic1 == 3; else elseContentSilver" value="3" selected>SILVER</option>
-          <ng-template #elseContentSilver>
-            <option value="3">SILVER</option>
-          </ng-template>
-          <option *ngIf="scoreDetail.course[courseIndex].olympic1 == 2; else elseContentBronze" value="2" selected>BRONZE</option>
-          <ng-template #elseContentBronze>
-            <option value="2">BRONZE</option>
-          </ng-template>
-          <option *ngIf="scoreDetail.course[courseIndex].olympic1 == 1; else elseContentIron" value="1" selected>IRON</option>
-          <ng-template #elseContentIron>
-            <option value="1">IRON</option>
-          </ng-template>
+        <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+          <option value="0">---</option>
+          <option value="5">DIAMOND</option>
+          <option value="4">GOLD</option>
+          <option value="3">SILVER</option>
+          <option value="2">BRONZE</option>
+          <option value="1">IRON</option>
         </select>
       </div>
     </div>
@@ -313,9 +298,7 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-4">
-        <div class="btn btn-primary btn-block" role="button">
-          保存
-        </div>
+        <button type="button" class="btn btn-primary btn-block" (click)="doSubmit()">保存</button>
       </div>
     </div>
   </div>
