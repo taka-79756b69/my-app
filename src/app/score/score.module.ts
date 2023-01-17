@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { ScoreComponent } from './score.component';
 import { ScoreeditComponent } from './scoreedit/scoreedit.component';
 import { NgModule } from '@angular/core';
@@ -30,6 +31,7 @@ const routes: Routes = [
   imports: [
     RouterModule.forChild(routes),
     BrowserModule,
+    FormsModule,
     CommonModule,
   ],
   providers: [
