@@ -1,3 +1,14 @@
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script>
+  $('#exampleModal').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget)
+    courseIndex = button.data('whatever')
+})
+</script>
+
 <div *ngIf="score">
   <table class="table">
     <thead class="position-sticky">
@@ -10,15 +21,19 @@
       </tr>
     </thead>
     <tbody>
+      <!-- <tr scope="row"> -->
       <tr *ngFor="let score_no of score.course; let courseIndex = index">
         <th scope="row">
-          <a routerLink="{{ courseIndex }}" class="btn btn-primary btn-block" href="#" role="button">{{ score_no.no }}</a>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="0">
+            {{ score.course[0].no }}
+          </button>
         </th>
-        <td class="text-center">Score: {{ score_no.score1 }}<br>(Put:{{ score_no.put1 }})</td>
-        <td class="text-center">Score: {{ score_no.score2 }}<br>(Put:{{ score_no.put2 }})</td>
-        <td class="text-center">Score: {{ score_no.score3 }}<br>(Put:{{ score_no.put3 }})</td>
-        <td class="text-center">Score: {{ score_no.score4 }}<br>(Put:{{ score_no.put4 }})</td>
+        <td class="text-center">Score: {{ score.course[0].score1 }}<br>(Put: {{ score.course[0].put1 }})</td>
+        <td class="text-center">Score: {{ score.course[0].score2 }}<br>(Put: {{ score.course[0].put2 }})</td>
+        <td class="text-center">Score: {{ score.course[0].score3 }}<br>(Put: {{ score.course[0].put3 }})</td>
+        <td class="text-center">Score: {{ score.course[0].score4 }}<br>(Put: {{ score.course[0].put4 }})</td>
       </tr>
+
     </tbody>
   </table>
 
@@ -26,43 +41,324 @@
     Launch demo modal
   </button>
 
+  <input type="hidden" id="couserIndexHidden">
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
-        <div class="modal-header">
+        <!-- <div class="modal-header">
           <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
-        </div>
-        <div class="modal-body">
-          <div class="container-fluid">
+        </div> -->
+        <div *ngIf="score">
+          <div class="container">
+            <br>
             <div class="row">
-              <div class="col-md-4">{{ score.name1 }}</div>
-              <div class="col-md-4 ml-auto">.col-md-4 .ml-auto</div>
+              <div class="col-3 d-flex align-items-center justify-content-center">
+                <p><small>{{ score.name1 }}</small></p>
+              </div>
+              <div class="col-3">
+                <div class="btn btn-success btn-block" role="button" (click)="countDownUser1()">
+                  DOWN
+                </div>
+              </div>
+              <div class="col-3">
+                <!-- <h4 class="text-center">{{ score.course["$('#couserIndexHidden').val"].score1 }}</h4> -->
+                {{ courseIndex }}
+              </div>
+              <div class="col-3">
+                <div class="btn btn-success btn-block" role="button" (click)="countUpUser1()">
+                  UP
+                </div>
+              </div>
             </div>
             <div class="row">
-              <div class="col-md-3 ml-auto">.col-md-3 .ml-auto</div>
-              <div class="col-md-2 ml-auto">.col-md-2 .ml-auto</div>
+              <div class="col-3">
+              </div>
+              <div class="col-3 d-flex align-items-center justify-content-center">
+                OLYMPIC
+              </div>
+              <div class="col-6 mb-2">
+                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                  <option value="0">---</option>
+                  <option value="5">DIAMOND</option>
+                  <option value="4">GOLD</option>
+                  <option value="3">SILVER</option>
+                  <option value="2">BRONZE</option>
+                  <option value="1">IRON</option>
+                </select>
+              </div>
             </div>
             <div class="row">
-              <div class="col-md-6 ml-auto">.col-md-6 .ml-auto</div>
+              <div class="col-3">
+              </div>
+              <div class="col-3 d-flex align-items-center justify-content-center">
+                LASVEGAS
+              </div>
+              <div class="col-6">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
+                  <label class="form-check-label" for="user1Radio1">
+                    <h6>Team A</h6>
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
+                  <label class="form-check-label" for="user1Radio2">
+                    <h6>Team B</h6>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-3 d-flex align-items-center justify-content-center">
+                {{ score.name2 }}
+              </div>
+              <div class="col-3">
+                <div class="btn btn-success btn-block" role="button" (click)="countDownUser2()">
+                  DOWN
+                </div>
+              </div>
+              <div class="col-3">
+                <h4 class="text-center">{{ score.course[0].score2 }}</h4>
+              </div>
+              <div class="col-3">
+                <div class="btn btn-success btn-block" role="button" (click)="countUpUser2()">
+                  UP
+                </div>
+              </div>
             </div>
             <div class="row">
-              <div class="col-sm-9">
-                Level 1: .col-sm-9
-                <div class="row">
-                  <div class="col-8 col-sm-6">
-                    Level 2: .col-8 .col-sm-6
-                  </div>
-                  <div class="col-4 col-sm-6">
-                    Level 2: .col-4 .col-sm-6
-                  </div>
+              <div class="col-3">
+              </div>
+              <div class="col-3 d-flex align-items-center justify-content-center">
+                OLYMPIC
+              </div>
+              <div class="col-6 mb-2">
+                <select class="custom-select">
+                  <option>---</option>
+                  <option *ngIf="score.course[0].olympic2 == 5; else elseContentDiamond" value="5" selected>DIAMOND</option>
+                  <ng-template #elseContentDiamond>
+                    <option value="5">DIAMOND</option>
+                  </ng-template>
+                  <option *ngIf="score.course[0].olympic2 == 4; else elseContentGold" value="4" selected>GOLD</option>
+                  <ng-template #elseContentGold>
+                    <option value="4">GOLD</option>
+                  </ng-template>
+                  <option *ngIf="score.course[0].olympic2 == 3; else elseContentSilver" value="3" selected>SILVER</option>
+                  <ng-template #elseContentSilver>
+                    <option value="3">SILVER</option>
+                  </ng-template>
+                  <option *ngIf="score.course[0].olympic2 == 2; else elseContentBronze" value="2" selected>BRONZE</option>
+                  <ng-template #elseContentBronze>
+                    <option value="2">BRONZE</option>
+                  </ng-template>
+                  <option *ngIf="score.course[0].olympic2 == 1; else elseContentIron" value="1" selected>IRON</option>
+                  <ng-template #elseContentIron>
+                    <option value="1">IRON</option>
+                  </ng-template>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-3">
+              </div>
+              <div class="col-3 d-flex align-items-center justify-content-center">
+                LASVEGAS
+              </div>
+              <div class="col-6">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="user2Radio1" value="option1">
+                  <label class="form-check-label" for="user2Radio1">
+                    <h6>Team A</h6>
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="user2Radio2" value="option2">
+                  <label class="form-check-label" for="user2Radio2">
+                    <h6>Team B</h6>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-3 d-flex align-items-center justify-content-center">
+                {{ score.name3 }}
+              </div>
+              <div class="col-3">
+                <div class="btn btn-success btn-block" role="button" (click)="countDownUser3()">
+                  DOWN
+                </div>
+              </div>
+              <div class="col-3">
+                <h4 class="text-center">{{ score.course[0].score3 }}</h4>
+              </div>
+              <div class="col-3">
+                <div class="btn btn-success btn-block" role="button" (click)="countUpUser3()">
+                  UP
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-3">
+              </div>
+              <div class="col-3 d-flex align-items-center justify-content-center">
+                OLYMPIC
+              </div>
+              <div class="col-6 mb-2">
+                <select class="custom-select">
+                  <option>---</option>
+                  <option *ngIf="score.course[0].olympic3 == 5; else elseContentDiamond" value="5" selected>DIAMOND</option>
+                  <ng-template #elseContentDiamond>
+                    <option value="5">DIAMOND</option>
+                  </ng-template>
+                  <option *ngIf="score.course[0].olympic3 == 4; else elseContentGold" value="4" selected>GOLD</option>
+                  <ng-template #elseContentGold>
+                    <option value="4">GOLD</option>
+                  </ng-template>
+                  <option *ngIf="score.course[0].olympic3 == 3; else elseContentSilver" value="3" selected>SILVER</option>
+                  <ng-template #elseContentSilver>
+                    <option value="3">SILVER</option>
+                  </ng-template>
+                  <option *ngIf="score.course[0].olympic3 == 2; else elseContentBronze" value="2" selected>BRONZE</option>
+                  <ng-template #elseContentBronze>
+                    <option value="2">BRONZE</option>
+                  </ng-template>
+                  <option *ngIf="score.course[0].olympic3 == 1; else elseContentIron" value="1" selected>IRON</option>
+                  <ng-template #elseContentIron>
+                    <option value="1">IRON</option>
+                  </ng-template>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-3">
+              </div>
+              <div class="col-3 d-flex align-items-center justify-content-center">
+                LASVEGAS
+              </div>
+              <div class="col-6">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="user3Radio1" value="option1">
+                  <label class="form-check-label" for="user3Radio1">
+                    <h6>Team A</h6>
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="user3Radio2" value="option2">
+                  <label class="form-check-label" for="user3Radio2">
+                    <h6>Team B</h6>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-3 d-flex align-items-center justify-content-center">
+                {{ score.name4 }}
+              </div>
+              <div class="col-3">
+                <div class="btn btn-success btn-block" role="button" (click)="countDownUser4()">
+                  DOWN
+                </div>
+              </div>
+              <div class="col-3">
+                <h4 class="text-center">{{ score.course[0].score4 }}</h4>
+              </div>
+              <div class="col-3">
+                <div class="btn btn-success btn-block" role="button" (click)="countUpUser4()">
+                  UP
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-3">
+              </div>
+              <div class="col-3 d-flex align-items-center justify-content-center">
+                OLYMPIC
+              </div>
+              <div class="col-6 mb-2">
+                <select class="custom-select">
+                  <option>---</option>
+                  <option *ngIf="score.course[0].olympic4 == 5; else elseContentDiamond" value="5" selected>DIAMOND</option>
+                  <ng-template #elseContentDiamond>
+                    <option value="5">DIAMOND</option>
+                  </ng-template>
+                  <option *ngIf="score.course[0].olympic4 == 4; else elseContentGold" value="4" selected>GOLD</option>
+                  <ng-template #elseContentGold>
+                    <option value="4">GOLD</option>
+                  </ng-template>
+                  <option *ngIf="score.course[0].olympic4 == 3; else elseContentSilver" value="3" selected>SILVER</option>
+                  <ng-template #elseContentSilver>
+                    <option value="3">SILVER</option>
+                  </ng-template>
+                  <option *ngIf="score.course[0].olympic4 == 2; else elseContentBronze" value="2" selected>BRONZE</option>
+                  <ng-template #elseContentBronze>
+                    <option value="2">BRONZE</option>
+                  </ng-template>
+                  <option *ngIf="score.course[0].olympic4 == 1; else elseContentIron" value="1" selected>IRON</option>
+                  <ng-template #elseContentIron>
+                    <option value="1">IRON</option>
+                  </ng-template>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-3">
+              </div>
+              <div class="col-3 d-flex align-items-center justify-content-center">
+                LASVEGAS
+              </div>
+              <div class="col-6">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="user4Radio1" value="option1">
+                  <label class="form-check-label" for="user4Radio1">
+                    <h6>Team A</h6>
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="user4Radio2" value="option2">
+                  <label class="form-check-label" for="user4Radio2">
+                    <h6>Team B</h6>
+                  </label>
                 </div>
               </div>
             </div>
           </div>
+          <!-- <br>
+          <div class="container">
+            <div class="row justify-content-md-center">
+              <div class="col-6">
+                <div class="card bg-danger text-white">
+                  <div class="card-body">
+                    <h5 class="card-title">-5</h5>
+                    <p class="card-text">山田進太郎<br>Dさん</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card bg-primary text-white">
+                  <div class="card-body">
+                    <h5 class="card-title">+5</h5>
+                    <p class="card-text">山田新次郎<br>Cさん</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <br>
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-4">
+                <button type="button" class="btn btn-primary btn-block" (click)="doSubmit()">保存</button>
+              </div>
+            </div>
+          </div>
         </div>
+
 
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

@@ -10,6 +10,8 @@ import { ScoreService } from 'src/app/common/service/score.service';
 export class ScorelistComponent {
 
   score: any
+  dropDown1: any
+  courseIndex: any
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -38,5 +40,53 @@ export class ScorelistComponent {
         }
       )
     })
+  }
+
+  doSubmit() {
+
+  }
+
+  cngDropDown1(){
+    this.score.course[0].olympic1 = this.dropDown1
+  }
+
+  countDownUser1() {
+    if(this.score.course[0].score1 !== 1 )
+      this.score.course[0].score1--
+  }
+
+  countUpUser1() {
+    if(this.score.course[0].score1 !== 15 )
+      this.score.course[0].score1++
+  }
+
+  countDownUser2() {
+    if(this.score.course[0].score2 !== 1 )
+      this.score.course[0].score2--
+  }
+
+  countUpUser2() {
+    if(this.score.course[0].score2 !== 15 )
+      this.score.course[0].score2++
+  }
+
+  countDownUser3() {
+    if(this.score.course[0].score3 !== 1 )
+      this.score.course[0].score3--
+  }
+
+  countUpUser3() {
+    if(this.score.course[0].score3 !== 15 )
+      this.score.course[0].score3++
+  }
+
+  countDownUser4() {
+    if(this.score.course[0].score4 !== 1 )
+      this.score.course[0].score4--
+  }
+
+  countUpUser4() {
+    if(this.score.course[0].score4 !== 15 )
+      this.score.course[0].score4++
   }
 }
