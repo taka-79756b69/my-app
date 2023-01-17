@@ -10,217 +10,230 @@
 </script> -->
 
 <div *ngIf="score">
-  <table class="table-sm">
-    <thead class="position-sticky">
-      <tr>
-        <th scope="col" class="text-center">#</th>
-        <th scope="col" class="text-center">{{ score.name1 }}</th>
-        <th scope="col" class="text-center">{{ score.name2 }}</th>
-        <th scope="col" class="text-center">{{ score.name3 }}</th>
-        <th scope="col" class="text-center">{{ score.name4 }}</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">
-          <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#course1Modal">
-            {{ score.course1_no }}
-          </button>
-        </th>
-        <td class="text-center">Score: {{ score.course1_score1 }}<br>(Put: {{ score.course1_put1 }})</td>
-        <td class="text-center">Score: {{ score.course1_score2 }}<br>(Put: {{ score.course1_put2 }})</td>
-        <td class="text-center">Score: {{ score.course1_score3 }}<br>(Put: {{ score.course1_put3 }})</td>
-        <td class="text-center">Score: {{ score.course1_score4 }}<br>(Put: {{ score.course1_put4 }})</td>
-      </tr>
-      <tr>
-        <th scope="row">
-          <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#course2Modal">
-            {{ score.course2_no }}
-          </button>
-        </th>
-        <td class="text-center">Score: {{ score.course2_score1 }}<br>(Put: {{ score.course2_put1 }})</td>
-        <td class="text-center">Score: {{ score.course2_score2 }}<br>(Put: {{ score.course2_put2 }})</td>
-        <td class="text-center">Score: {{ score.course2_score3 }}<br>(Put: {{ score.course2_put3 }})</td>
-        <td class="text-center">Score: {{ score.course2_score4 }}<br>(Put: {{ score.course2_put4 }})</td>
-      </tr>
-      <tr>
-        <th scope="row">
-          <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#course3Modal">
-            {{ score.course3_no }}
-          </button>
-        </th>
-        <td class="text-center">Score: {{ score.course3_score1 }}<br>(Put: {{ score.course3_put1 }})</td>
-        <td class="text-center">Score: {{ score.course3_score2 }}<br>(Put: {{ score.course3_put2 }})</td>
-        <td class="text-center">Score: {{ score.course3_score3 }}<br>(Put: {{ score.course3_put3 }})</td>
-        <td class="text-center">Score: {{ score.course3_score4 }}<br>(Put: {{ score.course3_put4 }})</td>
-      </tr>
-      <tr>
-        <th scope="row">
-          <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#course4Modal">
-            {{ score.course4_no }}
-          </button>
-        </th>
-        <td class="text-center">Score: {{ score.course4_score1 }}<br>(Put: {{ score.course4_put1 }})</td>
-        <td class="text-center">Score: {{ score.course4_score2 }}<br>(Put: {{ score.course4_put2 }})</td>
-        <td class="text-center">Score: {{ score.course4_score3 }}<br>(Put: {{ score.course4_put3 }})</td>
-        <td class="text-center">Score: {{ score.course4_score4 }}<br>(Put: {{ score.course4_put4 }})</td>
-      </tr>
-      <tr>
-        <th scope="row">
-          <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#course5Modal">
-            {{ score.course5_no }}
-          </button>
-        </th>
-        <td class="text-center">Score: {{ score.course5_score1 }}<br>(Put: {{ score.course5_put1 }})</td>
-        <td class="text-center">Score: {{ score.course5_score2 }}<br>(Put: {{ score.course5_put2 }})</td>
-        <td class="text-center">Score: {{ score.course5_score3 }}<br>(Put: {{ score.course5_put3 }})</td>
-        <td class="text-center">Score: {{ score.course5_score4 }}<br>(Put: {{ score.course5_put4 }})</td>
-      </tr>
-      <tr>
-        <th scope="row">
-          <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#course6Modal">
-            {{ score.course6_no }}
-          </button>
-        </th>
-        <td class="text-center">Score: {{ score.course6_score1 }}<br>(Put: {{ score.course6_put1 }})</td>
-        <td class="text-center">Score: {{ score.course6_score2 }}<br>(Put: {{ score.course6_put2 }})</td>
-        <td class="text-center">Score: {{ score.course6_score3 }}<br>(Put: {{ score.course6_put3 }})</td>
-        <td class="text-center">Score: {{ score.course6_score4 }}<br>(Put: {{ score.course6_put4 }})</td>
-      </tr>
-      <tr>
-        <th scope="row">
-          <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#course7Modal">
-            {{ score.course7_no }}
-          </button>
-        </th>
-        <td class="text-center">Score: {{ score.course7_score1 }}<br>(Put: {{ score.course7_put1 }})</td>
-        <td class="text-center">Score: {{ score.course7_score2 }}<br>(Put: {{ score.course7_put2 }})</td>
-        <td class="text-center">Score: {{ score.course7_score3 }}<br>(Put: {{ score.course7_put3 }})</td>
-        <td class="text-center">Score: {{ score.course7_score4 }}<br>(Put: {{ score.course7_put4 }})</td>
-      </tr>
-      <tr>
-        <th scope="row">
-          <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#course8Modal">
-            {{ score.course8_no }}
-          </button>
-        </th>
-        <td class="text-center">Score: {{ score.course8_score1 }}<br>(Put: {{ score.course8_put1 }})</td>
-        <td class="text-center">Score: {{ score.course8_score2 }}<br>(Put: {{ score.course8_put2 }})</td>
-        <td class="text-center">Score: {{ score.course8_score3 }}<br>(Put: {{ score.course8_put3 }})</td>
-        <td class="text-center">Score: {{ score.course8_score4 }}<br>(Put: {{ score.course8_put4 }})</td>
-      </tr>
-      <tr>
-        <th scope="row">
-          <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#course9Modal">
-            {{ score.course9_no }}
-          </button>
-        </th>
-        <td class="text-center">Score: {{ score.course9_score1 }}<br>(Put: {{ score.course9_put1 }})</td>
-        <td class="text-center">Score: {{ score.course9_score2 }}<br>(Put: {{ score.course9_put2 }})</td>
-        <td class="text-center">Score: {{ score.course9_score3 }}<br>(Put: {{ score.course9_put3 }})</td>
-        <td class="text-center">Score: {{ score.course9_score4 }}<br>(Put: {{ score.course9_put4 }})</td>
-      </tr>
-      <tr>
-        <th scope="row">
-          <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#course10Modal">
-            {{ score.course10_no }}
-          </button>
-        </th>
-        <td class="text-center">Score: {{ score.course10_score1 }}<br>(Put: {{ score.course10_put1 }})</td>
-        <td class="text-center">Score: {{ score.course10_score2 }}<br>(Put: {{ score.course10_put2 }})</td>
-        <td class="text-center">Score: {{ score.course10_score3 }}<br>(Put: {{ score.course10_put3 }})</td>
-        <td class="text-center">Score: {{ score.course10_score4 }}<br>(Put: {{ score.course10_put4 }})</td>
-      </tr>
-      <tr>
-        <th scope="row">
-          <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#course11Modal">
-            {{ score.course11_no }}
-          </button>
-        </th>
-        <td class="text-center">Score: {{ score.course11_score1 }}<br>(Put: {{ score.course11_put1 }})</td>
-        <td class="text-center">Score: {{ score.course11_score2 }}<br>(Put: {{ score.course11_put2 }})</td>
-        <td class="text-center">Score: {{ score.course11_score3 }}<br>(Put: {{ score.course11_put3 }})</td>
-        <td class="text-center">Score: {{ score.course11_score4 }}<br>(Put: {{ score.course11_put4 }})</td>
-      </tr>
-      <tr>
-        <th scope="row">
-          <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#course12Modal">
-            {{ score.course12_no }}
-          </button>
-        </th>
-        <td class="text-center">Score: {{ score.course12_score1 }}<br>(Put: {{ score.course12_put1 }})</td>
-        <td class="text-center">Score: {{ score.course12_score2 }}<br>(Put: {{ score.course12_put2 }})</td>
-        <td class="text-center">Score: {{ score.course12_score3 }}<br>(Put: {{ score.course12_put3 }})</td>
-        <td class="text-center">Score: {{ score.course12_score4 }}<br>(Put: {{ score.course12_put4 }})</td>
-      </tr>
-      <tr>
-        <th scope="row">
-          <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#course13Modal">
-            {{ score.course13_no }}
-          </button>
-        </th>
-        <td class="text-center">Score: {{ score.course13_score1 }}<br>(Put: {{ score.course13_put1 }})</td>
-        <td class="text-center">Score: {{ score.course13_score2 }}<br>(Put: {{ score.course13_put2 }})</td>
-        <td class="text-center">Score: {{ score.course13_score3 }}<br>(Put: {{ score.course13_put3 }})</td>
-        <td class="text-center">Score: {{ score.course13_score4 }}<br>(Put: {{ score.course13_put4 }})</td>
-      </tr>
-      <tr>
-        <th scope="row">
-          <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#course14Modal">
-            {{ score.course14_no }}
-          </button>
-        </th>
-        <td class="text-center">Score: {{ score.course14_score1 }}<br>(Put: {{ score.course14_put1 }})</td>
-        <td class="text-center">Score: {{ score.course14_score2 }}<br>(Put: {{ score.course14_put2 }})</td>
-        <td class="text-center">Score: {{ score.course14_score3 }}<br>(Put: {{ score.course14_put3 }})</td>
-        <td class="text-center">Score: {{ score.course14_score4 }}<br>(Put: {{ score.course14_put4 }})</td>
-      </tr>
-      <tr>
-        <th scope="row">
-          <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#course15Modal">
-            {{ score.course15_no }}
-          </button>
-        </th>
-        <td class="text-center">Score: {{ score.course15_score1 }}<br>(Put: {{ score.course15_put1 }})</td>
-        <td class="text-center">Score: {{ score.course15_score2 }}<br>(Put: {{ score.course15_put2 }})</td>
-        <td class="text-center">Score: {{ score.course15_score3 }}<br>(Put: {{ score.course15_put3 }})</td>
-        <td class="text-center">Score: {{ score.course15_score4 }}<br>(Put: {{ score.course15_put4 }})</td>
-      </tr>
-      <tr>
-        <th scope="row">
-          <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#course16Modal">
-            {{ score.course16_no }}
-          </button>
-        </th>
-        <td class="text-center">Score: {{ score.course16_score1 }}<br>(Put: {{ score.course16_put1 }})</td>
-        <td class="text-center">Score: {{ score.course16_score2 }}<br>(Put: {{ score.course16_put2 }})</td>
-        <td class="text-center">Score: {{ score.course16_score3 }}<br>(Put: {{ score.course16_put3 }})</td>
-        <td class="text-center">Score: {{ score.course16_score4 }}<br>(Put: {{ score.course16_put4 }})</td>
-      </tr>
-      <tr>
-        <th scope="row">
-          <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#course17Modal">
-            {{ score.course17_no }}
-          </button>
-        </th>
-        <td class="text-center">Score: {{ score.course17_score1 }}<br>(Put: {{ score.course17_put1 }})</td>
-        <td class="text-center">Score: {{ score.course17_score2 }}<br>(Put: {{ score.course17_put2 }})</td>
-        <td class="text-center">Score: {{ score.course17_score3 }}<br>(Put: {{ score.course17_put3 }})</td>
-        <td class="text-center">Score: {{ score.course17_score4 }}<br>(Put: {{ score.course17_put4 }})</td>
-      </tr>
-      <tr>
-        <th scope="row">
-          <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#course18Modal">
-            {{ score.course18_no }}
-          </button>
-        </th>
-        <td class="text-center">Score: {{ score.course18_score1 }}<br>(Put: {{ score.course18_put1 }})</td>
-        <td class="text-center">Score: {{ score.course18_score2 }}<br>(Put: {{ score.course18_put2 }})</td>
-        <td class="text-center">Score: {{ score.course18_score3 }}<br>(Put: {{ score.course18_put3 }})</td>
-        <td class="text-center">Score: {{ score.course18_score4 }}<br>(Put: {{ score.course18_put4 }})</td>
-      </tr>
-    </tbody>
-  </table>
+  <!-- <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()"> -->
+  <form (ngSubmit)="onSubmit()">
+    <table class="table-sm">
+      <thead>
+        <tr>
+          <th scope="col" class="text-center">#</th>
+          <th scope="col" class="text-center">{{ score.name1 }}</th>
+          <th scope="col" class="text-center">{{ score.name2 }}</th>
+          <th scope="col" class="text-center">{{ score.name3 }}</th>
+          <th scope="col" class="text-center">{{ score.name4 }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#course1Modal">
+              {{ score.course1_no }}
+            </button>
+          </th>
+          <td class="text-center">Score: {{ score.course1_score1 }}<br>(Put: {{ score.course1_put1 }})</td>
+          <td class="text-center">Score: {{ score.course1_score2 }}<br>(Put: {{ score.course1_put2 }})</td>
+          <td class="text-center">Score: {{ score.course1_score3 }}<br>(Put: {{ score.course1_put3 }})</td>
+          <td class="text-center">Score: {{ score.course1_score4 }}<br>(Put: {{ score.course1_put4 }})</td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#course2Modal">
+              {{ score.course2_no }}
+            </button>
+          </th>
+          <td class="text-center">Score: {{ score.course2_score1 }}<br>(Put: {{ score.course2_put1 }})</td>
+          <td class="text-center">Score: {{ score.course2_score2 }}<br>(Put: {{ score.course2_put2 }})</td>
+          <td class="text-center">Score: {{ score.course2_score3 }}<br>(Put: {{ score.course2_put3 }})</td>
+          <td class="text-center">Score: {{ score.course2_score4 }}<br>(Put: {{ score.course2_put4 }})</td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#course3Modal">
+              {{ score.course3_no }}
+            </button>
+          </th>
+          <td class="text-center">Score: {{ score.course3_score1 }}<br>(Put: {{ score.course3_put1 }})</td>
+          <td class="text-center">Score: {{ score.course3_score2 }}<br>(Put: {{ score.course3_put2 }})</td>
+          <td class="text-center">Score: {{ score.course3_score3 }}<br>(Put: {{ score.course3_put3 }})</td>
+          <td class="text-center">Score: {{ score.course3_score4 }}<br>(Put: {{ score.course3_put4 }})</td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#course4Modal">
+              {{ score.course4_no }}
+            </button>
+          </th>
+          <td class="text-center">Score: {{ score.course4_score1 }}<br>(Put: {{ score.course4_put1 }})</td>
+          <td class="text-center">Score: {{ score.course4_score2 }}<br>(Put: {{ score.course4_put2 }})</td>
+          <td class="text-center">Score: {{ score.course4_score3 }}<br>(Put: {{ score.course4_put3 }})</td>
+          <td class="text-center">Score: {{ score.course4_score4 }}<br>(Put: {{ score.course4_put4 }})</td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#course5Modal">
+              {{ score.course5_no }}
+            </button>
+          </th>
+          <td class="text-center">Score: {{ score.course5_score1 }}<br>(Put: {{ score.course5_put1 }})</td>
+          <td class="text-center">Score: {{ score.course5_score2 }}<br>(Put: {{ score.course5_put2 }})</td>
+          <td class="text-center">Score: {{ score.course5_score3 }}<br>(Put: {{ score.course5_put3 }})</td>
+          <td class="text-center">Score: {{ score.course5_score4 }}<br>(Put: {{ score.course5_put4 }})</td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#course6Modal">
+              {{ score.course6_no }}
+            </button>
+          </th>
+          <td class="text-center">Score: {{ score.course6_score1 }}<br>(Put: {{ score.course6_put1 }})</td>
+          <td class="text-center">Score: {{ score.course6_score2 }}<br>(Put: {{ score.course6_put2 }})</td>
+          <td class="text-center">Score: {{ score.course6_score3 }}<br>(Put: {{ score.course6_put3 }})</td>
+          <td class="text-center">Score: {{ score.course6_score4 }}<br>(Put: {{ score.course6_put4 }})</td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#course7Modal">
+              {{ score.course7_no }}
+            </button>
+          </th>
+          <td class="text-center">Score: {{ score.course7_score1 }}<br>(Put: {{ score.course7_put1 }})</td>
+          <td class="text-center">Score: {{ score.course7_score2 }}<br>(Put: {{ score.course7_put2 }})</td>
+          <td class="text-center">Score: {{ score.course7_score3 }}<br>(Put: {{ score.course7_put3 }})</td>
+          <td class="text-center">Score: {{ score.course7_score4 }}<br>(Put: {{ score.course7_put4 }})</td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#course8Modal">
+              {{ score.course8_no }}
+            </button>
+          </th>
+          <td class="text-center">Score: {{ score.course8_score1 }}<br>(Put: {{ score.course8_put1 }})</td>
+          <td class="text-center">Score: {{ score.course8_score2 }}<br>(Put: {{ score.course8_put2 }})</td>
+          <td class="text-center">Score: {{ score.course8_score3 }}<br>(Put: {{ score.course8_put3 }})</td>
+          <td class="text-center">Score: {{ score.course8_score4 }}<br>(Put: {{ score.course8_put4 }})</td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#course9Modal">
+              {{ score.course9_no }}
+            </button>
+          </th>
+          <td class="text-center">Score: {{ score.course9_score1 }}<br>(Put: {{ score.course9_put1 }})</td>
+          <td class="text-center">Score: {{ score.course9_score2 }}<br>(Put: {{ score.course9_put2 }})</td>
+          <td class="text-center">Score: {{ score.course9_score3 }}<br>(Put: {{ score.course9_put3 }})</td>
+          <td class="text-center">Score: {{ score.course9_score4 }}<br>(Put: {{ score.course9_put4 }})</td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#course10Modal">
+              {{ score.course10_no }}
+            </button>
+          </th>
+          <td class="text-center">Score: {{ score.course10_score1 }}<br>(Put: {{ score.course10_put1 }})</td>
+          <td class="text-center">Score: {{ score.course10_score2 }}<br>(Put: {{ score.course10_put2 }})</td>
+          <td class="text-center">Score: {{ score.course10_score3 }}<br>(Put: {{ score.course10_put3 }})</td>
+          <td class="text-center">Score: {{ score.course10_score4 }}<br>(Put: {{ score.course10_put4 }})</td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#course11Modal">
+              {{ score.course11_no }}
+            </button>
+          </th>
+          <td class="text-center">Score: {{ score.course11_score1 }}<br>(Put: {{ score.course11_put1 }})</td>
+          <td class="text-center">Score: {{ score.course11_score2 }}<br>(Put: {{ score.course11_put2 }})</td>
+          <td class="text-center">Score: {{ score.course11_score3 }}<br>(Put: {{ score.course11_put3 }})</td>
+          <td class="text-center">Score: {{ score.course11_score4 }}<br>(Put: {{ score.course11_put4 }})</td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#course12Modal">
+              {{ score.course12_no }}
+            </button>
+          </th>
+          <td class="text-center">Score: {{ score.course12_score1 }}<br>(Put: {{ score.course12_put1 }})</td>
+          <td class="text-center">Score: {{ score.course12_score2 }}<br>(Put: {{ score.course12_put2 }})</td>
+          <td class="text-center">Score: {{ score.course12_score3 }}<br>(Put: {{ score.course12_put3 }})</td>
+          <td class="text-center">Score: {{ score.course12_score4 }}<br>(Put: {{ score.course12_put4 }})</td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#course13Modal">
+              {{ score.course13_no }}
+            </button>
+          </th>
+          <td class="text-center">Score: {{ score.course13_score1 }}<br>(Put: {{ score.course13_put1 }})</td>
+          <td class="text-center">Score: {{ score.course13_score2 }}<br>(Put: {{ score.course13_put2 }})</td>
+          <td class="text-center">Score: {{ score.course13_score3 }}<br>(Put: {{ score.course13_put3 }})</td>
+          <td class="text-center">Score: {{ score.course13_score4 }}<br>(Put: {{ score.course13_put4 }})</td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#course14Modal">
+              {{ score.course14_no }}
+            </button>
+          </th>
+          <td class="text-center">Score: {{ score.course14_score1 }}<br>(Put: {{ score.course14_put1 }})</td>
+          <td class="text-center">Score: {{ score.course14_score2 }}<br>(Put: {{ score.course14_put2 }})</td>
+          <td class="text-center">Score: {{ score.course14_score3 }}<br>(Put: {{ score.course14_put3 }})</td>
+          <td class="text-center">Score: {{ score.course14_score4 }}<br>(Put: {{ score.course14_put4 }})</td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#course15Modal">
+              {{ score.course15_no }}
+            </button>
+          </th>
+          <td class="text-center">Score: {{ score.course15_score1 }}<br>(Put: {{ score.course15_put1 }})</td>
+          <td class="text-center">Score: {{ score.course15_score2 }}<br>(Put: {{ score.course15_put2 }})</td>
+          <td class="text-center">Score: {{ score.course15_score3 }}<br>(Put: {{ score.course15_put3 }})</td>
+          <td class="text-center">Score: {{ score.course15_score4 }}<br>(Put: {{ score.course15_put4 }})</td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#course16Modal">
+              {{ score.course16_no }}
+            </button>
+          </th>
+          <td class="text-center">Score: {{ score.course16_score1 }}<br>(Put: {{ score.course16_put1 }})</td>
+          <td class="text-center">Score: {{ score.course16_score2 }}<br>(Put: {{ score.course16_put2 }})</td>
+          <td class="text-center">Score: {{ score.course16_score3 }}<br>(Put: {{ score.course16_put3 }})</td>
+          <td class="text-center">Score: {{ score.course16_score4 }}<br>(Put: {{ score.course16_put4 }})</td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#course17Modal">
+              {{ score.course17_no }}
+            </button>
+          </th>
+          <td class="text-center">Score: {{ score.course17_score1 }}<br>(Put: {{ score.course17_put1 }})</td>
+          <td class="text-center">Score: {{ score.course17_score2 }}<br>(Put: {{ score.course17_put2 }})</td>
+          <td class="text-center">Score: {{ score.course17_score3 }}<br>(Put: {{ score.course17_put3 }})</td>
+          <td class="text-center">Score: {{ score.course17_score4 }}<br>(Put: {{ score.course17_put4 }})</td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#course18Modal">
+              {{ score.course18_no }}
+            </button>
+          </th>
+          <td class="text-center">Score: {{ score.course18_score1 }}<br>(Put: {{ score.course18_put1 }})</td>
+          <td class="text-center">Score: {{ score.course18_score2 }}<br>(Put: {{ score.course18_put2 }})</td>
+          <td class="text-center">Score: {{ score.course18_score3 }}<br>(Put: {{ score.course18_put3 }})</td>
+          <td class="text-center">Score: {{ score.course18_score4 }}<br>(Put: {{ score.course18_put4 }})</td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+          <button class="btn btn-primary btn-block" type="submit">スコア保存</button>
+        </div>
+        <div class="col-4"></div>
+      </div>
+    </div>
+  </form>
 
   <!-- コース1のダイアログ -->
   <div class="modal fade" id="course1Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -254,13 +267,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown1_1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1_1()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -272,14 +285,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn1_1' type="radio" name="radioBtn1_1_1" id="radioBtn1_1_1" [value]=0 (ngModelChange)="cngRdioBtn1_1()">
+                  <label class="form-check-label" for="radioBtn1_1_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn1_1' type="radio" name="radioBtn1_1_1" id="radioBtn1_1_2" [value]=1 (ngModelChange)="cngRdioBtn1_1()">
+                  <label class="form-check-label" for="radioBtn1_1_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -311,13 +324,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown1_1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1_2()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -329,14 +342,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn1_1' type="radio" name="radioBtn1_2_1" id="radioBtn1_2_1" [value]=0 (ngModelChange)="cngRdioBtn1_2()">
+                  <label class="form-check-label" for="radioBtn1_2_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn1_1' type="radio" name="radioBtn1_2_2" id="radioBtn1_2_2" [value]=1 (ngModelChange)="cngRdioBtn1_2()">
+                  <label class="form-check-label" for="radioBtn1_2_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -368,13 +381,28 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown1_3' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                  <option *ngIf="score.course1_olympic3 == 5; else elseContentDiamond" value=5 selected>DIAMOND</option>
+                  <ng-template #elseContentDiamond>
+                    <option value=5>DIAMOND</option>
+                  </ng-template>
+                  <option *ngIf="score.course1_olympic3 == 4; else elseContentGold" value=4 selected>GOLD</option>
+                  <ng-template #elseContentGold>
+                    <option value=4>GOLD</option>
+                  </ng-template>
+                  <option *ngIf="score.course1_olympic3 == 3; else elseContentSilver" value=3 selected>SILVER</option>
+                  <ng-template #elseContentSilver>
+                    <option value=3>SILVER</option>
+                  </ng-template>
+                  <option *ngIf="score.course1_olympic3 == 2; else elseContentBronze" value=2 selected>BRONZE</option>
+                  <ng-template #elseContentBronze>
+                    <option value=2>BRONZE</option>
+                  </ng-template>
+                  <option *ngIf="score.course1_olympic3 == 1; else elseContentIron" value=1 selected>IRON</option>
+                  <ng-template #elseContentIron>
+                    <option value=1>IRON</option>
+                  </ng-template>
                 </select>
               </div>
             </div>
@@ -425,13 +453,28 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown1_4' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                  <option *ngIf="score.course1_olympic4 == 5; else elseContentDiamond" value=5 selected>DIAMOND</option>
+                  <ng-template #elseContentDiamond>
+                    <option value=5>DIAMOND</option>
+                  </ng-template>
+                  <option *ngIf="score.course1_olympic4 == 4; else elseContentGold" value=4 selected>GOLD</option>
+                  <ng-template #elseContentGold>
+                    <option value=4>GOLD</option>
+                  </ng-template>
+                  <option *ngIf="score.course1_olympic4 == 3; else elseContentSilver" value=3 selected>SILVER</option>
+                  <ng-template #elseContentSilver>
+                    <option value=3>SILVER</option>
+                  </ng-template>
+                  <option *ngIf="score.course1_olympic4 == 2; else elseContentBronze" value=2 selected>BRONZE</option>
+                  <ng-template #elseContentBronze>
+                    <option value=2>BRONZE</option>
+                  </ng-template>
+                  <option *ngIf="score.course1_olympic4 == 1; else elseContentIron" value=1 selected>IRON</option>
+                  <ng-template #elseContentIron>
+                    <option value=1>IRON</option>
+                  </ng-template>
                 </select>
               </div>
             </div>
@@ -529,13 +572,28 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown2_1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                  <option *ngIf="score.course2_olympic1 == 5; else elseContentDiamond" value=5 selected>DIAMOND</option>
+                  <ng-template #elseContentDiamond>
+                    <option value=5>DIAMOND</option>
+                  </ng-template>
+                  <option *ngIf="score.course2_olympic1 == 4; else elseContentGold" value=4 selected>GOLD</option>
+                  <ng-template #elseContentGold>
+                    <option value=4>GOLD</option>
+                  </ng-template>
+                  <option *ngIf="score.course2_olympic1 == 3; else elseContentSilver" value=3 selected>SILVER</option>
+                  <ng-template #elseContentSilver>
+                    <option value=3>SILVER</option>
+                  </ng-template>
+                  <option *ngIf="score.course2_olympic1 == 2; else elseContentBronze" value=2 selected>BRONZE</option>
+                  <ng-template #elseContentBronze>
+                    <option value=2>BRONZE</option>
+                  </ng-template>
+                  <option *ngIf="score.course2_olympic1 == 1; else elseContentIron" value=1 selected>IRON</option>
+                  <ng-template #elseContentIron>
+                    <option value=1>IRON</option>
+                  </ng-template>
                 </select>
               </div>
             </div>
@@ -586,13 +644,28 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown2_2' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                  <option *ngIf="score.course2_olympic2 == 5; else elseContentDiamond" value=5 selected>DIAMOND</option>
+                  <ng-template #elseContentDiamond>
+                    <option value=5>DIAMOND</option>
+                  </ng-template>
+                  <option *ngIf="score.course2_olympic2 == 4; else elseContentGold" value=4 selected>GOLD</option>
+                  <ng-template #elseContentGold>
+                    <option value=4>GOLD</option>
+                  </ng-template>
+                  <option *ngIf="score.course2_olympic2 == 3; else elseContentSilver" value=3 selected>SILVER</option>
+                  <ng-template #elseContentSilver>
+                    <option value=3>SILVER</option>
+                  </ng-template>
+                  <option *ngIf="score.course2_olympic2 == 2; else elseContentBronze" value=2 selected>BRONZE</option>
+                  <ng-template #elseContentBronze>
+                    <option value=2>BRONZE</option>
+                  </ng-template>
+                  <option *ngIf="score.course2_olympic2 == 1; else elseContentIron" value=1 selected>IRON</option>
+                  <ng-template #elseContentIron>
+                    <option value=1>IRON</option>
+                  </ng-template>
                 </select>
               </div>
             </div>
@@ -643,13 +716,28 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown2_3' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                  <option *ngIf="score.course2_olympic3 == 5; else elseContentDiamond" value=5 selected>DIAMOND</option>
+                  <ng-template #elseContentDiamond>
+                    <option value=5>DIAMOND</option>
+                  </ng-template>
+                  <option *ngIf="score.course2_olympic3 == 4; else elseContentGold" value=4 selected>GOLD</option>
+                  <ng-template #elseContentGold>
+                    <option value=4>GOLD</option>
+                  </ng-template>
+                  <option *ngIf="score.course2_olympic3 == 3; else elseContentSilver" value=3 selected>SILVER</option>
+                  <ng-template #elseContentSilver>
+                    <option value=3>SILVER</option>
+                  </ng-template>
+                  <option *ngIf="score.course2_olympic3 == 2; else elseContentBronze" value=2 selected>BRONZE</option>
+                  <ng-template #elseContentBronze>
+                    <option value=2>BRONZE</option>
+                  </ng-template>
+                  <option *ngIf="score.course2_olympic3 == 1; else elseContentIron" value=1 selected>IRON</option>
+                  <ng-template #elseContentIron>
+                    <option value=1>IRON</option>
+                  </ng-template>
                 </select>
               </div>
             </div>
@@ -700,13 +788,28 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown2_4' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                  <option *ngIf="score.course2_olympic4 == 5; else elseContentDiamond" value=5 selected>DIAMOND</option>
+                  <ng-template #elseContentDiamond>
+                    <option value=5>DIAMOND</option>
+                  </ng-template>
+                  <option *ngIf="score.course2_olympic4 == 4; else elseContentGold" value=4 selected>GOLD</option>
+                  <ng-template #elseContentGold>
+                    <option value=4>GOLD</option>
+                  </ng-template>
+                  <option *ngIf="score.course2_olympic4 == 3; else elseContentSilver" value=3 selected>SILVER</option>
+                  <ng-template #elseContentSilver>
+                    <option value=3>SILVER</option>
+                  </ng-template>
+                  <option *ngIf="score.course2_olympic4 == 2; else elseContentBronze" value=2 selected>BRONZE</option>
+                  <ng-template #elseContentBronze>
+                    <option value=2>BRONZE</option>
+                  </ng-template>
+                  <option *ngIf="score.course2_olympic4 == 1; else elseContentIron" value=1 selected>IRON</option>
+                  <ng-template #elseContentIron>
+                    <option value=1>IRON</option>
+                  </ng-template>
                 </select>
               </div>
             </div>
@@ -803,7 +906,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown3_1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -860,7 +963,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown3_2' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -917,7 +1020,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown3_3' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -974,7 +1077,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown3_4' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -1077,7 +1180,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown4_1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -1134,7 +1237,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown4_2' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -1191,7 +1294,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown4_3' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -1248,7 +1351,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown4_4' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -1351,7 +1454,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown5_1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -1408,7 +1511,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown5_2' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -1465,7 +1568,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown5_3' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -1522,7 +1625,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown5_4' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -1625,7 +1728,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown6_1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -1682,7 +1785,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown6_2' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -1739,7 +1842,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown6_3' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -1796,7 +1899,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown6_4' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -1899,7 +2002,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown7_1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -1956,7 +2059,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown7_2' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -2013,7 +2116,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown7_3' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -2070,7 +2173,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown7_4' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -2173,7 +2276,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown8_1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -2230,7 +2333,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown8_2' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -2287,7 +2390,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown8_3' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -2344,7 +2447,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown8_4' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -2447,7 +2550,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown9_1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -2504,7 +2607,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown9_2' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -2561,7 +2664,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown9_3' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -2618,7 +2721,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown9_4' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -2721,7 +2824,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown10_1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -2778,7 +2881,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown10_2' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -2835,7 +2938,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown10_3' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -2892,7 +2995,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown10_4' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -2995,7 +3098,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown11_1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -3052,7 +3155,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown11_2' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -3109,7 +3212,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown11_3' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -3166,7 +3269,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown11_4' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -3269,7 +3372,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown12_1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -3326,7 +3429,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown12_2' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -3383,7 +3486,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown12_3' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -3440,7 +3543,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown12_4' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -3543,7 +3646,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown13_1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -3600,7 +3703,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown13_2' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -3657,7 +3760,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown13_3' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -3714,7 +3817,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown13_4' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -3817,7 +3920,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown14_1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -3874,7 +3977,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown14_2' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -3931,7 +4034,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown14_3' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -3988,7 +4091,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown14_4' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -4091,7 +4194,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown15_1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -4148,7 +4251,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown15_2' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -4205,7 +4308,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown15_3' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -4262,7 +4365,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown15_4' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -4365,7 +4468,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown16_1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -4422,7 +4525,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown16_2' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -4479,7 +4582,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown16_3' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -4536,7 +4639,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown16_4' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -4639,7 +4742,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown17_1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -4696,7 +4799,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown17_2' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -4753,7 +4856,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown17_3' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -4810,7 +4913,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown17_4' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -4913,7 +5016,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown18_1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -4970,7 +5073,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown18_2' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -5027,7 +5130,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown18_3' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>
@@ -5084,7 +5187,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
+                <select class="custom-select" [(ngModel)]='dropDown18_4' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1()">
                   <option value="0">---</option>
                   <option value="5">DIAMOND</option>
                   <option value="4">GOLD</option>

@@ -1,4 +1,4 @@
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ScoreComponent } from './score.component';
 import { ScoreeditComponent } from './scoreedit/scoreedit.component';
 import { NgModule } from '@angular/core';
@@ -33,6 +33,7 @@ const routes: Routes = [
     BrowserModule,
     FormsModule,
     CommonModule,
+    ReactiveFormsModule
   ],
   providers: [
     ScoreService

@@ -1,5 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const bodyParser = require('body-parser')
 const config = require('./config')
 const FakeScoreDb = require('./fake-score-db')
 
@@ -21,6 +22,7 @@ mongoose.connect(config.DB_URI, {
 )
 
 const app = express()
+app.use(bodyParser.json())
 
 app.use('/api/v1/score', golfscoreRoutes)
 

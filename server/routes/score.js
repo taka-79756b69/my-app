@@ -18,4 +18,22 @@ router.get('/:scoreId', function(req, res) {
   })
 })
 
+router.post('/:scoreId', function(req, res) {
+  const username = req.body.name1
+  const scoreId = req.params.scoreId
+  // const reqJson = JSON.stringify(req.body)
+  score.updateOne({
+    _id: scoreId
+  }, {
+    course1_score1: req.body.course1_score1,
+    course1_olympic1: req.body.course1_olympic1
+  }, function(err, foundScore) {
+    //scoredata.save(function(err, foundScore) {
+    if (err || !foundScore) {
+      return res.status(422).send({errors: [{title: 'Score Error', detail: 'Score Not Found'}]})
+    }
+    return res.json(username)
+  })
+})
+
 module.exports = router
