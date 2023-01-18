@@ -3,7 +3,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 <script>
-  $('#exampleModal').on('show.bs.modal', function (event) {
+  $('modal fade').on('show.bs.modal', function (event) {
     var button = $(event.relatedTarget)
     courseIndex = button.data('whatever')
 })
@@ -290,18 +290,11 @@
               </div>
             </div>
             <div class="row">
-              <!-- <div class="col-3">
-              </div> -->
-              <div class="col-6 d-flex align-items-center justify-content-center">
+              <div class="col-3">
+              </div>
+              <div class="col-3 d-flex align-items-center justify-content-center">
                 OLYMPIC
               </div>
-              <div class="col-6 d-flex align-items-center justify-content-center">
-                LASVEGAS
-              </div>
-            </div>
-            <div class="row">
-              <!-- <div class="col-3">
-              </div> -->
               <div class="col-6 mb-2">
                 <select class="custom-select" [(ngModel)]='dropDown1_1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1_1()">
                   <option value=0>---</option>
@@ -311,6 +304,13 @@
                   <option value=2>BRONZE</option>
                   <option value=1>IRON</option>
                 </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-3">
+              </div>
+              <div class="col-3 d-flex align-items-center justify-content-center">
+                LASVEGAS
               </div>
               <div class="col-6 align-items-center justify-content-center">
                 <div class="form-check form-check-inline">
