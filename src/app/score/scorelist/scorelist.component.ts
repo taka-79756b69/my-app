@@ -32,6 +32,12 @@ export class ScorelistComponent {
   total3: any
   total4: any
 
+  //OLYMPIC
+  olympicTotal1: any
+  olympicTotal2: any
+  olympicTotal3: any
+  olympicTotal4: any
+
   //ドロップダウンのモデル
   dropDown1_1: any
   dropDown1_2: any
@@ -226,6 +232,132 @@ export class ScorelistComponent {
     this.total2 = this.setTotal2()
     this.total3 = this.setTotal3()
     this.total4 = this.setTotal4()
+
+    this.setOlympicTotal()
+  }
+
+  setOlympicTotal() {
+
+    var countMember: any
+
+    countMember = 1
+
+    if(this.score.name2 != "")
+      countMember++
+
+    if(this.score.name3 != "")
+      countMember++
+
+    if(this.score.name4 != "")
+      countMember++
+
+    if(countMember == 1){
+      //オリンピックのメンバーが1人の場合は不成立
+      this.olympicTotal1 = 0
+      this.olympicTotal2 = 0
+      this.olympicTotal3 = 0
+      this.olympicTotal4 = 0
+      return
+    }
+
+    this.olympicTotal1 = (
+      +this.score.course1_olympic1 +
+      +this.score.course2_olympic1 +
+      +this.score.course3_olympic1 +
+      +this.score.course4_olympic1 +
+      +this.score.course5_olympic1 +
+      +this.score.course6_olympic1 +
+      +this.score.course7_olympic1 +
+      +this.score.course8_olympic1 +
+      +this.score.course9_olympic1 +
+      +this.score.course10_olympic1 +
+      +this.score.course11_olympic1 +
+      +this.score.course12_olympic1 +
+      +this.score.course13_olympic1 +
+      +this.score.course14_olympic1 +
+      +this.score.course15_olympic1 +
+      +this.score.course16_olympic1 +
+      +this.score.course17_olympic1 +
+      +this.score.course18_olympic1
+    )
+    this.olympicTotal2 = (
+      +this.score.course1_olympic2 +
+      +this.score.course2_olympic2 +
+      +this.score.course3_olympic2 +
+      +this.score.course4_olympic2 +
+      +this.score.course5_olympic2 +
+      +this.score.course6_olympic2 +
+      +this.score.course7_olympic2 +
+      +this.score.course8_olympic2 +
+      +this.score.course9_olympic2 +
+      +this.score.course10_olympic2 +
+      +this.score.course11_olympic2 +
+      +this.score.course12_olympic2 +
+      +this.score.course13_olympic2 +
+      +this.score.course14_olympic2 +
+      +this.score.course15_olympic2 +
+      +this.score.course16_olympic2 +
+      +this.score.course17_olympic2 +
+      +this.score.course18_olympic2
+    )
+    this.olympicTotal3 = (
+      +this.score.course1_olympic3 +
+      +this.score.course2_olympic3 +
+      +this.score.course3_olympic3 +
+      +this.score.course4_olympic3 +
+      +this.score.course5_olympic3 +
+      +this.score.course6_olympic3 +
+      +this.score.course7_olympic3 +
+      +this.score.course8_olympic3 +
+      +this.score.course9_olympic3 +
+      +this.score.course10_olympic3 +
+      +this.score.course11_olympic3 +
+      +this.score.course12_olympic3 +
+      +this.score.course13_olympic3 +
+      +this.score.course14_olympic3 +
+      +this.score.course15_olympic3 +
+      +this.score.course16_olympic3 +
+      +this.score.course17_olympic3 +
+      +this.score.course18_olympic3
+    )
+    this.olympicTotal4 = (
+      +this.score.course1_olympic4 +
+      +this.score.course2_olympic4 +
+      +this.score.course3_olympic4 +
+      +this.score.course4_olympic4 +
+      +this.score.course5_olympic4 +
+      +this.score.course6_olympic4 +
+      +this.score.course7_olympic4 +
+      +this.score.course8_olympic4 +
+      +this.score.course9_olympic4 +
+      +this.score.course10_olympic4 +
+      +this.score.course11_olympic4 +
+      +this.score.course12_olympic4 +
+      +this.score.course13_olympic4 +
+      +this.score.course14_olympic4 +
+      +this.score.course15_olympic4 +
+      +this.score.course16_olympic4 +
+      +this.score.course17_olympic4 +
+      +this.score.course18_olympic4
+    )
+
+    if(countMember == 4){
+      this.olympicTotal1 = this.olympicTotal1 * countMember - (this.olympicTotal2 + this.olympicTotal3 + this.olympicTotal4)
+      this.olympicTotal2 = this.olympicTotal2 * countMember - (this.olympicTotal1 + this.olympicTotal3 + this.olympicTotal4)
+      this.olympicTotal3 = this.olympicTotal3 * countMember - (this.olympicTotal1 + this.olympicTotal2 + this.olympicTotal4)
+      this.olympicTotal4 = this.olympicTotal4 * countMember - (this.olympicTotal1 + this.olympicTotal2 + this.olympicTotal3)
+    }
+
+    if(countMember == 3){
+      this.olympicTotal1 = this.olympicTotal1 * countMember - (this.olympicTotal2 + this.olympicTotal3 )
+      this.olympicTotal2 = this.olympicTotal2 * countMember - (this.olympicTotal1 + this.olympicTotal3 )
+      this.olympicTotal3 = this.olympicTotal3 * countMember - (this.olympicTotal1 + this.olympicTotal2 )
+    }
+
+    if(countMember == 2){
+      this.olympicTotal1 = this.olympicTotal1 * countMember - this.olympicTotal2
+      this.olympicTotal2 = this.olympicTotal2 * countMember - this.olympicTotal1
+    }
   }
 
   initDataSet() {
@@ -396,8 +528,11 @@ export class ScorelistComponent {
     this.total2 = this.setTotal2()
     this.total3 = this.setTotal3()
     this.total4 = this.setTotal4()
+
+    this.setOlympicTotal()
   }
 
+  //スコア合計をセット
   setTotal1() {
     return this.setOutTotal1() + this.setInTotal1()
   }
@@ -806,6 +941,7 @@ export class ScorelistComponent {
         },
         ()=>{
           this.ngOnInit()
+          alert("保存完了")
           //console.log('complete!')
         }
       )
