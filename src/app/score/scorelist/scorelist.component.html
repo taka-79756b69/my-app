@@ -15,11 +15,11 @@
     <table class="table-sm">
       <thead>
         <tr>
-          <th scope="col" class="text-center">#</th>
-          <th scope="col" class="text-center">{{ score.name1 }}</th>
-          <th scope="col" class="text-center">{{ score.name2 }}</th>
-          <th scope="col" class="text-center">{{ score.name3 }}</th>
-          <th scope="col" class="text-center">{{ score.name4 }}</th>
+          <td class="text-center">#</td>
+          <td class="text-center"><small>{{ score.name1 }}</small></td>
+          <td class="text-center"><small>{{ score.name2 }}</small></td>
+          <td class="text-center"><small>{{ score.name3 }}</small></td>
+          <td class="text-center"><small>{{ score.name4 }}</small></td>
         </tr>
       </thead>
       <tbody>
@@ -324,7 +324,7 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1_1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1_2()">
+                <select class="custom-select" [(ngModel)]='dropDown1_2' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1_2()">
                   <option value=0>---</option>
                   <option value=5>DIAMOND</option>
                   <option value=4>GOLD</option>
@@ -342,13 +342,13 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" [(ngModel)]='radioBtn1_1' type="radio" name="radioBtn1_2_1" id="radioBtn1_2_1" [value]=0 (ngModelChange)="cngRdioBtn1_2()">
+                  <input class="form-check-input" [(ngModel)]='radioBtn1_2' type="radio" name="radioBtn1_2_1" id="radioBtn1_2_1" [value]=0 (ngModelChange)="cngRdioBtn1_2()">
                   <label class="form-check-label" for="radioBtn1_2_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" [(ngModel)]='radioBtn1_1' type="radio" name="radioBtn1_2_2" id="radioBtn1_2_2" [value]=1 (ngModelChange)="cngRdioBtn1_2()">
+                  <input class="form-check-input" [(ngModel)]='radioBtn1_2' type="radio" name="radioBtn1_2_1" id="radioBtn1_2_2" [value]=1 (ngModelChange)="cngRdioBtn1_2()">
                   <label class="form-check-label" for="radioBtn1_2_2">
                     <h6>Team B</h6>
                   </label>
@@ -381,28 +381,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1_3' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option *ngIf="score.course1_olympic3 == 5; else elseContentDiamond" value=5 selected>DIAMOND</option>
-                  <ng-template #elseContentDiamond>
-                    <option value=5>DIAMOND</option>
-                  </ng-template>
-                  <option *ngIf="score.course1_olympic3 == 4; else elseContentGold" value=4 selected>GOLD</option>
-                  <ng-template #elseContentGold>
-                    <option value=4>GOLD</option>
-                  </ng-template>
-                  <option *ngIf="score.course1_olympic3 == 3; else elseContentSilver" value=3 selected>SILVER</option>
-                  <ng-template #elseContentSilver>
-                    <option value=3>SILVER</option>
-                  </ng-template>
-                  <option *ngIf="score.course1_olympic3 == 2; else elseContentBronze" value=2 selected>BRONZE</option>
-                  <ng-template #elseContentBronze>
-                    <option value=2>BRONZE</option>
-                  </ng-template>
-                  <option *ngIf="score.course1_olympic3 == 1; else elseContentIron" value=1 selected>IRON</option>
-                  <ng-template #elseContentIron>
-                    <option value=1>IRON</option>
-                  </ng-template>
+                <select class="custom-select" [(ngModel)]='dropDown1_3' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1_3()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -414,14 +399,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn1_3' type="radio" name="radioBtn1_3_1" id="radioBtn1_3_1" [value]=0 (ngModelChange)="cngRdioBtn1_3()">
+                  <label class="form-check-label" for="radioBtn1_3_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn1_3' type="radio" name="radioBtn1_3_1" id="radioBtn1_3_2" [value]=1 (ngModelChange)="cngRdioBtn1_3()">
+                  <label class="form-check-label" for="radioBtn1_3_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -453,28 +438,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown1_4' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option *ngIf="score.course1_olympic4 == 5; else elseContentDiamond" value=5 selected>DIAMOND</option>
-                  <ng-template #elseContentDiamond>
-                    <option value=5>DIAMOND</option>
-                  </ng-template>
-                  <option *ngIf="score.course1_olympic4 == 4; else elseContentGold" value=4 selected>GOLD</option>
-                  <ng-template #elseContentGold>
-                    <option value=4>GOLD</option>
-                  </ng-template>
-                  <option *ngIf="score.course1_olympic4 == 3; else elseContentSilver" value=3 selected>SILVER</option>
-                  <ng-template #elseContentSilver>
-                    <option value=3>SILVER</option>
-                  </ng-template>
-                  <option *ngIf="score.course1_olympic4 == 2; else elseContentBronze" value=2 selected>BRONZE</option>
-                  <ng-template #elseContentBronze>
-                    <option value=2>BRONZE</option>
-                  </ng-template>
-                  <option *ngIf="score.course1_olympic4 == 1; else elseContentIron" value=1 selected>IRON</option>
-                  <ng-template #elseContentIron>
-                    <option value=1>IRON</option>
-                  </ng-template>
+                <select class="custom-select" [(ngModel)]='dropDown1_4' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown1_4()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -486,14 +456,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn1_4' type="radio" name="radioBtn1_4_1" id="radioBtn1_4_1" [value]=0 (ngModelChange)="cngRdioBtn1_4()">
+                  <label class="form-check-label" for="radioBtn1_4_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn1_4' type="radio" name="radioBtn1_4_1" id="radioBtn1_4_2" [value]=1 (ngModelChange)="cngRdioBtn1_4()">
+                  <label class="form-check-label" for="radioBtn1_4_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -525,7 +495,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="doSubmit()">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal">保存</button>
               </div>
             </div>
           </div>
@@ -572,28 +542,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown2_1' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option *ngIf="score.course2_olympic1 == 5; else elseContentDiamond" value=5 selected>DIAMOND</option>
-                  <ng-template #elseContentDiamond>
-                    <option value=5>DIAMOND</option>
-                  </ng-template>
-                  <option *ngIf="score.course2_olympic1 == 4; else elseContentGold" value=4 selected>GOLD</option>
-                  <ng-template #elseContentGold>
-                    <option value=4>GOLD</option>
-                  </ng-template>
-                  <option *ngIf="score.course2_olympic1 == 3; else elseContentSilver" value=3 selected>SILVER</option>
-                  <ng-template #elseContentSilver>
-                    <option value=3>SILVER</option>
-                  </ng-template>
-                  <option *ngIf="score.course2_olympic1 == 2; else elseContentBronze" value=2 selected>BRONZE</option>
-                  <ng-template #elseContentBronze>
-                    <option value=2>BRONZE</option>
-                  </ng-template>
-                  <option *ngIf="score.course2_olympic1 == 1; else elseContentIron" value=1 selected>IRON</option>
-                  <ng-template #elseContentIron>
-                    <option value=1>IRON</option>
-                  </ng-template>
+                <select class="custom-select" [(ngModel)]='dropDown2_1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown2_1()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -605,14 +560,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn2_1' type="radio" name="radioBtn2_1_1" id="radioBtn2_1_1" [value]=0 (ngModelChange)="cngRdioBtn2_1()">
+                  <label class="form-check-label" for="radioBtn2_1_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn2_1' type="radio" name="radioBtn2_1_1" id="radioBtn2_1_2" [value]=1 (ngModelChange)="cngRdioBtn2_1()">
+                  <label class="form-check-label" for="radioBtn2_1_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -644,28 +599,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown2_2' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option *ngIf="score.course2_olympic2 == 5; else elseContentDiamond" value=5 selected>DIAMOND</option>
-                  <ng-template #elseContentDiamond>
-                    <option value=5>DIAMOND</option>
-                  </ng-template>
-                  <option *ngIf="score.course2_olympic2 == 4; else elseContentGold" value=4 selected>GOLD</option>
-                  <ng-template #elseContentGold>
-                    <option value=4>GOLD</option>
-                  </ng-template>
-                  <option *ngIf="score.course2_olympic2 == 3; else elseContentSilver" value=3 selected>SILVER</option>
-                  <ng-template #elseContentSilver>
-                    <option value=3>SILVER</option>
-                  </ng-template>
-                  <option *ngIf="score.course2_olympic2 == 2; else elseContentBronze" value=2 selected>BRONZE</option>
-                  <ng-template #elseContentBronze>
-                    <option value=2>BRONZE</option>
-                  </ng-template>
-                  <option *ngIf="score.course2_olympic2 == 1; else elseContentIron" value=1 selected>IRON</option>
-                  <ng-template #elseContentIron>
-                    <option value=1>IRON</option>
-                  </ng-template>
+                <select class="custom-select" [(ngModel)]='dropDown2_2' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown2_2()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -677,14 +617,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn2_2' type="radio" name="radioBtn2_2_1" id="radioBtn2_2_1" [value]=0 (ngModelChange)="cngRdioBtn2_2()">
+                  <label class="form-check-label" for="radioBtn2_2_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn2_2' type="radio" name="radioBtn2_2_1" id="radioBtn2_2_2" [value]=1 (ngModelChange)="cngRdioBtn2_2()">
+                  <label class="form-check-label" for="radioBtn2_2_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -716,28 +656,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown2_3' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option *ngIf="score.course2_olympic3 == 5; else elseContentDiamond" value=5 selected>DIAMOND</option>
-                  <ng-template #elseContentDiamond>
-                    <option value=5>DIAMOND</option>
-                  </ng-template>
-                  <option *ngIf="score.course2_olympic3 == 4; else elseContentGold" value=4 selected>GOLD</option>
-                  <ng-template #elseContentGold>
-                    <option value=4>GOLD</option>
-                  </ng-template>
-                  <option *ngIf="score.course2_olympic3 == 3; else elseContentSilver" value=3 selected>SILVER</option>
-                  <ng-template #elseContentSilver>
-                    <option value=3>SILVER</option>
-                  </ng-template>
-                  <option *ngIf="score.course2_olympic3 == 2; else elseContentBronze" value=2 selected>BRONZE</option>
-                  <ng-template #elseContentBronze>
-                    <option value=2>BRONZE</option>
-                  </ng-template>
-                  <option *ngIf="score.course2_olympic3 == 1; else elseContentIron" value=1 selected>IRON</option>
-                  <ng-template #elseContentIron>
-                    <option value=1>IRON</option>
-                  </ng-template>
+                <select class="custom-select" [(ngModel)]='dropDown2_3' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown2_3()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -749,14 +674,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn2_3' type="radio" name="radioBtn2_3_1" id="radioBtn2_3_1" [value]=0 (ngModelChange)="cngRdioBtn2_3()">
+                  <label class="form-check-label" for="radioBtn2_3_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn2_3' type="radio" name="radioBtn2_3_1" id="radioBtn2_3_2" [value]=1 (ngModelChange)="cngRdioBtn2_3()">
+                  <label class="form-check-label" for="radioBtn2_3_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -788,28 +713,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown2_4' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option *ngIf="score.course2_olympic4 == 5; else elseContentDiamond" value=5 selected>DIAMOND</option>
-                  <ng-template #elseContentDiamond>
-                    <option value=5>DIAMOND</option>
-                  </ng-template>
-                  <option *ngIf="score.course2_olympic4 == 4; else elseContentGold" value=4 selected>GOLD</option>
-                  <ng-template #elseContentGold>
-                    <option value=4>GOLD</option>
-                  </ng-template>
-                  <option *ngIf="score.course2_olympic4 == 3; else elseContentSilver" value=3 selected>SILVER</option>
-                  <ng-template #elseContentSilver>
-                    <option value=3>SILVER</option>
-                  </ng-template>
-                  <option *ngIf="score.course2_olympic4 == 2; else elseContentBronze" value=2 selected>BRONZE</option>
-                  <ng-template #elseContentBronze>
-                    <option value=2>BRONZE</option>
-                  </ng-template>
-                  <option *ngIf="score.course2_olympic4 == 1; else elseContentIron" value=1 selected>IRON</option>
-                  <ng-template #elseContentIron>
-                    <option value=1>IRON</option>
-                  </ng-template>
+                <select class="custom-select" [(ngModel)]='dropDown2_4' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown2_4()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -821,14 +731,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn2_4' type="radio" name="radioBtn2_4_1" id="radioBtn2_4_1" [value]=0 (ngModelChange)="cngRdioBtn2_4()">
+                  <label class="form-check-label" for="radioBtn2_4_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn2_4' type="radio" name="radioBtn2_4_1" id="radioBtn2_4_2" [value]=1 (ngModelChange)="cngRdioBtn2_4()">
+                  <label class="form-check-label" for="radioBtn2_4_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -860,7 +770,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="doSubmit()">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal">保存</button>
               </div>
             </div>
           </div>
@@ -906,13 +816,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown3_1' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown3_1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown3_1()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -924,14 +834,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn3_1' type="radio" name="radioBtn3_1_1" id="radioBtn3_1_1" [value]=0 (ngModelChange)="cngRdioBtn3_1()">
+                  <label class="form-check-label" for="radioBtn3_1_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn3_1' type="radio" name="radioBtn3_1_1" id="radioBtn3_1_2" [value]=1 (ngModelChange)="cngRdioBtn3_1()">
+                  <label class="form-check-label" for="radioBtn3_1_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -963,13 +873,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown3_2' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown3_2' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown3_2()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -981,14 +891,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn3_2' type="radio" name="radioBtn3_2_1" id="radioBtn3_2_1" [value]=0 (ngModelChange)="cngRdioBtn3_2()">
+                  <label class="form-check-label" for="radioBtn3_2_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn3_2' type="radio" name="radioBtn3_2_1" id="radioBtn3_2_2" [value]=1 (ngModelChange)="cngRdioBtn3_2()">
+                  <label class="form-check-label" for="radioBtn3_2_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -1020,13 +930,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown3_3' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown3_3' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown3_3()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -1038,14 +948,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn3_3' type="radio" name="radioBtn3_3_1" id="radioBtn3_3_1" [value]=0 (ngModelChange)="cngRdioBtn3_3()">
+                  <label class="form-check-label" for="radioBtn3_3_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn3_3' type="radio" name="radioBtn3_3_1" id="radioBtn3_3_2" [value]=1 (ngModelChange)="cngRdioBtn3_3()">
+                  <label class="form-check-label" for="radioBtn3_3_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -1077,13 +987,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown3_4' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown3_4' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown3_4()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -1095,14 +1005,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn3_4' type="radio" name="radioBtn3_4_1" id="radioBtn3_4_1" [value]=0 (ngModelChange)="cngRdioBtn3_4()">
+                  <label class="form-check-label" for="radioBtn3_4_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn3_4' type="radio" name="radioBtn3_4_1" id="radioBtn3_4_2" [value]=1 (ngModelChange)="cngRdioBtn3_4()">
+                  <label class="form-check-label" for="radioBtn3_4_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -1134,7 +1044,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="doSubmit()">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal">保存</button>
               </div>
             </div>
           </div>
@@ -1180,13 +1090,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown4_1' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown4_1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown4_1()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -1198,14 +1108,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn4_1' type="radio" name="radioBtn4_1_1" id="radioBtn4_1_1" [value]=0 (ngModelChange)="cngRdioBtn4_1()">
+                  <label class="form-check-label" for="radioBtn4_1_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn4_1' type="radio" name="radioBtn4_1_1" id="radioBtn4_1_2" [value]=1 (ngModelChange)="cngRdioBtn4_1()">
+                  <label class="form-check-label" for="radioBtn4_1_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -1237,13 +1147,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown4_2' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown4_2' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown4_2()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -1255,14 +1165,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn4_2' type="radio" name="radioBtn4_2_1" id="radioBtn4_2_1" [value]=0 (ngModelChange)="cngRdioBtn4_2()">
+                  <label class="form-check-label" for="radioBtn4_2_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn4_2' type="radio" name="radioBtn4_2_1" id="radioBtn4_2_2" [value]=1 (ngModelChange)="cngRdioBtn4_2()">
+                  <label class="form-check-label" for="radioBtn4_2_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -1294,13 +1204,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown4_3' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown4_3' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown4_3()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -1312,14 +1222,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn4_3' type="radio" name="radioBtn4_3_1" id="radioBtn4_3_1" [value]=0 (ngModelChange)="cngRdioBtn4_3()">
+                  <label class="form-check-label" for="radioBtn4_3_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn4_3' type="radio" name="radioBtn4_3_1" id="radioBtn4_3_2" [value]=1 (ngModelChange)="cngRdioBtn4_3()">
+                  <label class="form-check-label" for="radioBtn4_3_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -1351,13 +1261,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown4_4' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown4_4' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown4_4()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -1369,14 +1279,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn4_4' type="radio" name="radioBtn4_4_1" id="radioBtn4_4_1" [value]=0 (ngModelChange)="cngRdioBtn4_4()">
+                  <label class="form-check-label" for="radioBtn4_4_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn4_4' type="radio" name="radioBtn4_4_1" id="radioBtn4_4_2" [value]=1 (ngModelChange)="cngRdioBtn4_4()">
+                  <label class="form-check-label" for="radioBtn4_4_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -1408,7 +1318,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="doSubmit()">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal">保存</button>
               </div>
             </div>
           </div>
@@ -1453,15 +1363,19 @@
               <div class="col-3 d-flex align-items-center justify-content-center">
                 OLYMPIC
               </div>
-              <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown5_1' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
-                </select>
+              <div class="col-6">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" [(ngModel)]='radioBtn5_1' type="radio" name="radioBtn5_1_1" id="radioBtn5_1_1" [value]=0 (ngModelChange)="cngRdioBtn5_1()">
+                  <label class="form-check-label" for="radioBtn5_1_1">
+                    <h6>Team A</h6>
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" [(ngModel)]='radioBtn5_1' type="radio" name="radioBtn5_1_1" id="radioBtn5_1_2" [value]=1 (ngModelChange)="cngRdioBtn5_1()">
+                  <label class="form-check-label" for="radioBtn5_1_2">
+                    <h6>Team B</h6>
+                  </label>
+                </div>
               </div>
             </div>
             <div class="row">
@@ -1510,15 +1424,19 @@
               <div class="col-3 d-flex align-items-center justify-content-center">
                 OLYMPIC
               </div>
-              <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown5_2' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
-                </select>
+              <div class="col-6">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" [(ngModel)]='radioBtn5_2' type="radio" name="radioBtn5_2_1" id="radioBtn5_2_1" [value]=0 (ngModelChange)="cngRdioBtn5_2()">
+                  <label class="form-check-label" for="radioBtn5_2_1">
+                    <h6>Team A</h6>
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" [(ngModel)]='radioBtn5_2' type="radio" name="radioBtn5_2_1" id="radioBtn5_2_2" [value]=1 (ngModelChange)="cngRdioBtn5_2()">
+                  <label class="form-check-label" for="radioBtn5_2_2">
+                    <h6>Team B</h6>
+                  </label>
+                </div>
               </div>
             </div>
             <div class="row">
@@ -1568,13 +1486,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown5_3' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown5_3' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown5_3()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -1586,14 +1504,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn5_3' type="radio" name="radioBtn5_3_1" id="radioBtn5_3_1" [value]=0 (ngModelChange)="cngRdioBtn5_3()">
+                  <label class="form-check-label" for="radioBtn5_3_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn5_3' type="radio" name="radioBtn5_3_1" id="radioBtn5_3_2" [value]=1 (ngModelChange)="cngRdioBtn5_3()">
+                  <label class="form-check-label" for="radioBtn5_3_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -1625,13 +1543,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown5_4' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown5_4' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown5_4()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -1643,14 +1561,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn5_4' type="radio" name="radioBtn5_4_1" id="radioBtn5_4_1" [value]=0 (ngModelChange)="cngRdioBtn5_4()">
+                  <label class="form-check-label" for="radioBtn5_4_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn5_4' type="radio" name="radioBtn5_4_1" id="radioBtn5_4_2" [value]=1 (ngModelChange)="cngRdioBtn5_4()">
+                  <label class="form-check-label" for="radioBtn5_4_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -1682,7 +1600,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="doSubmit()">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal">保存</button>
               </div>
             </div>
           </div>
@@ -1728,13 +1646,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown6_1' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown6_1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown6_1()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -1746,14 +1664,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn6_1' type="radio" name="radioBtn6_1_1" id="radioBtn6_1_1" [value]=0 (ngModelChange)="cngRdioBtn6_1()">
+                  <label class="form-check-label" for="radioBtn6_1_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn6_1' type="radio" name="radioBtn6_1_1" id="radioBtn6_1_2" [value]=1 (ngModelChange)="cngRdioBtn6_1()">
+                  <label class="form-check-label" for="radioBtn6_1_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -1785,13 +1703,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown6_2' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown6_2' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown6_2()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -1803,14 +1721,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn6_2' type="radio" name="radioBtn6_2_1" id="radioBtn6_2_1" [value]=0 (ngModelChange)="cngRdioBtn6_2()">
+                  <label class="form-check-label" for="radioBtn6_2_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn6_2' type="radio" name="radioBtn6_2_1" id="radioBtn6_2_2" [value]=1 (ngModelChange)="cngRdioBtn6_2()">
+                  <label class="form-check-label" for="radioBtn6_2_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -1842,13 +1760,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown6_3' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown6_3' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown6_3()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -1860,14 +1778,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn6_3' type="radio" name="radioBtn6_3_1" id="radioBtn6_3_1" [value]=0 (ngModelChange)="cngRdioBtn6_3()">
+                  <label class="form-check-label" for="radioBtn6_3_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn6_3' type="radio" name="radioBtn6_3_1" id="radioBtn6_3_2" [value]=1 (ngModelChange)="cngRdioBtn6_3()">
+                  <label class="form-check-label" for="radioBtn6_3_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -1899,13 +1817,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown6_4' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown6_4' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown6_4()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -1917,14 +1835,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn6_4' type="radio" name="radioBtn6_4_1" id="radioBtn6_4_1" [value]=0 (ngModelChange)="cngRdioBtn6_4()">
+                  <label class="form-check-label" for="radioBtn6_4_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn6_4' type="radio" name="radioBtn6_4_1" id="radioBtn6_4_2" [value]=1 (ngModelChange)="cngRdioBtn6_4()">
+                  <label class="form-check-label" for="radioBtn6_4_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -1956,7 +1874,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="doSubmit()">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal">保存</button>
               </div>
             </div>
           </div>
@@ -2002,13 +1920,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown7_1' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown7_1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown7_1()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -2020,14 +1938,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn7_1' type="radio" name="radioBtn7_1_1" id="radioBtn7_1_1" [value]=0 (ngModelChange)="cngRdioBtn7_1()">
+                  <label class="form-check-label" for="radioBtn7_1_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn7_1' type="radio" name="radioBtn7_1_1" id="radioBtn7_1_2" [value]=1 (ngModelChange)="cngRdioBtn7_1()">
+                  <label class="form-check-label" for="radioBtn7_1_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -2059,13 +1977,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown7_2' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown7_2' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown7_2()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -2077,14 +1995,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn7_2' type="radio" name="radioBtn7_2_1" id="radioBtn7_2_1" [value]=0 (ngModelChange)="cngRdioBtn7_2()">
+                  <label class="form-check-label" for="radioBtn7_2_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn7_2' type="radio" name="radioBtn7_2_1" id="radioBtn7_2_2" [value]=1 (ngModelChange)="cngRdioBtn7_2()">
+                  <label class="form-check-label" for="radioBtn7_2_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -2116,13 +2034,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown7_3' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown7_3' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown7_3()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -2134,14 +2052,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn7_3' type="radio" name="radioBtn7_3_1" id="radioBtn7_3_1" [value]=0 (ngModelChange)="cngRdioBtn7_3()">
+                  <label class="form-check-label" for="radioBtn7_3_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn7_3' type="radio" name="radioBtn7_3_1" id="radioBtn7_3_2" [value]=1 (ngModelChange)="cngRdioBtn7_3()">
+                  <label class="form-check-label" for="radioBtn7_3_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -2173,13 +2091,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown7_4' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown7_4' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown7_4()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -2191,14 +2109,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn7_4' type="radio" name="radioBtn7_4_1" id="radioBtn7_4_1" [value]=0 (ngModelChange)="cngRdioBtn7_4()">
+                  <label class="form-check-label" for="radioBtn7_4_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn7_4' type="radio" name="radioBtn7_4_1" id="radioBtn7_4_2" [value]=1 (ngModelChange)="cngRdioBtn7_4()">
+                  <label class="form-check-label" for="radioBtn7_4_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -2230,7 +2148,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="doSubmit()">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal">保存</button>
               </div>
             </div>
           </div>
@@ -2276,13 +2194,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown8_1' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown8_1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown8_1()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -2294,14 +2212,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn8_1' type="radio" name="radioBtn8_1_1" id="radioBtn8_1_1" [value]=0 (ngModelChange)="cngRdioBtn8_1()">
+                  <label class="form-check-label" for="radioBtn8_1_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn8_1' type="radio" name="radioBtn8_1_1" id="radioBtn8_1_2" [value]=1 (ngModelChange)="cngRdioBtn8_1()">
+                  <label class="form-check-label" for="radioBtn8_1_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -2333,13 +2251,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown8_2' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown8_2' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown8_2()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -2351,14 +2269,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn8_2' type="radio" name="radioBtn8_2_1" id="radioBtn8_2_1" [value]=0 (ngModelChange)="cngRdioBtn8_2()">
+                  <label class="form-check-label" for="radioBtn8_2_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn8_2' type="radio" name="radioBtn8_2_1" id="radioBtn8_2_2" [value]=1 (ngModelChange)="cngRdioBtn8_2()">
+                  <label class="form-check-label" for="radioBtn8_2_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -2390,13 +2308,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown8_3' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown8_3' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown8_3()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -2408,14 +2326,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn8_3' type="radio" name="radioBtn8_3_1" id="radioBtn8_3_1" [value]=0 (ngModelChange)="cngRdioBtn8_3()">
+                  <label class="form-check-label" for="radioBtn8_3_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn8_3' type="radio" name="radioBtn8_3_1" id="radioBtn8_3_2" [value]=1 (ngModelChange)="cngRdioBtn8_3()">
+                  <label class="form-check-label" for="radioBtn8_3_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -2447,13 +2365,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown8_4' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown8_4' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown8_4()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -2465,14 +2383,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn8_4' type="radio" name="radioBtn8_4_1" id="radioBtn8_4_1" [value]=0 (ngModelChange)="cngRdioBtn8_4()">
+                  <label class="form-check-label" for="radioBtn8_4_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn8_4' type="radio" name="radioBtn8_4_1" id="radioBtn8_4_2" [value]=1 (ngModelChange)="cngRdioBtn8_4()">
+                  <label class="form-check-label" for="radioBtn8_4_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -2504,7 +2422,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="doSubmit()">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal">保存</button>
               </div>
             </div>
           </div>
@@ -2550,13 +2468,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown9_1' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown9_1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown9_1()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -2568,14 +2486,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn9_1' type="radio" name="radioBtn9_1_1" id="radioBtn9_1_1" [value]=0 (ngModelChange)="cngRdioBtn9_1()">
+                  <label class="form-check-label" for="radioBtn9_1_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn9_1' type="radio" name="radioBtn9_1_1" id="radioBtn9_1_2" [value]=1 (ngModelChange)="cngRdioBtn9_1()">
+                  <label class="form-check-label" for="radioBtn9_1_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -2607,13 +2525,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown9_2' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown9_2' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown9_2()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -2625,14 +2543,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn9_2' type="radio" name="radioBtn9_2_1" id="radioBtn9_2_1" [value]=0 (ngModelChange)="cngRdioBtn9_2()">
+                  <label class="form-check-label" for="radioBtn9_2_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn9_2' type="radio" name="radioBtn9_2_1" id="radioBtn9_2_2" [value]=1 (ngModelChange)="cngRdioBtn9_2()">
+                  <label class="form-check-label" for="radioBtn9_2_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -2664,13 +2582,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown9_3' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown9_3' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown9_3()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -2682,14 +2600,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn9_3' type="radio" name="radioBtn9_3_1" id="radioBtn9_3_1" [value]=0 (ngModelChange)="cngRdioBtn9_3()">
+                  <label class="form-check-label" for="radioBtn9_3_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn9_3' type="radio" name="radioBtn9_3_1" id="radioBtn9_3_2" [value]=1 (ngModelChange)="cngRdioBtn9_3()">
+                  <label class="form-check-label" for="radioBtn9_3_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -2721,13 +2639,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown9_4' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown9_4' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown9_4()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -2739,14 +2657,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn9_4' type="radio" name="radioBtn9_4_1" id="radioBtn9_4_1" [value]=0 (ngModelChange)="cngRdioBtn9_4()">
+                  <label class="form-check-label" for="radioBtn9_4_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn9_4' type="radio" name="radioBtn9_4_1" id="radioBtn9_4_2" [value]=1 (ngModelChange)="cngRdioBtn9_4()">
+                  <label class="form-check-label" for="radioBtn9_4_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -2778,7 +2696,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="doSubmit()">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal">保存</button>
               </div>
             </div>
           </div>
@@ -2824,13 +2742,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown10_1' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown10_1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown10_1()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -2842,14 +2760,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn10_1' type="radio" name="radioBtn10_1_1" id="radioBtn10_1_1" [value]=0 (ngModelChange)="cngRdioBtn10_1()">
+                  <label class="form-check-label" for="radioBtn10_1_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn10_1' type="radio" name="radioBtn10_1_1" id="radioBtn10_1_2" [value]=1 (ngModelChange)="cngRdioBtn10_1()">
+                  <label class="form-check-label" for="radioBtn10_1_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -2881,13 +2799,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown10_2' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown10_2' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown10_2()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -2899,14 +2817,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn10_2' type="radio" name="radioBtn10_2_1" id="radioBtn10_2_1" [value]=0 (ngModelChange)="cngRdioBtn10_2()">
+                  <label class="form-check-label" for="radioBtn10_2_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn10_2' type="radio" name="radioBtn10_2_1" id="radioBtn10_2_2" [value]=1 (ngModelChange)="cngRdioBtn10_2()">
+                  <label class="form-check-label" for="radioBtn10_2_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -2938,13 +2856,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown10_3' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown10_3' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown10_3()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -2956,14 +2874,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn10_3' type="radio" name="radioBtn10_3_1" id="radioBtn10_3_1" [value]=0 (ngModelChange)="cngRdioBtn10_3()">
+                  <label class="form-check-label" for="radioBtn10_3_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn10_3' type="radio" name="radioBtn10_3_1" id="radioBtn10_3_2" [value]=1 (ngModelChange)="cngRdioBtn10_3()">
+                  <label class="form-check-label" for="radioBtn10_3_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -2995,13 +2913,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown10_4' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown10_4' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown10_4()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -3013,14 +2931,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn10_4' type="radio" name="radioBtn10_4_1" id="radioBtn10_4_1" [value]=0 (ngModelChange)="cngRdioBtn10_4()">
+                  <label class="form-check-label" for="radioBtn10_4_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn10_4' type="radio" name="radioBtn10_4_1" id="radioBtn10_4_2" [value]=1 (ngModelChange)="cngRdioBtn10_4()">
+                  <label class="form-check-label" for="radioBtn10_4_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -3052,7 +2970,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="doSubmit()">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal">保存</button>
               </div>
             </div>
           </div>
@@ -3098,13 +3016,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown11_1' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown11_1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown11_1()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -3116,14 +3034,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn11_1' type="radio" name="radioBtn11_1_1" id="radioBtn11_1_1" [value]=0 (ngModelChange)="cngRdioBtn11_1()">
+                  <label class="form-check-label" for="radioBtn11_1_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn11_1' type="radio" name="radioBtn11_1_1" id="radioBtn11_1_2" [value]=1 (ngModelChange)="cngRdioBtn11_1()">
+                  <label class="form-check-label" for="radioBtn11_1_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -3155,13 +3073,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown11_2' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown11_2' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown11_2()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -3173,14 +3091,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn11_2' type="radio" name="radioBtn11_2_1" id="radioBtn11_2_1" [value]=0 (ngModelChange)="cngRdioBtn11_2()">
+                  <label class="form-check-label" for="radioBtn11_2_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn11_2' type="radio" name="radioBtn11_2_1" id="radioBtn11_2_2" [value]=1 (ngModelChange)="cngRdioBtn11_2()">
+                  <label class="form-check-label" for="radioBtn11_2_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -3212,13 +3130,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown11_3' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown11_3' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown11_3()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -3230,14 +3148,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn11_3' type="radio" name="radioBtn11_3_1" id="radioBtn11_3_1" [value]=0 (ngModelChange)="cngRdioBtn11_3()">
+                  <label class="form-check-label" for="radioBtn11_3_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn11_3' type="radio" name="radioBtn11_3_1" id="radioBtn11_3_2" [value]=1 (ngModelChange)="cngRdioBtn11_3()">
+                  <label class="form-check-label" for="radioBtn11_3_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -3269,13 +3187,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown11_4' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown11_4' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown11_4()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -3287,14 +3205,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn11_4' type="radio" name="radioBtn11_4_1" id="radioBtn11_4_1" [value]=0 (ngModelChange)="cngRdioBtn11_4()">
+                  <label class="form-check-label" for="radioBtn11_4_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn11_4' type="radio" name="radioBtn11_4_1" id="radioBtn11_4_2" [value]=1 (ngModelChange)="cngRdioBtn11_4()">
+                  <label class="form-check-label" for="radioBtn11_4_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -3326,7 +3244,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="doSubmit()">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal">保存</button>
               </div>
             </div>
           </div>
@@ -3372,13 +3290,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown12_1' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown12_1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown12_1()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -3390,14 +3308,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn12_1' type="radio" name="radioBtn12_1_1" id="radioBtn12_1_1" [value]=0 (ngModelChange)="cngRdioBtn12_1()">
+                  <label class="form-check-label" for="radioBtn12_1_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn12_1' type="radio" name="radioBtn12_1_1" id="radioBtn12_1_2" [value]=1 (ngModelChange)="cngRdioBtn12_1()">
+                  <label class="form-check-label" for="radioBtn12_1_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -3429,13 +3347,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown12_2' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown12_2' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown12_2()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -3447,14 +3365,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn12_2' type="radio" name="radioBtn12_2_1" id="radioBtn12_2_1" [value]=0 (ngModelChange)="cngRdioBtn12_2()">
+                  <label class="form-check-label" for="radioBtn12_2_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn12_2' type="radio" name="radioBtn12_2_1" id="radioBtn12_2_2" [value]=1 (ngModelChange)="cngRdioBtn12_2()">
+                  <label class="form-check-label" for="radioBtn12_2_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -3486,13 +3404,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown12_3' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown12_3' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown12_3()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -3504,14 +3422,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn12_3' type="radio" name="radioBtn12_3_1" id="radioBtn12_3_1" [value]=0 (ngModelChange)="cngRdioBtn12_3()">
+                  <label class="form-check-label" for="radioBtn12_3_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn12_3' type="radio" name="radioBtn12_3_1" id="radioBtn12_3_2" [value]=1 (ngModelChange)="cngRdioBtn12_3()">
+                  <label class="form-check-label" for="radioBtn12_3_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -3543,13 +3461,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown12_4' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown12_4' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown12_4()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -3561,14 +3479,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn12_4' type="radio" name="radioBtn12_4_1" id="radioBtn12_4_1" [value]=0 (ngModelChange)="cngRdioBtn12_4()">
+                  <label class="form-check-label" for="radioBtn12_4_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn12_4' type="radio" name="radioBtn12_4_1" id="radioBtn12_4_2" [value]=1 (ngModelChange)="cngRdioBtn12_4()">
+                  <label class="form-check-label" for="radioBtn12_4_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -3600,7 +3518,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="doSubmit()">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal">保存</button>
               </div>
             </div>
           </div>
@@ -3646,13 +3564,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown13_1' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown13_1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown13_1()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -3664,14 +3582,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn13_1' type="radio" name="radioBtn13_1_1" id="radioBtn13_1_1" [value]=0 (ngModelChange)="cngRdioBtn13_1()">
+                  <label class="form-check-label" for="radioBtn13_1_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn13_1' type="radio" name="radioBtn13_1_1" id="radioBtn13_1_2" [value]=1 (ngModelChange)="cngRdioBtn13_1()">
+                  <label class="form-check-label" for="radioBtn13_1_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -3703,13 +3621,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown13_2' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown13_2' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown13_2()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -3721,14 +3639,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn13_2' type="radio" name="radioBtn13_2_1" id="radioBtn13_2_1" [value]=0 (ngModelChange)="cngRdioBtn13_2()">
+                  <label class="form-check-label" for="radioBtn13_2_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn13_2' type="radio" name="radioBtn13_2_1" id="radioBtn13_2_2" [value]=1 (ngModelChange)="cngRdioBtn13_2()">
+                  <label class="form-check-label" for="radioBtn13_2_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -3760,13 +3678,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown13_3' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown13_3' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown13_3()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -3778,14 +3696,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn13_3' type="radio" name="radioBtn13_3_1" id="radioBtn13_3_1" [value]=0 (ngModelChange)="cngRdioBtn13_3()">
+                  <label class="form-check-label" for="radioBtn13_3_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn13_3' type="radio" name="radioBtn13_3_1" id="radioBtn13_3_2" [value]=1 (ngModelChange)="cngRdioBtn13_3()">
+                  <label class="form-check-label" for="radioBtn13_3_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -3817,13 +3735,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown13_4' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown13_4' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown13_4()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -3835,14 +3753,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn13_4' type="radio" name="radioBtn13_4_1" id="radioBtn13_4_1" [value]=0 (ngModelChange)="cngRdioBtn13_4()">
+                  <label class="form-check-label" for="radioBtn13_4_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn13_4' type="radio" name="radioBtn13_4_1" id="radioBtn13_4_2" [value]=1 (ngModelChange)="cngRdioBtn13_4()">
+                  <label class="form-check-label" for="radioBtn13_4_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -3874,7 +3792,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="doSubmit()">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal">保存</button>
               </div>
             </div>
           </div>
@@ -3920,13 +3838,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown14_1' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown14_1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown14_1()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -3938,14 +3856,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn14_1' type="radio" name="radioBtn14_1" id="radioBtn14_1_1" [value]=0 (ngModelChange)="cngRdioBtn14_1()">
+                  <label class="form-check-label" for="radioBtn14_1_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn14_1' type="radio" name="radioBtn14_1" id="radioBtn14_1_2" [value]=1 (ngModelChange)="cngRdioBtn14_1()">
+                  <label class="form-check-label" for="radioBtn14_1_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -3977,13 +3895,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown14_2' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown14_2' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown14_2()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -3995,14 +3913,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn14_2' type="radio" name="radioBtn14_2" id="radioBtn14_2_1" [value]=0 (ngModelChange)="cngRdioBtn14_2()">
+                  <label class="form-check-label" for="radioBtn14_2_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn14_2' type="radio" name="radioBtn14_2" id="radioBtn14_2_2" [value]=1 (ngModelChange)="cngRdioBtn14_2()">
+                  <label class="form-check-label" for="radioBtn14_2_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -4034,13 +3952,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown14_3' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown14_3' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown14_3()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -4052,14 +3970,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn14_3' type="radio" name="radioBtn14_3" id="radioBtn14_3_1" [value]=0 (ngModelChange)="cngRdioBtn14_3()">
+                  <label class="form-check-label" for="radioBtn14_3_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn14_3' type="radio" name="radioBtn14_3" id="radioBtn14_3_2" [value]=1 (ngModelChange)="cngRdioBtn14_3()">
+                  <label class="form-check-label" for="radioBtn14_3_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -4091,13 +4009,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown14_4' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown14_4' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown14_4()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -4109,14 +4027,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn14_4' type="radio" name="radioBtn14_4" id="radioBtn14_4_1" [value]=0 (ngModelChange)="cngRdioBtn14_4()">
+                  <label class="form-check-label" for="radioBtn14_4_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn14_4' type="radio" name="radioBtn14_4" id="radioBtn14_4_2" [value]=1 (ngModelChange)="cngRdioBtn14_4()">
+                  <label class="form-check-label" for="radioBtn14_4_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -4148,7 +4066,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="doSubmit()">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal">保存</button>
               </div>
             </div>
           </div>
@@ -4194,13 +4112,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown15_1' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown15_1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown15_1()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -4212,14 +4130,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn15_1' type="radio" name="radioBtn15_1" id="radioBtn15_1_1" [value]=0 (ngModelChange)="cngRdioBtn15_1()">
+                  <label class="form-check-label" for="radioBtn15_1_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn15_1' type="radio" name="radioBtn15_1" id="radioBtn15_1_2" [value]=1 (ngModelChange)="cngRdioBtn15_1()">
+                  <label class="form-check-label" for="radioBtn15_1_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -4251,13 +4169,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown15_2' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown15_2' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown15_2()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -4308,13 +4226,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown15_3' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown15_3' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown15_3()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -4326,14 +4244,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn15_3' type="radio" name="radioBtn15_3" id="radioBtn15_3_1" [value]=0 (ngModelChange)="cngRdioBtn15_3()">
+                  <label class="form-check-label" for="radioBtn15_3_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn15_3' type="radio" name="radioBtn15_3" id="radioBtn15_3_2" [value]=1 (ngModelChange)="cngRdioBtn15_3()">
+                  <label class="form-check-label" for="radioBtn15_3_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -4365,13 +4283,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown15_4' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown15_4' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown15_4()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -4383,14 +4301,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn15_4' type="radio" name="radioBtn15_4" id="radioBtn15_4_1" [value]=0 (ngModelChange)="cngRdioBtn15_4()">
+                  <label class="form-check-label" for="radioBtn15_4_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn15_4' type="radio" name="radioBtn15_4" id="radioBtn15_4_2" [value]=1 (ngModelChange)="cngRdioBtn15_4()">
+                  <label class="form-check-label" for="radioBtn15_4_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -4422,7 +4340,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="doSubmit()">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal">保存</button>
               </div>
             </div>
           </div>
@@ -4468,13 +4386,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown16_1' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown16_1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown16_1()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -4486,14 +4404,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn16_1' type="radio" name="radioBtn16_1" id="radioBtn16_1_1" [value]=0 (ngModelChange)="cngRdioBtn16_1()">
+                  <label class="form-check-label" for="radioBtn16_1_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn16_1' type="radio" name="radioBtn16_1" id="radioBtn16_1_2" [value]=1 (ngModelChange)="cngRdioBtn16_1()">
+                  <label class="form-check-label" for="radioBtn16_1_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -4525,13 +4443,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown16_2' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown16_2' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown16_2()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -4543,14 +4461,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn16_2' type="radio" name="radioBtn16_2" id="radioBtn16_2_1" [value]=0 (ngModelChange)="cngRdioBtn16_2()">
+                  <label class="form-check-label" for="radioBtn16_2_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn16_2' type="radio" name="radioBtn16_2" id="radioBtn16_2_2" [value]=1 (ngModelChange)="cngRdioBtn16_2()">
+                  <label class="form-check-label" for="radioBtn16_2_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -4582,13 +4500,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown16_3' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown16_3' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown16_3()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -4600,14 +4518,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn16_3' type="radio" name="radioBtn16_3" id="radioBtn16_3_1" [value]=0 (ngModelChange)="cngRdioBtn16_3()">
+                  <label class="form-check-label" for="radioBtn16_3_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn16_3' type="radio" name="radioBtn16_3" id="radioBtn16_3_2" [value]=1 (ngModelChange)="cngRdioBtn16_3()">
+                  <label class="form-check-label" for="radioBtn16_3_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -4639,13 +4557,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown16_4' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown16_4' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown16_4()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -4657,14 +4575,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn16_4' type="radio" name="radioBtn16_4" id="radioBtn16_4_1" [value]=0 (ngModelChange)="cngRdioBtn16_4()">
+                  <label class="form-check-label" for="radioBtn16_4_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn16_4' type="radio" name="radioBtn16_4" id="radioBtn16_4_2" [value]=1 (ngModelChange)="cngRdioBtn16_4()">
+                  <label class="form-check-label" for="radioBtn16_4_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -4696,7 +4614,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="doSubmit()">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal">保存</button>
               </div>
             </div>
           </div>
@@ -4742,13 +4660,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown17_1' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown17_1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown17_1()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -4760,14 +4678,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn17_1' type="radio" name="radioBtn17_1" id="radioBtn17_1_1" [value]=0 (ngModelChange)="cngRdioBtn17_1()">
+                  <label class="form-check-label" for="radioBtn17_1_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn17_1' type="radio" name="radioBtn17_1" id="radioBtn17_1_2" [value]=1 (ngModelChange)="cngRdioBtn17_1()">
+                  <label class="form-check-label" for="radioBtn17_1_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -4799,13 +4717,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown17_2' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown17_2' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown17_2()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -4817,14 +4735,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn17_2' type="radio" name="radioBtn17_2" id="radioBtn17_2_1" [value]=0 (ngModelChange)="cngRdioBtn17_2()">
+                  <label class="form-check-label" for="radioBtn17_2_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn17_2' type="radio" name="radioBtn17_2" id="radioBtn17_2_2" [value]=1 (ngModelChange)="cngRdioBtn17_2()">
+                  <label class="form-check-label" for="radioBtn17_2_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -4856,13 +4774,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown17_3' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown17_3' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown17_3()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -4874,14 +4792,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn17_3' type="radio" name="radioBtn17_3" id="radioBtn17_3_1" [value]=0 (ngModelChange)="cngRdioBtn17_3()">
+                  <label class="form-check-label" for="radioBtn17_3_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn17_3' type="radio" name="radioBtn17_3" id="radioBtn17_3_2" [value]=1 (ngModelChange)="cngRdioBtn17_3()">
+                  <label class="form-check-label" for="radioBtn17_3_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -4913,13 +4831,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown17_4' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown17_4' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown17_4()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -4931,14 +4849,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn17_4' type="radio" name="radioBtn17_4" id="radioBtn17_4_1" [value]=0 (ngModelChange)="cngRdioBtn17_4()">
+                  <label class="form-check-label" for="radioBtn17_4_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn17_4' type="radio" name="radioBtn17_4" id="radioBtn17_4_2" [value]=1 (ngModelChange)="cngRdioBtn17_4()">
+                  <label class="form-check-label" for="radioBtn17_4_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -4970,7 +4888,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="doSubmit()">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal">保存</button>
               </div>
             </div>
           </div>
@@ -5016,13 +4934,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown18_1' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown18_1' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown18_1()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -5034,14 +4952,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn18_1' type="radio" name="radioBtn18_1" id="radioBtn18_1_1" [value]=0 (ngModelChange)="cngRdioBtn18_1()">
+                  <label class="form-check-label" for="radioBtn18_1_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn18_1' type="radio" name="radioBtn18_1" id="radioBtn18_1_2" [value]=1 (ngModelChange)="cngRdioBtn18_1()">
+                  <label class="form-check-label" for="radioBtn18_1_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -5073,13 +4991,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown18_2' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown18_2' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown18_2()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -5091,14 +5009,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn18_2' type="radio" name="radioBtn18_2" id="radioBtn18_2_1" [value]=0 (ngModelChange)="cngRdioBtn18_2()">
+                  <label class="form-check-label" for="radioBtn18_2_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn18_2' type="radio" name="radioBtn18_2" id="radioBtn18_2_2" [value]=1 (ngModelChange)="cngRdioBtn18_2()">
+                  <label class="form-check-label" for="radioBtn18_2_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -5130,13 +5048,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown18_3' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown18_3' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown18_3()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -5148,14 +5066,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn18_3' type="radio" name="radioBtn18_3" id="radioBtn18_3_1" [value]=0 (ngModelChange)="cngRdioBtn18_3()">
+                  <label class="form-check-label" for="radioBtn18_3_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn18_3' type="radio" name="radioBtn18_3" id="radioBtn18_3_2" [value]=1 (ngModelChange)="cngRdioBtn18_3()">
+                  <label class="form-check-label" for="radioBtn18_3_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -5187,13 +5105,13 @@
                 OLYMPIC
               </div>
               <div class="col-6 mb-2">
-                <select class="custom-select" [(ngModel)]='dropDown18_4' name="dropdownOption" id="dropdownOption">
-                  <option value="0">---</option>
-                  <option value="5">DIAMOND</option>
-                  <option value="4">GOLD</option>
-                  <option value="3">SILVER</option>
-                  <option value="2">BRONZE</option>
-                  <option value="1">IRON</option>
+                <select class="custom-select" [(ngModel)]='dropDown18_4' name="dropdownOption" id="dropdownOption" (ngModelChange)="cngDropDown18_4()">
+                  <option value=0>---</option>
+                  <option value=5>DIAMOND</option>
+                  <option value=4>GOLD</option>
+                  <option value=3>SILVER</option>
+                  <option value=2>BRONZE</option>
+                  <option value=1>IRON</option>
                 </select>
               </div>
             </div>
@@ -5205,14 +5123,14 @@
               </div>
               <div class="col-6">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio1" value="option1">
-                  <label class="form-check-label" for="user1Radio1">
+                  <input class="form-check-input" [(ngModel)]='radioBtn18_4' type="radio" name="radioBtn18_4" id="radioBtn18_4_1" [value]=0 (ngModelChange)="cngRdioBtn18_4()">
+                  <label class="form-check-label" for="radioBtn18_4_1">
                     <h6>Team A</h6>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="user1Radio2" value="option2">
-                  <label class="form-check-label" for="user1Radio2">
+                  <input class="form-check-input" [(ngModel)]='radioBtn18_4' type="radio" name="radioBtn18_4" id="radioBtn18_4_2" [value]=1 (ngModelChange)="cngRdioBtn18_4()">
+                  <label class="form-check-label" for="radioBtn18_4_2">
                     <h6>Team B</h6>
                   </label>
                 </div>
@@ -5244,7 +5162,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="doSubmit()">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal">保存</button>
               </div>
             </div>
           </div>

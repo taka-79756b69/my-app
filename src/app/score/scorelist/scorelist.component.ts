@@ -195,6 +195,8 @@ export class ScorelistComponent {
   }
 
   initDataSet() {
+
+    //ドロップダウンの初期値セット
     this.dropDown1_1 = this.score.course1_olympic1
     this.dropDown1_2 = this.score.course1_olympic2
     this.dropDown1_3 = this.score.course1_olympic3
@@ -268,10 +270,9 @@ export class ScorelistComponent {
     this.dropDown18_3 = this.score.course18_olympic3
     this.dropDown18_4 = this.score.course18_olympic4
 
+    //ラジオボタンの初期値セット
     this.radioBtn1_1 = this.score.course1_lasvegas1
-    //this.radioBtn1_1 = 1
     this.radioBtn1_2 = this.score.course1_lasvegas2
-    //this.radioBtn1_2 = 1
     this.radioBtn1_3 = this.score.course1_lasvegas3
     this.radioBtn1_4 = this.score.course1_lasvegas4
     this.radioBtn2_1 = this.score.course2_lasvegas1
@@ -346,8 +347,7 @@ export class ScorelistComponent {
   }
 
   onSubmit() {
-    // Process checkout data here
-    //this.checkoutForm.reset();
+    // リクエスト送信用にJSON作成
     this.checkoutForm = ({
       name1: this.score.name1,
       name2: this.score.name2,
@@ -698,6 +698,7 @@ export class ScorelistComponent {
     })
   }
 
+  //ドロップダウンの変更イベント
   cngDropDown1_1(){
     this.score.course1_olympic1 = this.dropDown1_1
   }
@@ -722,14 +723,418 @@ export class ScorelistComponent {
   cngDropDown2_4(){
     this.score.course2_olympic4 = this.dropDown2_4
   }
+  cngDropDown3_1(){
+    this.score.course3_olympic1 = this.dropDown3_1
+  }
+  cngDropDown3_2(){
+    this.score.course3_olympic2 = this.dropDown3_2
+  }
+  cngDropDown3_3(){
+    this.score.course3_olympic3 = this.dropDown3_3
+  }
+  cngDropDown3_4(){
+    this.score.course3_olympic4 = this.dropDown3_4
+  }
+  cngDropDown4_1(){
+    this.score.course4_olympic1 = this.dropDown4_1
+  }
+  cngDropDown4_2(){
+    this.score.course4_olympic2 = this.dropDown4_2
+  }
+  cngDropDown4_3(){
+    this.score.course4_olympic3 = this.dropDown4_3
+  }
+  cngDropDown4_4(){
+    this.score.course4_olympic4 = this.dropDown4_4
+  }
+  cngDropDown5_1(){
+    this.score.course5_olympic1 = this.dropDown5_1
+  }
+  cngDropDown5_2(){
+    this.score.course5_olympic2 = this.dropDown5_2
+  }
+  cngDropDown5_3(){
+    this.score.course5_olympic3 = this.dropDown5_3
+  }
+  cngDropDown5_4(){
+    this.score.course5_olympic4 = this.dropDown5_4
+  }
+  cngDropDown6_1(){
+    this.score.course6_olympic1 = this.dropDown6_1
+  }
+  cngDropDown6_2(){
+    this.score.course6_olympic2 = this.dropDown6_2
+  }
+  cngDropDown6_3(){
+    this.score.course6_olympic3 = this.dropDown6_3
+  }
+  cngDropDown6_4(){
+    this.score.course6_olympic4 = this.dropDown6_4
+  }
+  cngDropDown7_1(){
+    this.score.course7_olympic1 = this.dropDown7_1
+  }
+  cngDropDown7_2(){
+    this.score.course7_olympic2 = this.dropDown7_2
+  }
+  cngDropDown7_3(){
+    this.score.course7_olympic3 = this.dropDown7_3
+  }
+  cngDropDown7_4(){
+    this.score.course7_olympic4 = this.dropDown7_4
+  }
+  cngDropDown8_1(){
+    this.score.course8_olympic1 = this.dropDown8_1
+  }
+  cngDropDown8_2(){
+    this.score.course8_olympic2 = this.dropDown8_2
+  }
+  cngDropDown8_3(){
+    this.score.course8_olympic3 = this.dropDown8_3
+  }
+  cngDropDown8_4(){
+    this.score.course8_olympic4 = this.dropDown8_4
+  }
+  cngDropDown9_1(){
+    this.score.course9_olympic1 = this.dropDown9_1
+  }
+  cngDropDown9_2(){
+    this.score.course9_olympic2 = this.dropDown9_2
+  }
+  cngDropDown9_3(){
+    this.score.course9_olympic3 = this.dropDown9_3
+  }
+  cngDropDown9_4(){
+    this.score.course9_olympic4 = this.dropDown9_4
+  }
+  cngDropDown10_1(){
+    this.score.course10_olympic1 = this.dropDown10_1
+  }
+  cngDropDown10_2(){
+    this.score.course10_olympic2 = this.dropDown10_2
+  }
+  cngDropDown10_3(){
+    this.score.course10_olympic3 = this.dropDown10_3
+  }
+  cngDropDown10_4(){
+    this.score.course10_olympic4 = this.dropDown10_4
+  }
+  cngDropDown11_1(){
+    this.score.course11_olympic1 = this.dropDown11_1
+  }
+  cngDropDown11_2(){
+    this.score.course11_olympic2 = this.dropDown11_2
+  }
+  cngDropDown11_3(){
+    this.score.course11_olympic3 = this.dropDown11_3
+  }
+  cngDropDown11_4(){
+    this.score.course11_olympic4 = this.dropDown11_4
+  }
+  cngDropDown12_1(){
+    this.score.course12_olympic1 = this.dropDown12_1
+  }
+  cngDropDown12_2(){
+    this.score.course12_olympic2 = this.dropDown12_2
+  }
+  cngDropDown12_3(){
+    this.score.course12_olympic3 = this.dropDown12_3
+  }
+  cngDropDown12_4(){
+    this.score.course12_olympic4 = this.dropDown12_4
+  }
+  cngDropDown13_1(){
+    this.score.course13_olympic1 = this.dropDown13_1
+  }
+  cngDropDown13_2(){
+    this.score.course13_olympic2 = this.dropDown13_2
+  }
+  cngDropDown13_3(){
+    this.score.course13_olympic3 = this.dropDown13_3
+  }
+  cngDropDown13_4(){
+    this.score.course13_olympic4 = this.dropDown13_4
+  }
+  cngDropDown14_1(){
+    this.score.course14_olympic1 = this.dropDown14_1
+  }
+  cngDropDown14_2(){
+    this.score.course14_olympic2 = this.dropDown14_2
+  }
+  cngDropDown14_3(){
+    this.score.course14_olympic3 = this.dropDown14_3
+  }
+  cngDropDown14_4(){
+    this.score.course14_olympic4 = this.dropDown14_4
+  }
+  cngDropDown15_1(){
+    this.score.course15_olympic1 = this.dropDown15_1
+  }
+  cngDropDown15_2(){
+    this.score.course15_olympic2 = this.dropDown15_2
+  }
+  cngDropDown15_3(){
+    this.score.course15_olympic3 = this.dropDown15_3
+  }
+  cngDropDown15_4(){
+    this.score.course15_olympic4 = this.dropDown15_4
+  }
+  cngDropDown16_1(){
+    this.score.course16_olympic1 = this.dropDown16_1
+  }
+  cngDropDown16_2(){
+    this.score.course16_olympic2 = this.dropDown16_2
+  }
+  cngDropDown16_3(){
+    this.score.course16_olympic3 = this.dropDown16_3
+  }
+  cngDropDown16_4(){
+    this.score.course16_olympic4 = this.dropDown16_4
+  }
+  cngDropDown17_1(){
+    this.score.course17_olympic1 = this.dropDown17_1
+  }
+  cngDropDown17_2(){
+    this.score.course17_olympic2 = this.dropDown17_2
+  }
+  cngDropDown17_3(){
+    this.score.course17_olympic3 = this.dropDown17_3
+  }
+  cngDropDown17_4(){
+    this.score.course17_olympic4 = this.dropDown17_4
+  }
+  cngDropDown18_1(){
+    this.score.course18_olympic1 = this.dropDown18_1
+  }
+  cngDropDown18_2(){
+    this.score.course18_olympic2 = this.dropDown18_2
+  }
+  cngDropDown18_3(){
+    this.score.course18_olympic3 = this.dropDown18_3
+  }
+  cngDropDown18_4(){
+    this.score.course18_olympic4 = this.dropDown18_4
+  }
 
+  //ラジオボタンの変更イベント
   cngRdioBtn1_1(){
     this.score.course1_lasvegas1 = this.radioBtn1_1
   }
   cngRdioBtn1_2(){
     this.score.course1_lasvegas2 = this.radioBtn1_2
   }
+  cngRdioBtn1_3(){
+    this.score.course1_lasvegas1 = this.radioBtn1_3
+  }
+  cngRdioBtn1_4(){
+    this.score.course1_lasvegas2 = this.radioBtn1_4
+  }
+  cngRdioBtn2_1(){
+    this.score.course2_lasvegas1 = this.radioBtn2_1
+  }
+  cngRdioBtn2_2(){
+    this.score.course2_lasvegas2 = this.radioBtn2_2
+  }
+  cngRdioBtn2_3(){
+    this.score.course2_lasvegas1 = this.radioBtn2_3
+  }
+  cngRdioBtn2_4(){
+    this.score.course2_lasvegas2 = this.radioBtn2_4
+  }
+  cngRdioBtn3_1(){
+    this.score.course3_lasvegas1 = this.radioBtn3_1
+  }
+  cngRdioBtn3_2(){
+    this.score.course3_lasvegas2 = this.radioBtn3_2
+  }
+  cngRdioBtn3_3(){
+    this.score.course3_lasvegas1 = this.radioBtn3_3
+  }
+  cngRdioBtn3_4(){
+    this.score.course3_lasvegas2 = this.radioBtn3_4
+  }
+  cngRdioBtn4_1(){
+    this.score.course4_lasvegas1 = this.radioBtn4_1
+  }
+  cngRdioBtn4_2(){
+    this.score.course4_lasvegas2 = this.radioBtn4_2
+  }
+  cngRdioBtn4_3(){
+    this.score.course4_lasvegas1 = this.radioBtn4_3
+  }
+  cngRdioBtn4_4(){
+    this.score.course4_lasvegas2 = this.radioBtn4_4
+  }
+  cngRdioBtn5_1(){
+    this.score.course5_lasvegas1 = this.radioBtn5_1
+  }
+  cngRdioBtn5_2(){
+    this.score.course5_lasvegas2 = this.radioBtn5_2
+  }
+  cngRdioBtn5_3(){
+    this.score.course5_lasvegas1 = this.radioBtn5_3
+  }
+  cngRdioBtn5_4(){
+    this.score.course5_lasvegas2 = this.radioBtn5_4
+  }
+  cngRdioBtn6_1(){
+    this.score.course6_lasvegas1 = this.radioBtn6_1
+  }
+  cngRdioBtn6_2(){
+    this.score.course6_lasvegas2 = this.radioBtn6_2
+  }
+  cngRdioBtn6_3(){
+    this.score.course6_lasvegas1 = this.radioBtn6_3
+  }
+  cngRdioBtn6_4(){
+    this.score.course6_lasvegas2 = this.radioBtn6_4
+  }
+  cngRdioBtn7_1(){
+    this.score.course7_lasvegas1 = this.radioBtn7_1
+  }
+  cngRdioBtn7_2(){
+    this.score.course7_lasvegas2 = this.radioBtn7_2
+  }
+  cngRdioBtn7_3(){
+    this.score.course7_lasvegas1 = this.radioBtn7_3
+  }
+  cngRdioBtn7_4(){
+    this.score.course7_lasvegas2 = this.radioBtn7_4
+  }
+  cngRdioBtn8_1(){
+    this.score.course8_lasvegas1 = this.radioBtn8_1
+  }
+  cngRdioBtn8_2(){
+    this.score.course8_lasvegas2 = this.radioBtn8_2
+  }
+  cngRdioBtn8_3(){
+    this.score.course8_lasvegas1 = this.radioBtn8_3
+  }
+  cngRdioBtn8_4(){
+    this.score.course8_lasvegas2 = this.radioBtn8_4
+  }
+  cngRdioBtn9_1(){
+    this.score.course9_lasvegas1 = this.radioBtn9_1
+  }
+  cngRdioBtn9_2(){
+    this.score.course9_lasvegas2 = this.radioBtn9_2
+  }
+  cngRdioBtn9_3(){
+    this.score.course9_lasvegas1 = this.radioBtn9_3
+  }
+  cngRdioBtn9_4(){
+    this.score.course9_lasvegas2 = this.radioBtn9_4
+  }
+  cngRdioBtn10_1(){
+    this.score.course10_lasvegas1 = this.radioBtn10_1
+  }
+  cngRdioBtn10_2(){
+    this.score.course10_lasvegas2 = this.radioBtn10_2
+  }
+  cngRdioBtn10_3(){
+    this.score.course10_lasvegas1 = this.radioBtn10_3
+  }
+  cngRdioBtn10_4(){
+    this.score.course10_lasvegas2 = this.radioBtn10_4
+  }
+  cngRdioBtn11_1(){
+    this.score.course11_lasvegas1 = this.radioBtn11_1
+  }
+  cngRdioBtn11_2(){
+    this.score.course11_lasvegas2 = this.radioBtn11_2
+  }
+  cngRdioBtn11_3(){
+    this.score.course11_lasvegas1 = this.radioBtn11_3
+  }
+  cngRdioBtn11_4(){
+    this.score.course11_lasvegas2 = this.radioBtn11_4
+  }
+  cngRdioBtn12_1(){
+    this.score.course12_lasvegas1 = this.radioBtn12_1
+  }
+  cngRdioBtn12_2(){
+    this.score.course12_lasvegas2 = this.radioBtn12_2
+  }
+  cngRdioBtn12_3(){
+    this.score.course12_lasvegas1 = this.radioBtn12_3
+  }
+  cngRdioBtn12_4(){
+    this.score.course12_lasvegas2 = this.radioBtn12_4
+  }
+  cngRdioBtn13_1(){
+    this.score.course13_lasvegas1 = this.radioBtn13_1
+  }
+  cngRdioBtn13_2(){
+    this.score.course13_lasvegas2 = this.radioBtn13_2
+  }
+  cngRdioBtn13_3(){
+    this.score.course13_lasvegas1 = this.radioBtn13_3
+  }
+  cngRdioBtn13_4(){
+    this.score.course13_lasvegas2 = this.radioBtn13_4
+  }
+  cngRdioBtn14_1(){
+    this.score.course14_lasvegas1 = this.radioBtn14_1
+  }
+  cngRdioBtn14_2(){
+    this.score.course14_lasvegas2 = this.radioBtn14_2
+  }
+  cngRdioBtn14_3(){
+    this.score.course14_lasvegas1 = this.radioBtn14_3
+  }
+  cngRdioBtn14_4(){
+    this.score.course14_lasvegas2 = this.radioBtn14_4
+  }
+  cngRdioBtn15_1(){
+    this.score.course15_lasvegas1 = this.radioBtn15_1
+  }
+  cngRdioBtn15_2(){
+    this.score.course15_lasvegas2 = this.radioBtn15_2
+  }
+  cngRdioBtn15_3(){
+    this.score.course15_lasvegas1 = this.radioBtn15_3
+  }
+  cngRdioBtn15_4(){
+    this.score.course15_lasvegas2 = this.radioBtn15_4
+  }
+  cngRdioBtn16_1(){
+    this.score.course16_lasvegas1 = this.radioBtn16_1
+  }
+  cngRdioBtn16_2(){
+    this.score.course16_lasvegas2 = this.radioBtn16_2
+  }
+  cngRdioBtn16_3(){
+    this.score.course16_lasvegas1 = this.radioBtn16_3
+  }
+  cngRdioBtn16_4(){
+    this.score.course16_lasvegas2 = this.radioBtn16_4
+  }
+  cngRdioBtn17_1(){
+    this.score.course17_lasvegas1 = this.radioBtn17_1
+  }
+  cngRdioBtn17_2(){
+    this.score.course17_lasvegas2 = this.radioBtn17_2
+  }
+  cngRdioBtn17_3(){
+    this.score.course17_lasvegas1 = this.radioBtn17_3
+  }
+  cngRdioBtn17_4(){
+    this.score.course17_lasvegas2 = this.radioBtn17_4
+  }
+  cngRdioBtn18_1(){
+    this.score.course18_lasvegas1 = this.radioBtn18_1
+  }
+  cngRdioBtn18_2(){
+    this.score.course18_lasvegas2 = this.radioBtn18_2
+  }
+  cngRdioBtn18_3(){
+    this.score.course18_lasvegas1 = this.radioBtn18_3
+  }
+  cngRdioBtn18_4(){
+    this.score.course18_lasvegas2 = this.radioBtn18_4
+  }
 
+  //スコアカウンターの変更イベント
   course1ScoreCountDown_User1() {
     if(this.score.course1_score1 !== 1 )
       this.score.course1_score1--
@@ -1324,5 +1729,4 @@ export class ScorelistComponent {
       this.score.course18_score4++
   }
 
-  doSubmit(){}
 }
