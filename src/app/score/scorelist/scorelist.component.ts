@@ -1038,10 +1038,10 @@ export class ScorelistComponent {
     this.score.course1_lasvegas2 = this.radioBtn1_2
   }
   cngRdioBtn1_3(){
-    this.score.course1_lasvegas1 = this.radioBtn1_3
+    this.score.course1_lasvegas3 = this.radioBtn1_3
   }
   cngRdioBtn1_4(){
-    this.score.course1_lasvegas2 = this.radioBtn1_4
+    this.score.course1_lasvegas4 = this.radioBtn1_4
   }
   cngRdioBtn2_1(){
     this.score.course2_lasvegas1 = this.radioBtn2_1
@@ -1050,10 +1050,10 @@ export class ScorelistComponent {
     this.score.course2_lasvegas2 = this.radioBtn2_2
   }
   cngRdioBtn2_3(){
-    this.score.course2_lasvegas1 = this.radioBtn2_3
+    this.score.course2_lasvegas3 = this.radioBtn2_3
   }
   cngRdioBtn2_4(){
-    this.score.course2_lasvegas2 = this.radioBtn2_4
+    this.score.course2_lasvegas4 = this.radioBtn2_4
   }
   cngRdioBtn3_1(){
     this.score.course3_lasvegas1 = this.radioBtn3_1
@@ -1062,10 +1062,10 @@ export class ScorelistComponent {
     this.score.course3_lasvegas2 = this.radioBtn3_2
   }
   cngRdioBtn3_3(){
-    this.score.course3_lasvegas1 = this.radioBtn3_3
+    this.score.course3_lasvegas3 = this.radioBtn3_3
   }
   cngRdioBtn3_4(){
-    this.score.course3_lasvegas2 = this.radioBtn3_4
+    this.score.course3_lasvegas4 = this.radioBtn3_4
   }
   cngRdioBtn4_1(){
     this.score.course4_lasvegas1 = this.radioBtn4_1
@@ -1074,10 +1074,10 @@ export class ScorelistComponent {
     this.score.course4_lasvegas2 = this.radioBtn4_2
   }
   cngRdioBtn4_3(){
-    this.score.course4_lasvegas1 = this.radioBtn4_3
+    this.score.course4_lasvegas3 = this.radioBtn4_3
   }
   cngRdioBtn4_4(){
-    this.score.course4_lasvegas2 = this.radioBtn4_4
+    this.score.course4_lasvegas4 = this.radioBtn4_4
   }
   cngRdioBtn5_1(){
     this.score.course5_lasvegas1 = this.radioBtn5_1
@@ -1086,10 +1086,10 @@ export class ScorelistComponent {
     this.score.course5_lasvegas2 = this.radioBtn5_2
   }
   cngRdioBtn5_3(){
-    this.score.course5_lasvegas1 = this.radioBtn5_3
+    this.score.course5_lasvegas3 = this.radioBtn5_3
   }
   cngRdioBtn5_4(){
-    this.score.course5_lasvegas2 = this.radioBtn5_4
+    this.score.course5_lasvegas4 = this.radioBtn5_4
   }
   cngRdioBtn6_1(){
     this.score.course6_lasvegas1 = this.radioBtn6_1
@@ -1098,10 +1098,10 @@ export class ScorelistComponent {
     this.score.course6_lasvegas2 = this.radioBtn6_2
   }
   cngRdioBtn6_3(){
-    this.score.course6_lasvegas1 = this.radioBtn6_3
+    this.score.course6_lasvegas3 = this.radioBtn6_3
   }
   cngRdioBtn6_4(){
-    this.score.course6_lasvegas2 = this.radioBtn6_4
+    this.score.course6_lasvegas4 = this.radioBtn6_4
   }
   cngRdioBtn7_1(){
     this.score.course7_lasvegas1 = this.radioBtn7_1
@@ -1110,10 +1110,10 @@ export class ScorelistComponent {
     this.score.course7_lasvegas2 = this.radioBtn7_2
   }
   cngRdioBtn7_3(){
-    this.score.course7_lasvegas1 = this.radioBtn7_3
+    this.score.course7_lasvegas3 = this.radioBtn7_3
   }
   cngRdioBtn7_4(){
-    this.score.course7_lasvegas2 = this.radioBtn7_4
+    this.score.course7_lasvegas4 = this.radioBtn7_4
   }
   cngRdioBtn8_1(){
     this.score.course8_lasvegas1 = this.radioBtn8_1
@@ -1122,10 +1122,10 @@ export class ScorelistComponent {
     this.score.course8_lasvegas2 = this.radioBtn8_2
   }
   cngRdioBtn8_3(){
-    this.score.course8_lasvegas1 = this.radioBtn8_3
+    this.score.course8_lasvegas3 = this.radioBtn8_3
   }
   cngRdioBtn8_4(){
-    this.score.course8_lasvegas2 = this.radioBtn8_4
+    this.score.course8_lasvegas4 = this.radioBtn8_4
   }
   cngRdioBtn9_1(){
     this.score.course9_lasvegas1 = this.radioBtn9_1
@@ -1134,10 +1134,10 @@ export class ScorelistComponent {
     this.score.course9_lasvegas2 = this.radioBtn9_2
   }
   cngRdioBtn9_3(){
-    this.score.course9_lasvegas1 = this.radioBtn9_3
+    this.score.course9_lasvegas3 = this.radioBtn9_3
   }
   cngRdioBtn9_4(){
-    this.score.course9_lasvegas2 = this.radioBtn9_4
+    this.score.course9_lasvegas4 = this.radioBtn9_4
   }
   cngRdioBtn10_1(){
     this.score.course10_lasvegas1 = this.radioBtn10_1
@@ -1146,10 +1146,10 @@ export class ScorelistComponent {
     this.score.course10_lasvegas2 = this.radioBtn10_2
   }
   cngRdioBtn10_3(){
-    this.score.course10_lasvegas1 = this.radioBtn10_3
+    this.score.course10_lasvegas3 = this.radioBtn10_3
   }
   cngRdioBtn10_4(){
-    this.score.course10_lasvegas2 = this.radioBtn10_4
+    this.score.course10_lasvegas4 = this.radioBtn10_4
   }
   cngRdioBtn11_1(){
     this.score.course11_lasvegas1 = this.radioBtn11_1
@@ -1158,10 +1158,10 @@ export class ScorelistComponent {
     this.score.course11_lasvegas2 = this.radioBtn11_2
   }
   cngRdioBtn11_3(){
-    this.score.course11_lasvegas1 = this.radioBtn11_3
+    this.score.course11_lasvegas3 = this.radioBtn11_3
   }
   cngRdioBtn11_4(){
-    this.score.course11_lasvegas2 = this.radioBtn11_4
+    this.score.course11_lasvegas4 = this.radioBtn11_4
   }
   cngRdioBtn12_1(){
     this.score.course12_lasvegas1 = this.radioBtn12_1
@@ -1170,10 +1170,10 @@ export class ScorelistComponent {
     this.score.course12_lasvegas2 = this.radioBtn12_2
   }
   cngRdioBtn12_3(){
-    this.score.course12_lasvegas1 = this.radioBtn12_3
+    this.score.course12_lasvegas3 = this.radioBtn12_3
   }
   cngRdioBtn12_4(){
-    this.score.course12_lasvegas2 = this.radioBtn12_4
+    this.score.course12_lasvegas4 = this.radioBtn12_4
   }
   cngRdioBtn13_1(){
     this.score.course13_lasvegas1 = this.radioBtn13_1
@@ -1182,10 +1182,10 @@ export class ScorelistComponent {
     this.score.course13_lasvegas2 = this.radioBtn13_2
   }
   cngRdioBtn13_3(){
-    this.score.course13_lasvegas1 = this.radioBtn13_3
+    this.score.course13_lasvegas3 = this.radioBtn13_3
   }
   cngRdioBtn13_4(){
-    this.score.course13_lasvegas2 = this.radioBtn13_4
+    this.score.course13_lasvegas4 = this.radioBtn13_4
   }
   cngRdioBtn14_1(){
     this.score.course14_lasvegas1 = this.radioBtn14_1
@@ -1194,10 +1194,10 @@ export class ScorelistComponent {
     this.score.course14_lasvegas2 = this.radioBtn14_2
   }
   cngRdioBtn14_3(){
-    this.score.course14_lasvegas1 = this.radioBtn14_3
+    this.score.course14_lasvegas3 = this.radioBtn14_3
   }
   cngRdioBtn14_4(){
-    this.score.course14_lasvegas2 = this.radioBtn14_4
+    this.score.course14_lasvegas4 = this.radioBtn14_4
   }
   cngRdioBtn15_1(){
     this.score.course15_lasvegas1 = this.radioBtn15_1
@@ -1206,10 +1206,10 @@ export class ScorelistComponent {
     this.score.course15_lasvegas2 = this.radioBtn15_2
   }
   cngRdioBtn15_3(){
-    this.score.course15_lasvegas1 = this.radioBtn15_3
+    this.score.course15_lasvegas3 = this.radioBtn15_3
   }
   cngRdioBtn15_4(){
-    this.score.course15_lasvegas2 = this.radioBtn15_4
+    this.score.course15_lasvegas4 = this.radioBtn15_4
   }
   cngRdioBtn16_1(){
     this.score.course16_lasvegas1 = this.radioBtn16_1
@@ -1218,10 +1218,10 @@ export class ScorelistComponent {
     this.score.course16_lasvegas2 = this.radioBtn16_2
   }
   cngRdioBtn16_3(){
-    this.score.course16_lasvegas1 = this.radioBtn16_3
+    this.score.course16_lasvegas3 = this.radioBtn16_3
   }
   cngRdioBtn16_4(){
-    this.score.course16_lasvegas2 = this.radioBtn16_4
+    this.score.course16_lasvegas4 = this.radioBtn16_4
   }
   cngRdioBtn17_1(){
     this.score.course17_lasvegas1 = this.radioBtn17_1
@@ -1230,10 +1230,10 @@ export class ScorelistComponent {
     this.score.course17_lasvegas2 = this.radioBtn17_2
   }
   cngRdioBtn17_3(){
-    this.score.course17_lasvegas1 = this.radioBtn17_3
+    this.score.course17_lasvegas3 = this.radioBtn17_3
   }
   cngRdioBtn17_4(){
-    this.score.course17_lasvegas2 = this.radioBtn17_4
+    this.score.course17_lasvegas4 = this.radioBtn17_4
   }
   cngRdioBtn18_1(){
     this.score.course18_lasvegas1 = this.radioBtn18_1
@@ -1242,10 +1242,10 @@ export class ScorelistComponent {
     this.score.course18_lasvegas2 = this.radioBtn18_2
   }
   cngRdioBtn18_3(){
-    this.score.course18_lasvegas1 = this.radioBtn18_3
+    this.score.course18_lasvegas3 = this.radioBtn18_3
   }
   cngRdioBtn18_4(){
-    this.score.course18_lasvegas2 = this.radioBtn18_4
+    this.score.course18_lasvegas4 = this.radioBtn18_4
   }
 
   //スコアカウンターの変更イベント

@@ -1,8 +1,6 @@
-import { json, query } from 'express';
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from 'rxjs';
-import { Query } from 'mongoose';
 
 @Injectable()
 export class ScoreService {
