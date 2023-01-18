@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, SimpleChanges } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { ScoreService } from 'src/app/common/service/score.service';
@@ -13,6 +13,24 @@ export class ScorelistComponent {
   score: any
   courseIndex: any
   checkoutForm: any
+
+  //OUTTOTAL
+  outTotal1: any
+  outTotal2: any
+  outTotal3: any
+  outTotal4: any
+
+  //INTOTAL
+  inTotal1: any
+  inTotal2: any
+  inTotal3: any
+  inTotal4: any
+
+  //TOTAL
+  total1: any
+  total2: any
+  total3: any
+  total4: any
 
   //ドロップダウンのモデル
   dropDown1_1: any
@@ -194,6 +212,22 @@ export class ScorelistComponent {
     })
   }
 
+  save() {
+    // changes.prop contains the old and the new value...
+    this.outTotal1 = this.setOutTotal1()
+    this.inTotal1 = this.setInTotal1()
+    this.outTotal2 = this.setOutTotal2()
+    this.inTotal2 = this.setInTotal2()
+    this.outTotal3 = this.setOutTotal3()
+    this.inTotal3 = this.setInTotal3()
+    this.outTotal4 = this.setOutTotal4()
+    this.inTotal4 = this.setInTotal4()
+    this.total1 = this.setTotal1()
+    this.total2 = this.setTotal2()
+    this.total3 = this.setTotal3()
+    this.total4 = this.setTotal4()
+  }
+
   initDataSet() {
 
     //ドロップダウンの初期値セット
@@ -344,6 +378,85 @@ export class ScorelistComponent {
     this.radioBtn18_3 = this.score.course18_lasvegas3
     this.radioBtn18_4 = this.score.course18_lasvegas4
 
+    // this.outTotal1 = (
+    //   this.score.course1_score1 + this.score.course2_score1 + this.score.course3_score1 +
+    //   this.score.course4_score1 + this.score.course5_score1 + this.score.course6_score1 +
+    //   this.score.course7_score1 + this.score.course8_score1 + this.score.course9_score1
+    //   )
+
+    this.outTotal1 = this.setOutTotal1()
+    this.inTotal1 = this.setInTotal1()
+    this.outTotal2 = this.setOutTotal2()
+    this.inTotal2 = this.setInTotal2()
+    this.outTotal3 = this.setOutTotal3()
+    this.inTotal3 = this.setInTotal3()
+    this.outTotal4 = this.setOutTotal4()
+    this.inTotal4 = this.setInTotal4()
+    this.total1 = this.setTotal1()
+    this.total2 = this.setTotal2()
+    this.total3 = this.setTotal3()
+    this.total4 = this.setTotal4()
+  }
+
+  setTotal1() {
+    return this.setOutTotal1() + this.setInTotal1()
+  }
+  setTotal2() {
+    return this.setOutTotal2() + this.setInTotal2()
+  }
+  setTotal3() {
+    return this.setOutTotal3() + this.setInTotal3()
+  }
+  setTotal4() {
+    return this.setOutTotal4() + this.setInTotal4()
+  }
+
+  setOutTotal1() {
+    return this.score.course1_score1 + this.score.course2_score1 + this.score.course3_score1
+    + this.score.course4_score1 + this.score.course5_score1 + this.score.course6_score1
+    + this.score.course7_score1 + this.score.course8_score1 + this.score.course9_score1
+  }
+
+  setInTotal1() {
+    return this.score.course10_score1 + this.score.course11_score1 + this.score.course12_score1
+    + this.score.course13_score1 + this.score.course14_score1 + this.score.course15_score1
+    + this.score.course16_score1 + this.score.course17_score1 + this.score.course18_score1
+  }
+
+  setOutTotal2() {
+    return this.score.course1_score2 + this.score.course2_score2 + this.score.course3_score2
+    + this.score.course4_score2 + this.score.course5_score2 + this.score.course6_score2
+    + this.score.course7_score2 + this.score.course8_score2 + this.score.course9_score2
+  }
+
+  setInTotal2() {
+    return this.score.course10_score2 + this.score.course11_score2 + this.score.course12_score2
+    + this.score.course13_score2 + this.score.course14_score2 + this.score.course15_score2
+    + this.score.course16_score2 + this.score.course17_score2 + this.score.course18_score2
+  }
+
+  setOutTotal3() {
+    return this.score.course1_score3 + this.score.course2_score3 + this.score.course3_score3
+    + this.score.course4_score3 + this.score.course5_score3 + this.score.course6_score3
+    + this.score.course7_score3 + this.score.course8_score3 + this.score.course9_score3
+  }
+
+  setInTotal3() {
+    return this.score.course10_score3 + this.score.course11_score3 + this.score.course12_score3
+    + this.score.course13_score3 + this.score.course14_score3 + this.score.course15_score3
+    + this.score.course16_score3 + this.score.course17_score3 + this.score.course18_score3
+  }
+
+  setOutTotal4() {
+    return this.score.course1_score4 + this.score.course2_score4 + this.score.course3_score4
+    + this.score.course4_score4 + this.score.course5_score4 + this.score.course6_score4
+    + this.score.course7_score4 + this.score.course8_score4 + this.score.course9_score4
+  }
+
+  setInTotal4() {
+    return this.score.course10_score4 + this.score.course11_score4 + this.score.course12_score4
+    + this.score.course13_score4 + this.score.course14_score4 + this.score.course15_score4
+    + this.score.course16_score4 + this.score.course17_score4 + this.score.course18_score4
   }
 
   onSubmit() {
@@ -692,6 +805,7 @@ export class ScorelistComponent {
           console.log('got err: '+ err)
         },
         ()=>{
+          this.ngOnInit()
           //console.log('complete!')
         }
       )

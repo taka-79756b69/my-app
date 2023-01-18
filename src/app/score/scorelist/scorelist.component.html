@@ -12,7 +12,7 @@
 <div *ngIf="score">
   <!-- <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()"> -->
   <form (ngSubmit)="onSubmit()">
-    <table class="table-sm">
+    <table class="table table-sm">
       <thead>
         <tr>
           <td class="text-center">#</td>
@@ -122,6 +122,16 @@
           <td class="text-center">Score: {{ score.course9_score3 }}<br>(Put: {{ score.course9_put3 }})</td>
           <td class="text-center">Score: {{ score.course9_score4 }}<br>(Put: {{ score.course9_put4 }})</td>
         </tr>
+        <tr class="bg-info text-white">
+          <th scope="row">
+            <div class="text-center">OUT</div>
+          </th>
+          <td class="text-center">Score: {{ outTotal1 }}</td>
+          <td class="text-center">Score: {{ outTotal2 }}</td>
+          <td class="text-center">Score: {{ outTotal3 }}</td>
+          <td class="text-center">Score: {{ outTotal4 }}</td>
+        </tr>
+        <br>
         <tr>
           <th scope="row">
             <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#course10Modal">
@@ -221,6 +231,25 @@
           <td class="text-center">Score: {{ score.course18_score3 }}<br>(Put: {{ score.course18_put3 }})</td>
           <td class="text-center">Score: {{ score.course18_score4 }}<br>(Put: {{ score.course18_put4 }})</td>
         </tr>
+        <tr class="bg-info text-white">
+          <th scope="row">
+            <div class="text-center">IN</div>
+          </th>
+          <td class="text-center">Score: {{ inTotal1 }}</td>
+          <td class="text-center">Score: {{ inTotal2 }}</td>
+          <td class="text-center">Score: {{ inTotal3 }}</td>
+          <td class="text-center">Score: {{ inTotal4 }}</td>
+        </tr>
+
+        <tr class="bg-success text-white">
+          <th scope="row">
+            <div class="text-center">TOTAL</div>
+          </th>
+          <td class="text-center">Score: {{ total1 }}</td>
+          <td class="text-center">Score: {{ total2 }}</td>
+          <td class="text-center">Score: {{ total3 }}</td>
+          <td class="text-center">Score: {{ total4 }}</td>
+        </tr>
       </tbody>
     </table>
     <br>
@@ -236,7 +265,7 @@
   </form>
 
   <!-- コース1のダイアログ -->
-  <div class="modal fade" id="course1Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal fade" id="course1Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div *ngIf="score">
@@ -495,7 +524,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()" (click)="save()">保存</button>
               </div>
             </div>
           </div>
@@ -511,7 +540,7 @@
   </div>
 
   <!-- コース2のダイアログ -->
-  <div class="modal fade" id="course2Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal fade" id="course2Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div *ngIf="score">
@@ -770,7 +799,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()" (click)="save()">保存</button>
               </div>
             </div>
           </div>
@@ -785,7 +814,7 @@
     </div>
   </div>
   <!-- コース3のダイアログ -->
-  <div class="modal fade" id="course3Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal fade" id="course3Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div *ngIf="score">
@@ -1044,7 +1073,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">保存</button>
               </div>
             </div>
           </div>
@@ -1059,7 +1088,7 @@
     </div>
   </div>
   <!-- course4のダイアログ -->
-  <div class="modal fade" id="course4Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal fade" id="course4Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div *ngIf="score">
@@ -1318,7 +1347,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">保存</button>
               </div>
             </div>
           </div>
@@ -1333,7 +1362,7 @@
     </div>
   </div>
   <!-- course5のダイアログ -->
-  <div class="modal fade" id="course5Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal fade" id="course5Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div *ngIf="score">
@@ -1600,7 +1629,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">保存</button>
               </div>
             </div>
           </div>
@@ -1615,7 +1644,7 @@
     </div>
   </div>
   <!-- course6のダイアログ -->
-  <div class="modal fade" id="course6Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal fade" id="course6Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div *ngIf="score">
@@ -1874,7 +1903,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">保存</button>
               </div>
             </div>
           </div>
@@ -1889,7 +1918,7 @@
     </div>
   </div>
   <!-- course7のダイアログ -->
-  <div class="modal fade" id="course7Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal fade" id="course7Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div *ngIf="score">
@@ -2148,7 +2177,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">保存</button>
               </div>
             </div>
           </div>
@@ -2163,7 +2192,7 @@
     </div>
   </div>
   <!-- course8のダイアログ -->
-  <div class="modal fade" id="course8Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal fade" id="course8Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div *ngIf="score">
@@ -2422,7 +2451,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">保存</button>
               </div>
             </div>
           </div>
@@ -2437,7 +2466,7 @@
     </div>
   </div>
   <!-- course9のダイアログ -->
-  <div class="modal fade" id="course9Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal fade" id="course9Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div *ngIf="score">
@@ -2696,7 +2725,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">保存</button>
               </div>
             </div>
           </div>
@@ -2711,7 +2740,7 @@
     </div>
   </div>
   <!-- course10のダイアログ -->
-  <div class="modal fade" id="course10Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal fade" id="course10Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div *ngIf="score">
@@ -2970,7 +2999,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">保存</button>
               </div>
             </div>
           </div>
@@ -2985,7 +3014,7 @@
     </div>
   </div>
   <!-- course11のダイアログ -->
-  <div class="modal fade" id="course11Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal fade" id="course11Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div *ngIf="score">
@@ -3244,7 +3273,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">保存</button>
               </div>
             </div>
           </div>
@@ -3259,7 +3288,7 @@
     </div>
   </div>
   <!-- course12のダイアログ -->
-  <div class="modal fade" id="course12Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal fade" id="course12Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div *ngIf="score">
@@ -3518,7 +3547,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">保存</button>
               </div>
             </div>
           </div>
@@ -3533,7 +3562,7 @@
     </div>
   </div>
   <!-- course13のダイアログ -->
-  <div class="modal fade" id="course13Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal fade" id="course13Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div *ngIf="score">
@@ -3792,7 +3821,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">保存</button>
               </div>
             </div>
           </div>
@@ -3807,7 +3836,7 @@
     </div>
   </div>
   <!-- course14のダイアログ -->
-  <div class="modal fade" id="course14Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal fade" id="course14Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div *ngIf="score">
@@ -4066,7 +4095,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">保存</button>
               </div>
             </div>
           </div>
@@ -4081,7 +4110,7 @@
     </div>
   </div>
   <!-- course15のダイアログ -->
-  <div class="modal fade" id="course15Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal fade" id="course15Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div *ngIf="score">
@@ -4340,7 +4369,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">保存</button>
               </div>
             </div>
           </div>
@@ -4355,7 +4384,7 @@
     </div>
   </div>
   <!-- course16のダイアログ -->
-  <div class="modal fade" id="course16Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal fade" id="course16Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div *ngIf="score">
@@ -4614,7 +4643,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">保存</button>
               </div>
             </div>
           </div>
@@ -4629,7 +4658,7 @@
     </div>
   </div>
   <!-- course17のダイアログ -->
-  <div class="modal fade" id="course17Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal fade" id="course17Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div *ngIf="score">
@@ -4888,7 +4917,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">保存</button>
               </div>
             </div>
           </div>
@@ -4903,7 +4932,7 @@
     </div>
   </div>
   <!-- course18のダイアログ -->
-  <div class="modal fade" id="course18Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal fade" id="course18Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div *ngIf="score">
@@ -5162,7 +5191,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">保存</button>
               </div>
             </div>
           </div>

@@ -15,7 +15,8 @@ const routes: Routes = [
     children: [
      { path: '', component: ScorelisttopComponent },
      { path: ':scoreId', component: ScorelistComponent },
-     { path: ':scoreId/:courseIndex', component: ScoreeditComponent },
+    //  { path: ':scoreId/score', component: ScoreComponent },
+     { path: ':scoreId/score', redirectTo: '/score', pathMatch: 'full'},
      { path: 'scorelisttop', component: ScorelisttopComponent }
     ]
   }
