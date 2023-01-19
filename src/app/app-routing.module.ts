@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ScoreModule } from './score/score.module';
 import { BrowserModule } from '@angular/platform-browser';
+import { NewgameComponent } from './newgame/newgame.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'score', pathMatch: 'full'},
-  // { path: 'home', component: HomeComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full'},
+  { path: 'home', component: HomeComponent },
   { path: 'score', component: ScoreComponent },
+  { path: 'newgame', component: NewgameComponent }
 ];
 
 @NgModule({
