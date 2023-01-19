@@ -38,6 +38,12 @@ export class ScorelistComponent {
   olympicTotal3: any
   olympicTotal4: any
 
+  //LASVEGAS
+  lasvegasTotal1 = 0
+  lasvegasTotal2 = 0
+  lasvegasTotal3 = 0
+  lasvegasTotal4 = 0
+
   //ドロップダウンのモデル
   dropDown1_1: any
   dropDown1_2: any
@@ -234,13 +240,278 @@ export class ScorelistComponent {
     this.total4 = this.setTotal4()
 
     this.setOlympicTotal()
+    this.setLasvegasTotal()
+  }
+
+  setLasvegasTotal() {
+
+    //course1
+    var scores: any
+    scores = [
+      {
+        score1: this.score.course1_score1,
+        team1:  this.score.course1_lasvegas1,
+        score2: this.score.course1_score2,
+        team2:  this.score.course1_lasvegas2,
+        score3: this.score.course1_score3,
+        team3:  this.score.course1_lasvegas3,
+        score4: this.score.course1_score4,
+        team4:  this.score.course1_lasvegas4,
+      },
+      {
+        score1: this.score.course2_score1,
+        team1:  this.score.course2_lasvegas1,
+        score2: this.score.course2_score2,
+        team2:  this.score.course2_lasvegas2,
+        score3: this.score.course2_score3,
+        team3:  this.score.course2_lasvegas3,
+        score4: this.score.course2_score4,
+        team4:  this.score.course2_lasvegas4,
+      },
+      {
+        score1: this.score.course3_score1,
+        team1:  this.score.course3_lasvegas1,
+        score2: this.score.course3_score2,
+        team2:  this.score.course3_lasvegas2,
+        score3: this.score.course3_score3,
+        team3:  this.score.course3_lasvegas3,
+        score4: this.score.course3_score4,
+        team4:  this.score.course3_lasvegas4,
+      },
+      {
+        score1: this.score.course4_score1,
+        team1:  this.score.course4_lasvegas1,
+        score2: this.score.course4_score2,
+        team2:  this.score.course4_lasvegas2,
+        score3: this.score.course4_score3,
+        team3:  this.score.course4_lasvegas3,
+        score4: this.score.course4_score4,
+        team4:  this.score.course4_lasvegas4,
+      }
+      ,
+      {
+        score1: this.score.course5_score1,
+        team1:  this.score.course5_lasvegas1,
+        score2: this.score.course5_score2,
+        team2:  this.score.course5_lasvegas2,
+        score3: this.score.course5_score3,
+        team3:  this.score.course5_lasvegas3,
+        score4: this.score.course5_score4,
+        team4:  this.score.course5_lasvegas4,
+      },
+      {
+        score1: this.score.course6_score1,
+        team1:  this.score.course6_lasvegas1,
+        score2: this.score.course6_score2,
+        team2:  this.score.course6_lasvegas2,
+        score3: this.score.course6_score3,
+        team3:  this.score.course6_lasvegas3,
+        score4: this.score.course6_score4,
+        team4:  this.score.course6_lasvegas4,
+      },
+      {
+        score1: this.score.course7_score1,
+        team1:  this.score.course7_lasvegas1,
+        score2: this.score.course7_score2,
+        team2:  this.score.course7_lasvegas2,
+        score3: this.score.course7_score3,
+        team3:  this.score.course7_lasvegas3,
+        score4: this.score.course7_score4,
+        team4:  this.score.course7_lasvegas4,
+      },
+      {
+        score1: this.score.course8_score1,
+        team1:  this.score.course8_lasvegas1,
+        score2: this.score.course8_score2,
+        team2:  this.score.course8_lasvegas2,
+        score3: this.score.course8_score3,
+        team3:  this.score.course8_lasvegas3,
+        score4: this.score.course8_score4,
+        team4:  this.score.course8_lasvegas4,
+      },
+      {
+        score1: this.score.course9_score1,
+        team1:  this.score.course9_lasvegas1,
+        score2: this.score.course9_score2,
+        team2:  this.score.course9_lasvegas2,
+        score3: this.score.course9_score3,
+        team3:  this.score.course9_lasvegas3,
+        score4: this.score.course9_score4,
+        team4:  this.score.course9_lasvegas4,
+      },
+      {
+        score1: this.score.course10_score1,
+        team1:  this.score.course10_lasvegas1,
+        score2: this.score.course10_score2,
+        team2:  this.score.course10_lasvegas2,
+        score3: this.score.course10_score3,
+        team3:  this.score.course10_lasvegas3,
+        score4: this.score.course10_score4,
+        team4:  this.score.course10_lasvegas4,
+      },
+      {
+        score1: this.score.course11_score1,
+        team1:  this.score.course11_lasvegas1,
+        score2: this.score.course11_score2,
+        team2:  this.score.course11_lasvegas2,
+        score3: this.score.course11_score3,
+        team3:  this.score.course11_lasvegas3,
+        score4: this.score.course11_score4,
+        team4:  this.score.course11_lasvegas4,
+      },
+      {
+        score1: this.score.course12_score1,
+        team1:  this.score.course12_lasvegas1,
+        score2: this.score.course12_score2,
+        team2:  this.score.course12_lasvegas2,
+        score3: this.score.course12_score3,
+        team3:  this.score.course12_lasvegas3,
+        score4: this.score.course12_score4,
+        team4:  this.score.course12_lasvegas4,
+      },
+      {
+        score1: this.score.course13_score1,
+        team1:  this.score.course13_lasvegas1,
+        score2: this.score.course13_score2,
+        team2:  this.score.course13_lasvegas2,
+        score3: this.score.course13_score3,
+        team3:  this.score.course13_lasvegas3,
+        score4: this.score.course13_score4,
+        team4:  this.score.course13_lasvegas4,
+      },
+      {
+        score1: this.score.course14_score1,
+        team1:  this.score.course14_lasvegas1,
+        score2: this.score.course14_score2,
+        team2:  this.score.course14_lasvegas2,
+        score3: this.score.course14_score3,
+        team3:  this.score.course14_lasvegas3,
+        score4: this.score.course14_score4,
+        team4:  this.score.course14_lasvegas4,
+      },
+      {
+        score1: this.score.course15_score1,
+        team1:  this.score.course15_lasvegas1,
+        score2: this.score.course15_score2,
+        team2:  this.score.course15_lasvegas2,
+        score3: this.score.course15_score3,
+        team3:  this.score.course15_lasvegas3,
+        score4: this.score.course15_score4,
+        team4:  this.score.course15_lasvegas4,
+      },
+      {
+        score1: this.score.course16_score1,
+        team1:  this.score.course16_lasvegas1,
+        score2: this.score.course16_score2,
+        team2:  this.score.course16_lasvegas2,
+        score3: this.score.course16_score3,
+        team3:  this.score.course16_lasvegas3,
+        score4: this.score.course16_score4,
+        team4:  this.score.course16_lasvegas4,
+      },
+      {
+        score1: this.score.course17_score1,
+        team1:  this.score.course17_lasvegas1,
+        score2: this.score.course17_score2,
+        team2:  this.score.course17_lasvegas2,
+        score3: this.score.course17_score3,
+        team3:  this.score.course17_lasvegas3,
+        score4: this.score.course17_score4,
+        team4:  this.score.course17_lasvegas4,
+      },
+      {
+        score1: this.score.course18_score1,
+        team1:  this.score.course18_lasvegas1,
+        score2: this.score.course18_score2,
+        team2:  this.score.course18_lasvegas2,
+        score3: this.score.course18_score3,
+        team3:  this.score.course18_lasvegas3,
+        score4: this.score.course18_score4,
+        team4:  this.score.course18_lasvegas4,
+      }
+
+      //コースごとにTeamAとBに分ける？
+      //
+    ]
+
+    //初期化しておく
+    this.lasvegasTotal1 = 0
+    this.lasvegasTotal2 = 0
+    this.lasvegasTotal3 = 0
+    this.lasvegasTotal4 = 0
+
+    for (let score of scores) {
+
+      var teamA: number[] = new Array()
+      var teamB: number[] = new Array()
+
+      if(score.score1 != 0 && score.score2 != 0 && score.score3 != 0 && score.score4 != 0){
+        if(score.team1 == 0){
+          teamA.push(+score.score1)
+        }else{
+          teamB.push(+score.score1)
+        }
+        if(score.team2 == 0){
+          teamA.push(+score.score2)
+        }else{
+          teamB.push(+score.score2)
+        }
+        if(score.team3 == 0){
+          teamA.push(+score.score3)
+        }else{
+          teamB.push(+score.score3)
+        }
+        if(score.team4 == 0){
+          teamA.push(+score.score4)
+        }else{
+          teamB.push(+score.score4)
+        }
+
+        if(score.team1 == 0){
+          this.lasvegasTotal1 = this.lasvegasTotal1 + (this.getLasTeamScore(teamB) - this.getLasTeamScore(teamA))
+        }else{
+          this.lasvegasTotal1 = this.lasvegasTotal1 + (this.getLasTeamScore(teamA) - this.getLasTeamScore(teamB))
+        }
+
+        if(score.team2 == 0){
+          this.lasvegasTotal2 = this.lasvegasTotal2 + (this.getLasTeamScore(teamB) - this.getLasTeamScore(teamA))
+        }else{
+          this.lasvegasTotal2 = this.lasvegasTotal2 + (this.getLasTeamScore(teamA) - this.getLasTeamScore(teamB))
+        }
+
+        if(score.team3 == 0){
+          this.lasvegasTotal3 = this.lasvegasTotal3 + (this.getLasTeamScore(teamB) - this.getLasTeamScore(teamA))
+        }else{
+          this.lasvegasTotal3 = this.lasvegasTotal3 + (this.getLasTeamScore(teamA) - this.getLasTeamScore(teamB))
+        }
+
+        if(score.team4 == 0){
+          this.lasvegasTotal4 = this.lasvegasTotal4 + (this.getLasTeamScore(teamB) - this.getLasTeamScore(teamA))
+        }else{
+          this.lasvegasTotal4 = this.lasvegasTotal4 + (this.getLasTeamScore(teamA) - this.getLasTeamScore(teamB))
+        }
+      }
+    }
+  }
+
+  getLasTeamScore(score:any){
+
+    if(score[0] < score[1]){
+      return (score[0] * 10 + score[1])
+    }else{
+      return (score[1] * 10 + score[0])
+    }
   }
 
   setOlympicTotal() {
 
     var countMember: any
+    var tmp1: any
+    var tmp2: any
+    var tmp3: any
+    var tmp4: any
 
-    countMember = 1
+    countMember = 0
 
     if(this.score.name2 != "")
       countMember++
@@ -251,7 +522,7 @@ export class ScorelistComponent {
     if(this.score.name4 != "")
       countMember++
 
-    if(countMember == 1){
+    if(countMember == 0){
       //オリンピックのメンバーが1人の場合は不成立
       this.olympicTotal1 = 0
       this.olympicTotal2 = 0
@@ -341,23 +612,28 @@ export class ScorelistComponent {
       +this.score.course18_olympic4
     )
 
-    if(countMember == 4){
-      this.olympicTotal1 = this.olympicTotal1 * countMember - (this.olympicTotal2 + this.olympicTotal3 + this.olympicTotal4)
-      this.olympicTotal2 = this.olympicTotal2 * countMember - (this.olympicTotal1 + this.olympicTotal3 + this.olympicTotal4)
-      this.olympicTotal3 = this.olympicTotal3 * countMember - (this.olympicTotal1 + this.olympicTotal2 + this.olympicTotal4)
-      this.olympicTotal4 = this.olympicTotal4 * countMember - (this.olympicTotal1 + this.olympicTotal2 + this.olympicTotal3)
-    }
-
     if(countMember == 3){
-      this.olympicTotal1 = this.olympicTotal1 * countMember - (this.olympicTotal2 + this.olympicTotal3 )
-      this.olympicTotal2 = this.olympicTotal2 * countMember - (this.olympicTotal1 + this.olympicTotal3 )
-      this.olympicTotal3 = this.olympicTotal3 * countMember - (this.olympicTotal1 + this.olympicTotal2 )
+      tmp1 = this.olympicTotal1 * countMember - (this.olympicTotal2 + this.olympicTotal3 + this.olympicTotal4)
+      tmp2 = this.olympicTotal2 * countMember - (this.olympicTotal1 + this.olympicTotal3 + this.olympicTotal4)
+      tmp3 = this.olympicTotal3 * countMember - (this.olympicTotal1 + this.olympicTotal2 + this.olympicTotal4)
+      tmp4 = this.olympicTotal4 * countMember - (this.olympicTotal1 + this.olympicTotal2 + this.olympicTotal3)
     }
 
     if(countMember == 2){
-      this.olympicTotal1 = this.olympicTotal1 * countMember - this.olympicTotal2
-      this.olympicTotal2 = this.olympicTotal2 * countMember - this.olympicTotal1
+      tmp1 = this.olympicTotal1 * countMember - (this.olympicTotal2 + this.olympicTotal3 )
+      tmp2 = this.olympicTotal2 * countMember - (this.olympicTotal1 + this.olympicTotal3 )
+      tmp3 = this.olympicTotal3 * countMember - (this.olympicTotal1 + this.olympicTotal2 )
     }
+
+    if(countMember == 1){
+      tmp1 = this.olympicTotal1 * countMember - this.olympicTotal2
+      tmp2 = this.olympicTotal2 * countMember - this.olympicTotal1
+    }
+
+    this.olympicTotal1 = tmp1
+    this.olympicTotal2 = tmp2
+    this.olympicTotal3 = tmp3
+    this.olympicTotal4 = tmp4
   }
 
   initDataSet() {
@@ -530,6 +806,7 @@ export class ScorelistComponent {
     this.total4 = this.setTotal4()
 
     this.setOlympicTotal()
+    this.setLasvegasTotal()
   }
 
   //スコア合計をセット
@@ -594,6 +871,7 @@ export class ScorelistComponent {
     + this.score.course16_score4 + this.score.course17_score4 + this.score.course18_score4
   }
 
+  //スコア保存
   onSubmit() {
     // リクエスト送信用にJSON作成
     this.checkoutForm = ({
@@ -1386,7 +1664,7 @@ export class ScorelistComponent {
 
   //スコアカウンターの変更イベント
   course1ScoreCountDown_User1() {
-    if(this.score.course1_score1 !== 1 )
+    if(this.score.course1_score1 !== 0 )
       this.score.course1_score1--
   }
   course1ScoreCountUp_User1() {
@@ -1394,7 +1672,7 @@ export class ScorelistComponent {
       this.score.course1_score1++
   }
   course1ScoreCountDown_User2() {
-    if(this.score.course1_score2 !== 1 )
+    if(this.score.course1_score2 !== 0 )
       this.score.course1_score2--
   }
   course1ScoreCountUp_User2() {
@@ -1402,7 +1680,7 @@ export class ScorelistComponent {
       this.score.course1_score2++
   }
   course1ScoreCountDown_User3() {
-    if(this.score.course1_score3 !== 1 )
+    if(this.score.course1_score3 !== 0 )
       this.score.course1_score3--
   }
   course1ScoreCountUp_User3() {
@@ -1410,7 +1688,7 @@ export class ScorelistComponent {
       this.score.course1_score3++
   }
   course1ScoreCountDown_User4() {
-    if(this.score.course1_score4 !== 1 )
+    if(this.score.course1_score4 !== 0 )
       this.score.course1_score4--
   }
   course1ScoreCountUp_User4() {
@@ -1419,7 +1697,7 @@ export class ScorelistComponent {
   }
 
   course2ScoreCountDown_User1() {
-    if(this.score.course2_score1 !== 1 )
+    if(this.score.course2_score1 !== 0 )
       this.score.course2_score1--
   }
   course2ScoreCountUp_User1() {
@@ -1427,7 +1705,7 @@ export class ScorelistComponent {
       this.score.course2_score1++
   }
   course2ScoreCountDown_User2() {
-    if(this.score.course2_score2 !== 1 )
+    if(this.score.course2_score2 !== 0 )
       this.score.course2_score2--
   }
   course2ScoreCountUp_User2() {
@@ -1435,7 +1713,7 @@ export class ScorelistComponent {
       this.score.course2_score2++
   }
   course2ScoreCountDown_User3() {
-    if(this.score.course2_score3 !== 1 )
+    if(this.score.course2_score3 !== 0 )
       this.score.course2_score3--
   }
   course2ScoreCountUp_User3() {
@@ -1443,7 +1721,7 @@ export class ScorelistComponent {
       this.score.course2_score3++
   }
   course2ScoreCountDown_User4() {
-    if(this.score.course2_score4 !== 1 )
+    if(this.score.course2_score4 !== 0 )
       this.score.course2_score4--
   }
   course2ScoreCountUp_User4() {
@@ -1452,7 +1730,7 @@ export class ScorelistComponent {
   }
 
   course3ScoreCountDown_User1() {
-    if(this.score.course3_score1 !== 1 )
+    if(this.score.course3_score1 !== 0 )
       this.score.course3_score1--
   }
   course3ScoreCountUp_User1() {
@@ -1460,7 +1738,7 @@ export class ScorelistComponent {
       this.score.course3_score1++
   }
   course3ScoreCountDown_User2() {
-    if(this.score.course3_score2 !== 1 )
+    if(this.score.course3_score2 !== 0 )
       this.score.course3_score2--
   }
   course3ScoreCountUp_User2() {
@@ -1468,7 +1746,7 @@ export class ScorelistComponent {
       this.score.course3_score2++
   }
   course3ScoreCountDown_User3() {
-    if(this.score.course3_score3 !== 1 )
+    if(this.score.course3_score3 !== 0 )
       this.score.course3_score3--
   }
   course3ScoreCountUp_User3() {
@@ -1476,7 +1754,7 @@ export class ScorelistComponent {
       this.score.course3_score3++
   }
   course3ScoreCountDown_User4() {
-    if(this.score.course3_score4 !== 1 )
+    if(this.score.course3_score4 !== 0 )
       this.score.course3_score4--
   }
   course3ScoreCountUp_User4() {
@@ -1485,7 +1763,7 @@ export class ScorelistComponent {
   }
 
   course4ScoreCountDown_User1() {
-    if(this.score.course4_score1 !== 1 )
+    if(this.score.course4_score1 !== 0 )
       this.score.course4_score1--
   }
   course4ScoreCountUp_User1() {
@@ -1493,7 +1771,7 @@ export class ScorelistComponent {
       this.score.course4_score1++
   }
   course4ScoreCountDown_User2() {
-    if(this.score.course4_score2 !== 1 )
+    if(this.score.course4_score2 !== 0 )
       this.score.course4_score2--
   }
   course4ScoreCountUp_User2() {
@@ -1501,7 +1779,7 @@ export class ScorelistComponent {
       this.score.course4_score2++
   }
   course4ScoreCountDown_User3() {
-    if(this.score.course4_score3 !== 1 )
+    if(this.score.course4_score3 !== 0 )
       this.score.course4_score3--
   }
   course4ScoreCountUp_User3() {
@@ -1509,7 +1787,7 @@ export class ScorelistComponent {
       this.score.course4_score3++
   }
   course4ScoreCountDown_User4() {
-    if(this.score.course4_score4 !== 1 )
+    if(this.score.course4_score4 !== 0 )
       this.score.course4_score4--
   }
   course4ScoreCountUp_User4() {
@@ -1518,7 +1796,7 @@ export class ScorelistComponent {
   }
 
   course5ScoreCountDown_User1() {
-    if(this.score.course5_score1 !== 1 )
+    if(this.score.course5_score1 !== 0 )
       this.score.course5_score1--
   }
   course5ScoreCountUp_User1() {
@@ -1526,7 +1804,7 @@ export class ScorelistComponent {
       this.score.course5_score1++
   }
   course5ScoreCountDown_User2() {
-    if(this.score.course5_score2 !== 1 )
+    if(this.score.course5_score2 !== 0 )
       this.score.course5_score2--
   }
   course5ScoreCountUp_User2() {
@@ -1534,7 +1812,7 @@ export class ScorelistComponent {
       this.score.course5_score2++
   }
   course5ScoreCountDown_User3() {
-    if(this.score.course5_score3 !== 1 )
+    if(this.score.course5_score3 !== 0 )
       this.score.course5_score3--
   }
   course5ScoreCountUp_User3() {
@@ -1542,7 +1820,7 @@ export class ScorelistComponent {
       this.score.course5_score3++
   }
   course5ScoreCountDown_User4() {
-    if(this.score.course5_score4 !== 1 )
+    if(this.score.course5_score4 !== 0 )
       this.score.course5_score4--
   }
   course5ScoreCountUp_User4() {
@@ -1551,7 +1829,7 @@ export class ScorelistComponent {
   }
 
   course6ScoreCountDown_User1() {
-    if(this.score.course6_score1 !== 1 )
+    if(this.score.course6_score1 !== 0 )
       this.score.course6_score1--
   }
   course6ScoreCountUp_User1() {
@@ -1559,7 +1837,7 @@ export class ScorelistComponent {
       this.score.course6_score1++
   }
   course6ScoreCountDown_User2() {
-    if(this.score.course6_score2 !== 1 )
+    if(this.score.course6_score2 !== 0 )
       this.score.course6_score2--
   }
   course6ScoreCountUp_User2() {
@@ -1567,7 +1845,7 @@ export class ScorelistComponent {
       this.score.course6_score2++
   }
   course6ScoreCountDown_User3() {
-    if(this.score.course6_score3 !== 1 )
+    if(this.score.course6_score3 !== 0 )
       this.score.course6_score3--
   }
   course6ScoreCountUp_User3() {
@@ -1575,7 +1853,7 @@ export class ScorelistComponent {
       this.score.course6_score3++
   }
   course6ScoreCountDown_User4() {
-    if(this.score.course6_score4 !== 1 )
+    if(this.score.course6_score4 !== 0 )
       this.score.course6_score4--
   }
   course6ScoreCountUp_User4() {
@@ -1584,7 +1862,7 @@ export class ScorelistComponent {
   }
 
   course7ScoreCountDown_User1() {
-    if(this.score.course7_score1 !== 1 )
+    if(this.score.course7_score1 !== 0 )
       this.score.course7_score1--
   }
   course7ScoreCountUp_User1() {
@@ -1592,7 +1870,7 @@ export class ScorelistComponent {
       this.score.course7_score1++
   }
   course7ScoreCountDown_User2() {
-    if(this.score.course7_score2 !== 1 )
+    if(this.score.course7_score2 !== 0 )
       this.score.course7_score2--
   }
   course7ScoreCountUp_User2() {
@@ -1600,7 +1878,7 @@ export class ScorelistComponent {
       this.score.course7_score2++
   }
   course7ScoreCountDown_User3() {
-    if(this.score.course7_score3 !== 1 )
+    if(this.score.course7_score3 !== 0 )
       this.score.course7_score3--
   }
   course7ScoreCountUp_User3() {
@@ -1608,7 +1886,7 @@ export class ScorelistComponent {
       this.score.course7_score3++
   }
   course7ScoreCountDown_User4() {
-    if(this.score.course7_score4 !== 1 )
+    if(this.score.course7_score4 !== 0 )
       this.score.course7_score4--
   }
   course7ScoreCountUp_User4() {
@@ -1617,7 +1895,7 @@ export class ScorelistComponent {
   }
 
   course8ScoreCountDown_User1() {
-    if(this.score.course8_score1 !== 1 )
+    if(this.score.course8_score1 !== 0 )
       this.score.course8_score1--
   }
   course8ScoreCountUp_User1() {
@@ -1625,7 +1903,7 @@ export class ScorelistComponent {
       this.score.course8_score1++
   }
   course8ScoreCountDown_User2() {
-    if(this.score.course8_score2 !== 1 )
+    if(this.score.course8_score2 !== 0 )
       this.score.course8_score2--
   }
   course8ScoreCountUp_User2() {
@@ -1633,7 +1911,7 @@ export class ScorelistComponent {
       this.score.course8_score2++
   }
   course8ScoreCountDown_User3() {
-    if(this.score.course8_score3 !== 1 )
+    if(this.score.course8_score3 !== 0 )
       this.score.course8_score3--
   }
   course8ScoreCountUp_User3() {
@@ -1641,7 +1919,7 @@ export class ScorelistComponent {
       this.score.course8_score3++
   }
   course8ScoreCountDown_User4() {
-    if(this.score.course8_score4 !== 1 )
+    if(this.score.course8_score4 !== 0 )
       this.score.course8_score4--
   }
   course8ScoreCountUp_User4() {
@@ -1650,7 +1928,7 @@ export class ScorelistComponent {
   }
 
   course9ScoreCountDown_User1() {
-    if(this.score.course9_score1 !== 1 )
+    if(this.score.course9_score1 !== 0 )
       this.score.course9_score1--
   }
   course9ScoreCountUp_User1() {
@@ -1658,7 +1936,7 @@ export class ScorelistComponent {
       this.score.course9_score1++
   }
   course9ScoreCountDown_User2() {
-    if(this.score.course9_score2 !== 1 )
+    if(this.score.course9_score2 !== 0 )
       this.score.course9_score2--
   }
   course9ScoreCountUp_User2() {
@@ -1666,7 +1944,7 @@ export class ScorelistComponent {
       this.score.course9_score2++
   }
   course9ScoreCountDown_User3() {
-    if(this.score.course9_score3 !== 1 )
+    if(this.score.course9_score3 !== 0 )
       this.score.course9_score3--
   }
   course9ScoreCountUp_User3() {
@@ -1674,7 +1952,7 @@ export class ScorelistComponent {
       this.score.course9_score3++
   }
   course9ScoreCountDown_User4() {
-    if(this.score.course9_score4 !== 1 )
+    if(this.score.course9_score4 !== 0 )
       this.score.course9_score4--
   }
   course9ScoreCountUp_User4() {
@@ -1683,7 +1961,7 @@ export class ScorelistComponent {
   }
 
   course10ScoreCountDown_User1() {
-    if(this.score.course10_score1 !== 1 )
+    if(this.score.course10_score1 !== 0 )
       this.score.course10_score1--
   }
   course10ScoreCountUp_User1() {
@@ -1691,7 +1969,7 @@ export class ScorelistComponent {
       this.score.course10_score1++
   }
   course10ScoreCountDown_User2() {
-    if(this.score.course10_score2 !== 1 )
+    if(this.score.course10_score2 !== 0 )
       this.score.course10_score2--
   }
   course10ScoreCountUp_User2() {
@@ -1699,7 +1977,7 @@ export class ScorelistComponent {
       this.score.course10_score2++
   }
   course10ScoreCountDown_User3() {
-    if(this.score.course10_score3 !== 1 )
+    if(this.score.course10_score3 !== 0 )
       this.score.course10_score3--
   }
   course10ScoreCountUp_User3() {
@@ -1707,7 +1985,7 @@ export class ScorelistComponent {
       this.score.course10_score3++
   }
   course10ScoreCountDown_User4() {
-    if(this.score.course10_score4 !== 1 )
+    if(this.score.course10_score4 !== 0 )
       this.score.course10_score4--
   }
   course10ScoreCountUp_User4() {
@@ -1716,7 +1994,7 @@ export class ScorelistComponent {
   }
 
   course11ScoreCountDown_User1() {
-    if(this.score.course11_score1 !== 1 )
+    if(this.score.course11_score1 !== 0 )
       this.score.course11_score1--
   }
   course11ScoreCountUp_User1() {
@@ -1724,7 +2002,7 @@ export class ScorelistComponent {
       this.score.course11_score1++
   }
   course11ScoreCountDown_User2() {
-    if(this.score.course11_score2 !== 1 )
+    if(this.score.course11_score2 !== 0 )
       this.score.course11_score2--
   }
   course11ScoreCountUp_User2() {
@@ -1732,7 +2010,7 @@ export class ScorelistComponent {
       this.score.course11_score2++
   }
   course11ScoreCountDown_User3() {
-    if(this.score.course11_score3 !== 1 )
+    if(this.score.course11_score3 !== 0 )
       this.score.course11_score3--
   }
   course11ScoreCountUp_User3() {
@@ -1740,7 +2018,7 @@ export class ScorelistComponent {
       this.score.course11_score3++
   }
   course11ScoreCountDown_User4() {
-    if(this.score.course11_score4 !== 1 )
+    if(this.score.course11_score4 !== 0 )
       this.score.course11_score4--
   }
   course11ScoreCountUp_User4() {
@@ -1749,7 +2027,7 @@ export class ScorelistComponent {
   }
 
   course12ScoreCountDown_User1() {
-    if(this.score.course12_score1 !== 1 )
+    if(this.score.course12_score1 !== 0 )
       this.score.course12_score1--
   }
   course12ScoreCountUp_User1() {
@@ -1757,7 +2035,7 @@ export class ScorelistComponent {
       this.score.course12_score1++
   }
   course12ScoreCountDown_User2() {
-    if(this.score.course12_score2 !== 1 )
+    if(this.score.course12_score2 !== 0 )
       this.score.course12_score2--
   }
   course12ScoreCountUp_User2() {
@@ -1765,7 +2043,7 @@ export class ScorelistComponent {
       this.score.course12_score2++
   }
   course12ScoreCountDown_User3() {
-    if(this.score.course12_score3 !== 1 )
+    if(this.score.course12_score3 !== 0 )
       this.score.course12_score3--
   }
   course12ScoreCountUp_User3() {
@@ -1773,7 +2051,7 @@ export class ScorelistComponent {
       this.score.course12_score3++
   }
   course12ScoreCountDown_User4() {
-    if(this.score.course12_score4 !== 1 )
+    if(this.score.course12_score4 !== 0 )
       this.score.course12_score4--
   }
   course12ScoreCountUp_User4() {
@@ -1782,7 +2060,7 @@ export class ScorelistComponent {
   }
 
   course13ScoreCountDown_User1() {
-    if(this.score.course13_score1 !== 1 )
+    if(this.score.course13_score1 !== 0 )
       this.score.course13_score1--
   }
   course13ScoreCountUp_User1() {
@@ -1790,7 +2068,7 @@ export class ScorelistComponent {
       this.score.course13_score1++
   }
   course13ScoreCountDown_User2() {
-    if(this.score.course13_score2 !== 1 )
+    if(this.score.course13_score2 !== 0 )
       this.score.course13_score2--
   }
   course13ScoreCountUp_User2() {
@@ -1798,7 +2076,7 @@ export class ScorelistComponent {
       this.score.course13_score2++
   }
   course13ScoreCountDown_User3() {
-    if(this.score.course13_score3 !== 1 )
+    if(this.score.course13_score3 !== 0 )
       this.score.course13_score3--
   }
   course13ScoreCountUp_User3() {
@@ -1806,7 +2084,7 @@ export class ScorelistComponent {
       this.score.course13_score3++
   }
   course13ScoreCountDown_User4() {
-    if(this.score.course13_score4 !== 1 )
+    if(this.score.course13_score4 !== 0 )
       this.score.course13_score4--
   }
   course13ScoreCountUp_User4() {
@@ -1815,7 +2093,7 @@ export class ScorelistComponent {
   }
 
   course14ScoreCountDown_User1() {
-    if(this.score.course14_score1 !== 1 )
+    if(this.score.course14_score1 !== 0 )
       this.score.course14_score1--
   }
   course14ScoreCountUp_User1() {
@@ -1823,7 +2101,7 @@ export class ScorelistComponent {
       this.score.course14_score1++
   }
   course14ScoreCountDown_User2() {
-    if(this.score.course14_score2 !== 1 )
+    if(this.score.course14_score2 !== 0 )
       this.score.course14_score2--
   }
   course14ScoreCountUp_User2() {
@@ -1831,7 +2109,7 @@ export class ScorelistComponent {
       this.score.course14_score2++
   }
   course14ScoreCountDown_User3() {
-    if(this.score.course14_score3 !== 1 )
+    if(this.score.course14_score3 !== 0 )
       this.score.course14_score3--
   }
   course14ScoreCountUp_User3() {
@@ -1839,7 +2117,7 @@ export class ScorelistComponent {
       this.score.course14_score3++
   }
   course14ScoreCountDown_User4() {
-    if(this.score.course14_score4 !== 1 )
+    if(this.score.course14_score4 !== 0 )
       this.score.course14_score4--
   }
   course14ScoreCountUp_User4() {
@@ -1848,7 +2126,7 @@ export class ScorelistComponent {
   }
 
   course15ScoreCountDown_User1() {
-    if(this.score.course15_score1 !== 1 )
+    if(this.score.course15_score1 !== 0 )
       this.score.course15_score1--
   }
   course15ScoreCountUp_User1() {
@@ -1856,7 +2134,7 @@ export class ScorelistComponent {
       this.score.course15_score1++
   }
   course15ScoreCountDown_User2() {
-    if(this.score.course15_score2 !== 1 )
+    if(this.score.course15_score2 !== 0 )
       this.score.course15_score2--
   }
   course15ScoreCountUp_User2() {
@@ -1864,7 +2142,7 @@ export class ScorelistComponent {
       this.score.course15_score2++
   }
   course15ScoreCountDown_User3() {
-    if(this.score.course15_score3 !== 1 )
+    if(this.score.course15_score3 !== 0 )
       this.score.course15_score3--
   }
   course15ScoreCountUp_User3() {
@@ -1872,7 +2150,7 @@ export class ScorelistComponent {
       this.score.course15_score3++
   }
   course15ScoreCountDown_User4() {
-    if(this.score.course15_score4 !== 1 )
+    if(this.score.course15_score4 !== 0 )
       this.score.course15_score4--
   }
   course15ScoreCountUp_User4() {
@@ -1881,7 +2159,7 @@ export class ScorelistComponent {
   }
 
   course16ScoreCountDown_User1() {
-    if(this.score.course16_score1 !== 1 )
+    if(this.score.course16_score1 !== 0 )
       this.score.course16_score1--
   }
   course16ScoreCountUp_User1() {
@@ -1889,7 +2167,7 @@ export class ScorelistComponent {
       this.score.course16_score1++
   }
   course16ScoreCountDown_User2() {
-    if(this.score.course16_score2 !== 1 )
+    if(this.score.course16_score2 !== 0 )
       this.score.course16_score2--
   }
   course16ScoreCountUp_User2() {
@@ -1897,7 +2175,7 @@ export class ScorelistComponent {
       this.score.course16_score2++
   }
   course16ScoreCountDown_User3() {
-    if(this.score.course16_score3 !== 1 )
+    if(this.score.course16_score3 !== 0 )
       this.score.course16_score3--
   }
   course16ScoreCountUp_User3() {
@@ -1905,7 +2183,7 @@ export class ScorelistComponent {
       this.score.course16_score3++
   }
   course16ScoreCountDown_User4() {
-    if(this.score.course16_score4 !== 1 )
+    if(this.score.course16_score4 !== 0 )
       this.score.course16_score4--
   }
   course16ScoreCountUp_User4() {
@@ -1914,7 +2192,7 @@ export class ScorelistComponent {
   }
 
   course17ScoreCountDown_User1() {
-    if(this.score.course17_score1 !== 1 )
+    if(this.score.course17_score1 !== 0 )
       this.score.course17_score1--
   }
   course17ScoreCountUp_User1() {
@@ -1922,7 +2200,7 @@ export class ScorelistComponent {
       this.score.course17_score1++
   }
   course17ScoreCountDown_User2() {
-    if(this.score.course17_score2 !== 1 )
+    if(this.score.course17_score2 !== 0 )
       this.score.course17_score2--
   }
   course17ScoreCountUp_User2() {
@@ -1930,7 +2208,7 @@ export class ScorelistComponent {
       this.score.course17_score2++
   }
   course17ScoreCountDown_User3() {
-    if(this.score.course17_score3 !== 1 )
+    if(this.score.course17_score3 !== 0 )
       this.score.course17_score3--
   }
   course17ScoreCountUp_User3() {
@@ -1938,7 +2216,7 @@ export class ScorelistComponent {
       this.score.course17_score3++
   }
   course17ScoreCountDown_User4() {
-    if(this.score.course17_score4 !== 1 )
+    if(this.score.course17_score4 !== 0 )
       this.score.course17_score4--
   }
   course17ScoreCountUp_User4() {
@@ -1947,7 +2225,7 @@ export class ScorelistComponent {
   }
 
   course18ScoreCountDown_User1() {
-    if(this.score.course18_score1 !== 1 )
+    if(this.score.course18_score1 !== 0 )
       this.score.course18_score1--
   }
   course18ScoreCountUp_User1() {
@@ -1955,7 +2233,7 @@ export class ScorelistComponent {
       this.score.course18_score1++
   }
   course18ScoreCountDown_User2() {
-    if(this.score.course18_score2 !== 1 )
+    if(this.score.course18_score2 !== 0 )
       this.score.course18_score2--
   }
   course18ScoreCountUp_User2() {
@@ -1963,7 +2241,7 @@ export class ScorelistComponent {
       this.score.course18_score2++
   }
   course18ScoreCountDown_User3() {
-    if(this.score.course18_score3 !== 1 )
+    if(this.score.course18_score3 !== 0 )
       this.score.course18_score3--
   }
   course18ScoreCountUp_User3() {
@@ -1971,12 +2249,11 @@ export class ScorelistComponent {
       this.score.course18_score3++
   }
   course18ScoreCountDown_User4() {
-    if(this.score.course18_score4 !== 1 )
+    if(this.score.course18_score4 !== 0 )
       this.score.course18_score4--
   }
   course18ScoreCountUp_User4() {
     if(this.score.course18_score4 !== 15 )
       this.score.course18_score4++
   }
-
 }

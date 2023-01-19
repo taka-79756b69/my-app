@@ -75,7 +75,7 @@
             'backgroundColor' : score.course2_lasvegas4 ? '#696969' : 'white',
             'color' : score.course2_lasvegas4 ? 'white' : 'black'
           }">
-          Score: {{ score.course1_score4 }}<br>(Put: {{ score.course1_put4 }})</td>
+          Score: {{ score.course2_score4 }}<br>(Put: {{ score.course2_put4 }})</td>
         </tr>
         <tr>
           <th scope="row">
@@ -542,58 +542,58 @@
     </table>
     <div class="container">
       <div class="row">
-        <div class="col-3 text-right">
+        <div class="col-4 text-right bg-secondary text-white">
           <small>#</small>
         </div>
-        <div class="col-3 text-right">
+        <div class="col-4 text-right bg-secondary text-white">
           <small>OLYMPIC TOTAL</small>
         </div>
-        <div class="col-3 text-right">
+        <div class="col-4 text-right bg-secondary text-white">
           <small>LASVEGAS TOTAL</small>
         </div>
       </div>
       <div class="row">
-        <div class="col-3 text-center">
+        <div class="col-4 text-center bg-secondary text-white">
           <small>{{ score.name1 }}</small>
         </div>
-        <div class="col-3 text-right">
+        <div class="col-4 text-right">
           <small>{{ olympicTotal1 }}</small>
         </div>
-        <div class="col-3 text-right">
-          <small>{{ olympicTotal1 }}</small>
+        <div class="col-4 text-right">
+          <small>{{ lasvegasTotal1 }}</small>
         </div>
       </div>
       <div class="row">
-        <div class="col-3 text-center">
+        <div class="col-4 text-center bg-secondary text-white">
           <small>{{ score.name2 }}</small>
         </div>
-        <div class="col-3 text-right">
+        <div class="col-4 text-right">
           <small>{{ olympicTotal2 }}</small>
         </div>
-        <div class="col-3 text-right">
-          <small>{{ olympicTotal1 }}</small>
+        <div class="col-4 text-right">
+          <small>{{ lasvegasTotal2 }}</small>
         </div>
       </div>
       <div class="row">
-        <div class="col-3 text-center">
+        <div class="col-4 text-center bg-secondary text-white">
           <small>{{ score.name3 }}</small>
         </div>
-        <div class="col-3 text-right">
+        <div class="col-4 text-right">
           <small>{{ olympicTotal3 }}</small>
         </div>
-        <div class="col-3 text-right">
-          <small>{{ olympicTotal1 }}</small>
+        <div class="col-4 text-right">
+          <small>{{ lasvegasTotal3 }}</small>
         </div>
       </div>
       <div class="row">
-        <div class="col-3 text-center">
+        <div class="col-4 text-center bg-secondary text-white">
           <small>{{ score.name4 }}</small>
         </div>
-        <div class="col-3 text-right">
+        <div class="col-4 text-right">
           <small>{{ olympicTotal4 }}</small>
         </div>
-        <div class="col-3 text-right">
-          <small>{{ olympicTotal1 }}</small>
+        <div class="col-4 text-right">
+          <small>{{ lasvegasTotal4 }}</small>
         </div>
       </div>
       <br>
@@ -867,7 +867,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()" (click)="save()">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">一覧へ反映</button>
               </div>
             </div>
           </div>
@@ -1142,7 +1142,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()" (click)="save()">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">一覧へ反映</button>
               </div>
             </div>
           </div>
@@ -1416,7 +1416,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">一覧へ反映</button>
               </div>
             </div>
           </div>
@@ -1690,7 +1690,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">一覧へ反映</button>
               </div>
             </div>
           </div>
@@ -1964,7 +1964,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">一覧へ反映</button>
               </div>
             </div>
           </div>
@@ -2238,7 +2238,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">一覧へ反映</button>
               </div>
             </div>
           </div>
@@ -2512,7 +2512,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">一覧へ反映</button>
               </div>
             </div>
           </div>
@@ -2786,7 +2786,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">一覧へ反映</button>
               </div>
             </div>
           </div>
@@ -3060,7 +3060,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">一覧へ反映</button>
               </div>
             </div>
           </div>
@@ -3334,7 +3334,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">一覧へ反映</button>
               </div>
             </div>
           </div>
@@ -3608,7 +3608,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">一覧へ反映</button>
               </div>
             </div>
           </div>
@@ -3882,7 +3882,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">一覧へ反映</button>
               </div>
             </div>
           </div>
@@ -4156,7 +4156,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">一覧へ反映</button>
               </div>
             </div>
           </div>
@@ -4430,7 +4430,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">一覧へ反映</button>
               </div>
             </div>
           </div>
@@ -4704,7 +4704,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">一覧へ反映</button>
               </div>
             </div>
           </div>
@@ -4978,7 +4978,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">一覧へ反映</button>
               </div>
             </div>
           </div>
@@ -5252,7 +5252,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">一覧へ反映</button>
               </div>
             </div>
           </div>
@@ -5526,7 +5526,7 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-4">
-                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">保存</button>
+                <button type="button" class="btn btn-primary btn-block btn-block" data-dismiss="modal" (click)="save()">一覧へ反映</button>
               </div>
             </div>
           </div>
