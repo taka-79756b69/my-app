@@ -18,6 +18,23 @@ router.get('/:scoreId', function(req, res) {
   })
 })
 
+router.post('', function(req, res) {
+  const username = req.body.name1
+  console.log(req.body)
+  score.insertMany({
+    name1: req.body.name1,
+    name2: req.body.name2,
+    name3: req.body.name3,
+    name4: req.body.name4,
+  }, function(err, foundScore) {
+    //scoredata.save(function(err, foundScore) {
+    if (err || !foundScore) {
+      return res.status(422).send({errors: [{title: 'Score Error', detail: 'Score Not Found'}]})
+    }
+    return res.json(username)
+  })
+})
+
 router.post('/:scoreId', function(req, res) {
   const username = req.body.name1
   const scoreId = req.params.scoreId

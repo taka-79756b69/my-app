@@ -23,7 +23,6 @@ mongoose.connect(config.DB_URI, {
 
 const app = express()
 app.use(bodyParser.json())
-
 app.use('/api/v1/score', golfscoreRoutes)
 
 if(process.env.NODE_ENV === 'production') {

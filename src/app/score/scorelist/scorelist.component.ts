@@ -447,24 +447,56 @@ export class ScorelistComponent {
 
       if(score.score1 != 0 && score.score2 != 0 && score.score3 != 0 && score.score4 != 0){
         if(score.team1 == 0){
-          teamA.push(+score.score1)
+          if(score.score1 < 10){
+            teamA.push(+score.score1)
+          }else{
+            teamA.push(9)
+          }
         }else{
-          teamB.push(+score.score1)
+          if(score.score1 < 10){
+            teamB.push(+score.score1)
+          }else{
+            teamB.push(9)
+          }
         }
         if(score.team2 == 0){
-          teamA.push(+score.score2)
+          if(score.score2 < 10){
+            teamA.push(+score.score2)
+          }else{
+            teamA.push(9)
+          }
         }else{
-          teamB.push(+score.score2)
+          if(score.score2 < 10){
+            teamB.push(+score.score2)
+          }else{
+            teamB.push(9)
+          }
         }
         if(score.team3 == 0){
-          teamA.push(+score.score3)
+          if(score.score3 < 10){
+            teamA.push(+score.score3)
+          }else{
+            teamA.push(9)
+          }
         }else{
-          teamB.push(+score.score3)
+          if(score.score3 < 10){
+            teamB.push(+score.score3)
+          }else{
+            teamB.push(9)
+          }
         }
         if(score.team4 == 0){
-          teamA.push(+score.score4)
+          if(score.score4 < 10){
+            teamA.push(+score.score4)
+          }else{
+            teamA.push(9)
+          }
         }else{
-          teamB.push(+score.score4)
+          if(score.score4 < 10){
+            teamB.push(+score.score4)
+          }else{
+            teamB.push(9)
+          }
         }
 
         if(score.team1 == 0){

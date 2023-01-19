@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ScoreModule } from './score/score.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NewgameComponent } from './newgame/newgame.component';
+import { NewgameModule } from './newgame/newgame.module';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -17,7 +18,8 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes),
     ScoreModule,
-    BrowserModule
+    BrowserModule,
+    NewgameModule
   ],
   exports: [RouterModule]
 })

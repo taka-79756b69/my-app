@@ -23,4 +23,10 @@ export class ScoreService {
     this.http.head("application/json")
     return this.http.post('/api/v1/score/'+ scoreId, req)
   }
+
+  newInsert(req: any): Observable<any>{
+    // return products[productId]
+    this.http.head("application/json")
+    return this.http.post('/api/v1/score/', req)
+  }
 }
