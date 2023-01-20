@@ -4,6 +4,10 @@ class FakeScoreDb {
 
   constructor() {
     this.scoreList = {
+
+      courseName: 'テストコース',
+      playDate: 0,
+
       name1: 'テスト一郎',
       name2: 'テスト二郎',
       name3: 'テスト三郎',

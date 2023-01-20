@@ -1,6 +1,10 @@
 const { Schema, default: mongoose } = require("mongoose");
 
 const ScoreSchema = new Schema({
+
+  courseName: String,
+  playDate: Date,
+
   name1: String,
   name2: String,
   name3: String,

@@ -33,7 +33,8 @@ export class NewgameComponent {
 
   //新規保存
   onSubmit(form: any) {
-    console.log(JSON.stringify(form.value))
+
+    //console.log(JSON.stringify(form.value))
     // リクエスト送信用にJSON作成
     // this.checkoutForm = ({
     //   name1: this.score.name1,
@@ -367,26 +368,43 @@ export class NewgameComponent {
 
     this.activatedRoute.paramMap.subscribe(params => {
 
-      const scoreObservable = this.scoreService.newInsert(JSON.stringify(form.value))
+      const scoreObservable = this.scoreService.newInsert(form.value)
 
       scoreObservable.subscribe(
         (data)=>{
-          console.log('got data: '+ JSON.stringify(data))
+          //console.log('got data: '+ JSON.stringify(data))
           //this.router.navigate(["score"])
+          this.reload()
         },
         (err)=>{
-          console.log('got err: '+ err)
+          //console.log('got err: '+ err)
         },
         ()=>{
-          console.log("保存完了")
-          //console.log('complete!')
+          //console.log("保存完了")
         }
       )
     })
   }
 
   reload(){
-    //ここで最新のレコードを取る予定
+    //ここで最新のレコードを取ってスコア入力画面に遷移
     //this.router.navigate(["score/:scoreId"])
+    this.activatedRoute.paramMap.subscribe(params => {
+
+      const scoreObservable = this.scoreService.getScoreListNewOne()
+
+      scoreObservable.subscribe(
+        (data)=>{
+          //console.log('got data: '+ JSON.stringify(data))
+          this.router.navigate(["score/"+data[0]._id])
+        },
+        (err)=>{
+          //console.log('got err: '+ err)
+        },
+        ()=>{
+          //console.log("保存完了")
+        }
+      )
+    })
   }
 }

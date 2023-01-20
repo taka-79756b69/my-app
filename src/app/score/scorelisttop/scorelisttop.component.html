@@ -1,5 +1,18 @@
-<div *ngFor="let tmp of scorelist" class="col-sm">
-  <a routerLink="{{ tmp._id }}">
-    <h5 class="card-title">{{ tmp.name1 }}のスコア</h5>
-  </a>
+<div *ngFor="let tmp of scorelist">
+  <div class="container">
+    <div class="row  justify-content-center">
+      <div class="col-10">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">{{ tmp.courseName }}{{ "  (" + tmp.playDate.substring(0,10) + ")" }}</h3>
+            <p class="card-text">{{ tmp.name1 }}{{ ",  " + tmp.name1 }}{{ ",  " + tmp.name1 }}{{ ",  " + tmp.name1 }}</p>
+            <a routerLink="{{ tmp._id }}">
+              <div class="btn btn-primary">スコア表示</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+  </div>
 </div>

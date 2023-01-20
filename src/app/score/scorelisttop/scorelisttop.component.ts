@@ -19,14 +19,14 @@ export class ScorelisttopComponent {
     scoreListObservable.subscribe(
       (data)=>{
         this.scorelist = data
-        console.log('got data: '+ data)
-        console.log("一覧はとれてる")
+        //console.log('got data: '+ data)
+        //console.log("一覧はとれてる")
       },
       (err)=>{
-        console.log('got err: '+ err)
+        //console.log('got err: '+ err)
       },
       ()=>{
-        console.log('complete!')
+        //console.log('complete!')
       }
     )
   }

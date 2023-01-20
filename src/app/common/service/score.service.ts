@@ -13,6 +13,11 @@ export class ScoreService {
     return this.http.get('/api/v1/score/')
   }
 
+  getScoreListNewOne(): Observable<any>{
+    // return products
+    return this.http.get('/api/v1/score/sort')
+  }
+
   getScore(scoreId: string): Observable<any>{
     // return products[productId]
     return this.http.get('/api/v1/score/'+ scoreId)
