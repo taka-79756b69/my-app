@@ -1,14 +1,19 @@
 <div *ngFor="let tmp of scorelist">
   <div class="container">
-    <div class="row  justify-content-center">
+    <div class="row justify-content-center">
       <div class="col-10">
-        <div class="card">
+        <div class="card text-white bg-secondary">
           <div class="card-body">
             <h3 class="card-title">{{ tmp.courseName }}{{ "  (" + tmp.playDate.substring(0,10) + ")" }}</h3>
-            <p class="card-text">{{ tmp.name1 }}{{ ",  " + tmp.name1 }}{{ ",  " + tmp.name1 }}{{ ",  " + tmp.name1 }}</p>
+            <p class="card-text">{{ tmp.name1 }}{{ ",  " + tmp.name2 }}{{ ",  " + tmp.name3 }}{{ ",  " + tmp.name4 }}</p>
             <a routerLink="{{ tmp._id }}">
               <div class="btn btn-primary">スコア表示</div>
             </a>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <!-- <a routerLink="{{ tmp._id }}"> -->
+              <div class="btn btn-danger btn-sm" (click)="deleteData( tmp._id )">データ削除</div>
+            <!-- </a> -->
           </div>
         </div>
       </div>

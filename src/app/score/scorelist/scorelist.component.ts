@@ -1,4 +1,4 @@
-import { Component, SimpleChanges } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { ScoreService } from 'src/app/common/service/score.service';
@@ -1235,7 +1235,7 @@ export class ScorelistComponent {
       course18_olympic4: this.score.course18_olympic4,
       course18_lasvegas4: this.score.course18_lasvegas4,
     });
-    console.warn('Your order has been submitted', this.checkoutForm);
+    //console.warn('Your order has been submitted', this.checkoutForm);
 
     this.activatedRoute.paramMap.subscribe(params => {
 
@@ -2288,4 +2288,5 @@ export class ScorelistComponent {
     if(this.score.course18_score4 !== 15 )
       this.score.course18_score4++
   }
+
 }

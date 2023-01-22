@@ -34,4 +34,9 @@ export class ScoreService {
     this.http.head("application/json")
     return this.http.post('/api/v1/score/', req)
   }
+
+  deleteScore(scoreId: string): Observable<any>{
+
+    return this.http.post('/api/v1/score/delete/'+ scoreId, scoreId)
+  }
 }

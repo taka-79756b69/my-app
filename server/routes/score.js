@@ -698,4 +698,19 @@ router.post('/:scoreId', function(req, res) {
   })
 })
 
+router.post('/delete/:scoreId', function(req, res) {
+
+  const scoreId = req.params.scoreId
+  // const reqJson = JSON.stringify(req.body)
+  score.deleteOne({
+    _id: scoreId
+  }, function(err, foundScore) {
+    //scoredata.save(function(err, foundScore) {
+    if (err || !foundScore) {
+      return res.status(422).send({errors: [{title: 'Score Error', detail: 'Score Not Found'}]})
+    }
+    return res.json(foundScore)
+  })
+})
+
 module.exports = router

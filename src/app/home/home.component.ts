@@ -9,14 +9,4 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 })
 export class HomeComponent {
 
-  show:any
-
-  ngOnInit(): void {
-
-    this.show = true
-  }
-
-  onSubmit(): void{
-
-  }
 }
